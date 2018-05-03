@@ -1,0 +1,19 @@
+- Diseño nivel
+- Comportamiento personaje
+- hud
+- Enemigos
+  - esqueletos
+  - murcielagos
+  - bone pillar
+  - Ghost
+  - Medusa Head
+  - Viper Swarm
+  - Mr. Hed
+  - Clubbing Knight
+ - velas
+ - final boss
+ - si nos venimos muy arriba 
+  - lo del balanceo
+  - lo de las escaleras 
+  - lo de la verja
+  
