@@ -1,8 +1,9 @@
 # Super Castlevania IV
-## Información
-<p>
+
+## Información
+
 Super Castlevania IV (en Japón Akumajō Dracula 悪魔城ドラキュラ Akumajō Dorakyura, traducido literalmente como Devil's Castle Dracula) es un videojuego de acción-aventura desarrollado y publicado por Konami en 1991 en Japón y en Norteamérica, y en 1992 en Europa. Fue el primer videojuego de la serie Castlevania en aparecer para la videoconsola Super Nintendo aprovechándose de las mejores características técnicas en comparación con su predecesora, la videoconsola Nintendo Entertainment System, apoyado en un hardware de 16 bits y ayudado de múltiples efectos como el Modo 7.
-</p>
+
 
 <p>
 Aunque es otro remake del juego Castlevania de Nintendo Entertainment System, en realidad es una secuela de Castlevania II: Simon's Quest (pero igual tampoco forma parte de la cronología oficial).
