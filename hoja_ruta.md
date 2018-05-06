@@ -1,4 +1,4 @@
-- Diseño nivel
+- Diseño nivel (elementos de colision para moverse y avanzar)
 - Comportamiento personaje
 - hud
 - Enemigos
@@ -10,10 +10,13 @@
   - Viper Swarm
   - Mr. Hed
   - Clubbing Knight
- - velas
- - final boss
+ - velas y objetos recogibles que aportan
+ - final boss + condiciones de finalización del juego
+ - menú de inicio
+ 
  - si nos venimos muy arriba 
   - lo del balanceo
   - lo de las escaleras 
   - lo de la verja
-  
+  - controles desde pantalla movil
+  - en el menú de inicio una opción de tutorial para explicar al jugador todos los controles y que se familiarice (o practique) con ellos de cara a la partida.
