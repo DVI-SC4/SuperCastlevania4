@@ -6,7 +6,7 @@
 
 Super Castlevania IV (en Japón: Akumajō Dracula 悪魔城ドラキュラ Akumajō Dorakyura, traducido literalmente como "Devil's Castle Dracula") es un videojuego de acción-aventura desarrollado y publicado por Konami a finales de 1991 en Japón y en Norteamérica, y en 1992 en Europa. Fue el primer videojuego de la serie Castlevania en aparecer para la videoconsola Super Nintendo aprovechándose de las mejores características técnicas en comparación con su predecesora, la videoconsola Nintendo Entertainment System (NES), apoyado en un hardware de 16 bits y ayudado de múltiples efectos como el Modo 7.
 
-Aunque es otro remake del juego Castlevania de NES, en realidad es una secuela de Castlevania II: Simon's Quest (pero igual tampoco forma parte de la cronología oficial).
+Aunque se trata de un remake del juego Castlevania de NES, en realidad es una secuela de Castlevania II: Simon's Quest.
 
 ### Trama
 La familia Belmont, a través de generaciones había destruido a Drácula cada vez que volvía a campar sobre la faz de la Tierra. En esta ocasión, después de cien años, el vampiro regresa ayudado por un ejército de seres infernales y clásicos a la vez, entre los que se encuentran una suerte de monstruo de Frankenstein, la Momia, e incluso un familiar lejano de la mitológica Medusa.
@@ -37,9 +37,9 @@ La familia Belmont, a través de generaciones había destruido a Drácula cada v
 	* Recogibles
 	* Armas secundarias
 
-* Niveles (en principio se hará uno)
+* Niveles (en principio se hará el primero)
 
-* Jefe de nivel
+* Jefe final del nivel
 
 * HUD
 	* Medidor de energía del protagonista
@@ -74,7 +74,7 @@ La familia Belmont, a través de generaciones había destruido a Drácula cada v
 ### Presentación
 * [MacDown (OS X)](https://macdown.uranusjr.com)
 
-## Recursos a utilizar
+## Fuentes de recursos a utilizar
 * [CastlevaniaCrypt](http://www.castlevaniacrypt.com/cv4/maps)
 * [CastlevaniaDungeon](https://castlevaniadungeon.net/games/scv4foreign.html)
 * [SpritesIncCo](http://www.sprites-inc.co.uk/vania/OtherConsole/SCV4/)
