@@ -10,7 +10,7 @@ Como de cara a la memoria y la entrega nos piden poner todo lo que se ha hecho y
 
 ### César
 
-*
+* Puliendo movimientos del protagonista: colocación correcta del látigo en cada ataque y probando movimientos correctos.
 
 ### Sergio
 
@@ -34,6 +34,7 @@ Como de cara a la memoria y la entrega nos piden poner todo lo que se ha hecho y
 * Preparación de sprites y jsons de elementos de interacción del primer nivel (velas, esfera final, etc.).
 * Preparación de sprites de objetos recogibles (látigo mejorado, carne, corazones, etc.).
 * Preparación de sprites y jsons de enemigos básicos (murciélago, esqueleto, bicéfalo, etc.) con posiciones de avance, ataques y muerte.
+* Edición inicial de readme.md (memoria final).
 
 ### Sergio
 
