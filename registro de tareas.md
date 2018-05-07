@@ -30,9 +30,9 @@ Como de cara a la memoria y la entrega nos piden poner todo lo que se ha hecho y
 * Obtención y conversión de efectos de sonido, extrayéndolos de la grabación de una emulación.
 * Obtención de música de fondo (para introduccción, menú, nivel y créditos).
 * Obtención de imágenes con el recorrido visual (mapa en "horizontal") de los distintos niveles.
-* Limpieza y preparación de sprites para los elementos del HUD y armas secundarias a partir de capturas de pantalla de una emulación.
+* Limpieza y preparación de sprites de los elementos del HUD y de las armas secundarias, a partir de capturas de pantalla de una emulación.
 * Preparación de sprites y jsons de elementos de interacción del primer nivel (velas, esfera final, etc.).
-* Preparación de sprites de objetos recogibles (látigo mejorado, carne, corazones, etc.).
+* Preparación de sprites de objetos recogibles (mejora de látigo, carne, corazones, etc.).
 * Preparación de sprites y jsons de enemigos básicos (murciélago, esqueleto, bicéfalo, etc.) con posiciones de avance, ataques y muerte.
 * Edición inicial de readme.md (memoria final).
 
