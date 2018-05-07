@@ -3,7 +3,7 @@ Proyecto final de la asignatura Desarrollo de Videojuegos mediante Tecnologias W
 
 # Índice
 
-* 1.Diseño del juego
+* 1. Diseño del juego
 	* 1. Objetivo del juego 
 	* 2. Principales mecánicas
 	* 3. Personajes
