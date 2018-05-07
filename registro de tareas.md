@@ -28,8 +28,8 @@ Como de cara a la memoria y la entrega nos piden poner todo lo que se ha hecho y
 * Limpieza y preparación de sprite de Simon avanzando agachado a partir de capturas de emulación.
 * Programación de los movimientos y ataques de Simon (caminando, agachándose y saltando).
 * Obtención y conversión de efectos de sonido, extrayéndolos de la grabación de una emulación.
-* Obtención de música de fondo para introduccción, menú, nivel y créditos.
-* Obtención de archivos con el recorrido visual de los distintos niveles.
+* Obtención de música de fondo (para introduccción, menú, nivel y créditos).
+* Obtención de imágenes con el recorrido visual (mapa en "horizontal") de los distintos niveles.
 * Limpieza y preparación de sprites para los elementos del HUD y armas secundarias a partir de capturas de pantalla de una emulación.
 * Preparación de sprites y jsons de elementos de interacción del primer nivel (velas, esfera final, etc.).
 * Preparación de sprites de objetos recogibles (látigo mejorado, carne, corazones, etc.).
