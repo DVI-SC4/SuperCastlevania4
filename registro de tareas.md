@@ -10,7 +10,7 @@ Como de cara a la memoria y la entrega nos piden poner todo lo que se ha hecho y
 
 ### César
 
-* Puliendo movimientos del protagonista: colocación correcta del látigo en cada ataque y probando movimientos correctos.
+* Optimizar en general todo el código de Simon, que sea también más legible y sencillo.
 
 ### Sergio
 
@@ -24,9 +24,9 @@ Como de cara a la memoria y la entrega nos piden poner todo lo que se ha hecho y
 
 ### César
 
-* Preparación de sprites y jsons de Simon, con posiciones de avance, ataques y saltos.
+* Preparación de sprites, jsons y animaciones por frames de Simon, con posiciones de avance, ataques, saltos, escaleras...
 * Limpieza y preparación de sprite de Simon avanzando agachado a partir de capturas de emulación.
-* Programación de los movimientos y ataques de Simon (caminando, agachándose y saltando).
+* Programación de lógica de Simon: avance, saltos, agacharse, ataques con los diferentes combos... excepto su mecánica de comportamiento en escaleras.
 * Obtención y conversión de efectos de sonido, extrayéndolos de la grabación de una emulación.
 * Obtención de música de fondo (para introduccción, menú, nivel y créditos).
 * Obtención de imágenes con el recorrido visual (mapa en "horizontal") de los distintos niveles.
