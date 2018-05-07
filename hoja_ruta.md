@@ -13,7 +13,8 @@
  - velas y objetos recogibles que aportan
  - final boss + condiciones de finalización del juego
  - menú de inicio
- 
+ - pantalla de créditos
+
  - si nos venimos muy arriba 
   - lo del balanceo
   - lo de las escaleras 
