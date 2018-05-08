@@ -13,7 +13,7 @@ Proyecto final de la asignatura Desarrollo de Videojuegos mediante Tecnologias W
 
 # 1. Diseño del juego
 
-(se puede confeccionar a partir del documento de concepto entregado anteriormente, ampliando con las nuevas mecánicas añadidas y explicando mínimamente en qué consisten)
+(se puede confeccionar a partir del documento de concepto entregado anteriormente, ampliando con las nuevas mecánicas añadidas y explicando mínimamente en qué consisten. Acompañar de algunas imágenes o capturas de nuestros recursos o cosas ya implementadas)
 	
 ## 1. Objetivo del juego
 
@@ -27,14 +27,39 @@ Nada más entrar al castillo, estaremos expuestos a las hordas de enemigos y en 
 
 ### 1. Avance y retroceso
 
-### 2. Salto
+Simon puede caminar en ambos sentidos pulsando las teclas de dirección "izquierda" y "derecha".
 
-### 3. Agacharse
+### 2. Agacharse
 
-### 4. Ataque
+Para esquivar ciertos ataques, nuestro protagonista puede agacharse usando la tecla de dirección "abajo". Asimismo, mientras se encuentra agachado, puede seguir avanzando o retrocediendo en cuclillas si la situación lo requiere.
 
-### 5. Uso de armas secundarias
+### 3. Salto
 
+Simon también puede saltar pulsando la tecla "Q". Para mayor agilidad, durante el breve salto puede cambiar el sentido de su avance si pulsa "izquierda" o "derecha".
+
+### 4. Subir y bajar escaleras
+
+Como parte indispensable de su avance por el nivel, Simon también es capaz de subir o bajar escaleras. 
+* Para subir, al situarse encima del pie de las escaleras pulsará "derecha" o "izquierda" (según el sentido de la escalera) seguido de "arriba" y comenzará el ascenso.
+* Para bajar, bastará con avanzar (sea hacia la izquierda o hacia la derecha) hacia la escalera en cuestión y comenzará el descenso. Si la escalera no está al final de una plataforma sino en medio de una, se combinará el uso de "izquierda" o "derecha" seguida de la tecla "abajo".
+
+### 5. Ataque
+
+(decir lo de que se actualiza a morning star, que es así más largo o con mayor alcance, y que hace mas daño por cada asestada)
+
+El arma principal de Simon es el legendario látigo "Vampire Killer", el cual ha pasado de generación en generación en la familia Belmont durante siglos y el cual posee habilidades mágicas para luchar contra las criaturas infernales. 
+
+Mediante la tecla "W", Simon enarbolará el látigo para asestar golpes a sus enemigos hasta destruirles. Disponemos de distintas combinaciones de ataque para usar las que mejor se ajusten a la situación en la que Simon se vea envuelto:
+
+* Ataque normal: se ataca de pie y de forma horizontal, en la dirección en la que Simon esté mirando.
+* Ataque agachado: tras pulsar "abajo", si después activamos el látigo, éste dirigirá un ataque horizontal también en la dirección en que se esté mirando pero, esta vez, con una menor altura.
+* Ataque vertical
+* Ataque diagonal
+* Ataques durante el salto
+
+### 6. Uso de armas secundarias
+
+(decidir con qué tecla se activarán)
 
 ## 3. Personajes
 

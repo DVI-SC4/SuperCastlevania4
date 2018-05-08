@@ -1,5 +1,7 @@
 # Tareas por hacer y completadas
 
+![](http://gifimage.net/wp-content/uploads/2017/10/castlevania-gif-11.gif)
+
 Como de cara a la memoria y la entrega nos piden poner todo lo que se ha hecho y por cada miembro, vamos a ir poniendo aquí todo lo que ha ido haciendo cada uno (y lo que se está haciendo en tal momento), para que podamos consultarlo durante el desarrollo y luego ponerlo en el documento final.
 
 ## Tareas en curso
