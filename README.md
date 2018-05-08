@@ -27,17 +27,31 @@ Nada más entrar al castillo, estaremos expuestos a las hordas de enemigos y en 
 
 ### 1. Avance y retroceso
 
+<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/movimiento/teclas_andando.png?raw=true" width="11%" />
+
+![andando](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/movimiento/andando.gif?raw=true)
+
 Simon puede caminar en ambos sentidos pulsando las teclas de dirección "izquierda" y "derecha".
 
 ### 2. Agacharse
+
+<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/movimiento/teclas_agacharse.png?raw=true" width="20%" />
+
+![agacharse](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/movimiento/agacharse.gif?raw=true)
 
 Para esquivar ciertos ataques, nuestro protagonista puede agacharse usando la tecla de dirección "abajo". Asimismo, mientras se encuentra agachado, puede seguir avanzando o retrocediendo en cuclillas si la situación lo requiere.
 
 ### 3. Salto
 
+<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/movimiento/teclas_saltando.png?raw=true" width="20%" />
+
+![agacharse](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/movimiento/saltando.gif?raw=true)
+
 Simon también puede saltar pulsando la tecla "Q". Para mayor agilidad, durante el breve salto puede cambiar el sentido de su avance si pulsa "izquierda" o "derecha".
 
 ### 4. Subir y bajar escaleras
+
+(se pondrán las teclas y gif cuando esté implementado)
 
 Como parte indispensable de su avance por el nivel, Simon también es capaz de subir o bajar escaleras. 
 * Para subir, al situarse encima del pie de las escaleras pulsará "derecha" o "izquierda" (según el sentido de la escalera) seguido de "arriba" y comenzará el ascenso.
@@ -45,11 +59,41 @@ Como parte indispensable de su avance por el nivel, Simon también es capaz de s
 
 ### 5. Ataque
 
-(decir lo de que se actualiza a morning star, que es así más largo o con mayor alcance, y que hace mas daño por cada asestada)
-
 El arma principal de Simon es el legendario látigo "Vampire Killer", el cual ha pasado de generación en generación en la familia Belmont durante siglos y el cual posee habilidades mágicas para luchar contra las criaturas infernales. 
 
-Mediante la tecla "W", Simon enarbolará el látigo para asestar golpes a sus enemigos hasta destruirles. Disponemos de distintas combinaciones de ataque para usar las que mejor se ajusten a la situación en la que Simon se vea envuelto:
+Mediante la tecla "W", Simon enarbolará el látigo para asestar golpes a sus enemigos hasta destruirles. Además, durante la partida podrá recoger un hechizo de mejora que convierte al látigo en "Morning Star", haciéndolo más largo, férreo y permitiéndole hacer más daño por cada ataque.
+
+Disponemos de distintas combinaciones de ataque, en ambas direcciones, para usar las que mejor se ajusten a la situación en la que Simon se vea envuelto.
+
+#### 5.1 Ataques desde el suelo
+
+##### 5.1.1 Ataque normal
+
+<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/teclas/W.png?raw=true" width="5%" />
+
+![atacando](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20en%20el%20suelo/atacando.gif?raw=true)
+
+##### 5.1.2 Ataque agachado
+
+<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20en%20el%20suelo/teclas_atacando_agachado.png?raw=true" width="14%" />
+
+![atacando](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20en%20el%20suelo/atacando_agachado.gif?raw=true)
+
+##### 5.1.3 Ataque vertical
+
+<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20en%20el%20suelo/teclas_atacando_vertical.png?raw=true" width="14%" />
+
+![atacando](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20en%20el%20suelo/atacando_vertical.gif?raw=true)
+
+##### 5.1.4 Ataque en diagonal
+
+<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20en%20el%20suelo/teclas_ataque_diagonal.png?raw=true" width="24%" />
+
+![atacando](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20en%20el%20suelo/ataque_diagonal.gif?raw=true)
+
+#### 5.2 Ataques en el aire
+
+##### 5.2.1 
 
 * Ataque normal: se ataca de pie y de forma horizontal, en la dirección en la que Simon esté mirando.
 * Ataque agachado: tras pulsar "abajo", si después activamos el látigo, éste dirigirá un ataque horizontal también en la dirección en que se esté mirando pero, esta vez, con una menor altura.
