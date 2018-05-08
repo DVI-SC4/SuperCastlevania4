@@ -79,7 +79,7 @@ Disponemos de distintas combinaciones de ataque, en ambas direcciones, para usar
 
 ![atacando](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20en%20el%20suelo/atacando_agachado.gif?raw=true)
 
-##### 5.1.3 Ataque vertical
+##### 5.1.3 Ataque en vertical
 
 <img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20en%20el%20suelo/teclas_atacando_vertical.png?raw=true" width="14%" />
 
@@ -93,13 +93,35 @@ Disponemos de distintas combinaciones de ataque, en ambas direcciones, para usar
 
 #### 5.2 Ataques en el aire
 
-##### 5.2.1 
+##### 5.2.1 Ataque normal saltando
 
-* Ataque normal: se ataca de pie y de forma horizontal, en la dirección en la que Simon esté mirando.
-* Ataque agachado: tras pulsar "abajo", si después activamos el látigo, éste dirigirá un ataque horizontal también en la dirección en que se esté mirando pero, esta vez, con una menor altura.
-* Ataque vertical
-* Ataque diagonal
-* Ataques durante el salto
+<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/teclas_atacando_saltando.png?raw=true" width="24%" />
+
+![atacando](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/atacando_saltando.gif?raw=true)
+
+##### 5.2.2 Ataque en vertical saltando
+
+<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/teclas_atacando_vertical_saltando.png?raw=true" width="24%" />
+
+![atacando](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/atacando_vertical_saltando.gif?raw=true)
+
+##### 5.2.3 Ataque hacia abajo saltando
+
+<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/teclas_atacando_verticalabajo.png?raw=true" width="24%" />
+
+![atacando](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/atacando_verticalabajo.gif?raw=true)
+
+##### 5.2.4 Ataque en diagonal saltando
+
+<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/teclas_atacando_diagonalarriba_saltando.png?raw=true" width="24%" />
+
+![atacando](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/atacando_diagonalarriba_saltando.gif?raw=true)
+
+##### 5.2.5 Ataque en diagonal hacia abajo saltando
+
+<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/teclas_atacando_diagonalabajo_saltando.png?raw=true" width="24%" />
+
+![atacando](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/atacando_diagonalabajo_saltando.gif?raw=true)
 
 ### 6. Uso de armas secundarias
 
