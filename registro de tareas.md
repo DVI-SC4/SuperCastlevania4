@@ -1,6 +1,7 @@
 # Tareas por hacer y completadas
 
 ![](http://gifimage.net/wp-content/uploads/2017/10/castlevania-gif-11.gif)
+![](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
 
 <img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="40" height="40" />
 
