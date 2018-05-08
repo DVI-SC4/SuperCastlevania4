@@ -59,7 +59,7 @@ Mediante la tecla "W", Simon enarbolará el látigo para asestar golpes a sus en
 
 ### 6. Uso de armas secundarias
 
-(decidir con qué tecla se activarán)
+(decidir con qué tecla se activarán y hacer su gif e imagen de tecla. Yo lo pondría con la tecla E por facilidad de activarlas rápidamente)
 
 ## 3. Personajes
 
