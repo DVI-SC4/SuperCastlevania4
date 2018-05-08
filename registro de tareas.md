@@ -1,6 +1,7 @@
 # Tareas por hacer y completadas
 
 ![Werk werk werk](https://i.gifer.com/1Pu8.gif)
+![Coding](https://m.popkey.co/bcb243/azGKx_s-200x150.gi)
 
 Como de cara a la memoria y la entrega nos piden poner todo lo que se ha hecho y por cada miembro, vamos a ir poniendo aquí todo lo que ha ido haciendo cada uno (y lo que se está haciendo en tal momento), para que podamos consultarlo durante el desarrollo y luego ponerlo en el documento final.
 
@@ -13,6 +14,7 @@ Como de cara a la memoria y la entrega nos piden poner todo lo que se ha hecho y
 ### César
 
 * Optimizar en general todo el código de Simon, que sea también más legible y sencillo.
+* Redactando parte de la memoria.
 
 ### Sergio
 
