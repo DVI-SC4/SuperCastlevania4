@@ -14,7 +14,7 @@ Como de cara a la memoria y la entrega nos piden poner todo lo que se ha hecho y
 ### César
 
 * Optimizar en general todo el código de Simon, que sea también más legible y sencillo.
-* Arreglando posición de látigo correcta con Simon escalado al doble.
+* Prepararé el sprite, json y animación por frames del jefe final del nivel cuando decidamos cuál queremos implementar.
 
 ### Sergio
 
@@ -37,8 +37,7 @@ Como de cara a la memoria y la entrega nos piden poner todo lo que se ha hecho y
 * Limpieza y preparación de sprites de los elementos del HUD y de las armas secundarias, a partir de capturas de pantalla de una emulación.
 * Preparación de sprites y jsons de elementos de interacción del primer nivel (velas, esfera final, etc.).
 * Preparación de sprites de objetos recogibles (mejora de látigo, carne, corazones, etc.).
-* Preparación de sprites, jsons y animaciones por frames de enemigos básicos (murciélago, esqueleto, bicéfalo, etc.) con posiciones de avance, ataques y muerte.
-* Preparación de sprite, json y animación por frames del jefe final del nivel.
+* Preparación de sprites y jsons de enemigos básicos (murciélago, esqueleto, bicéfalo, etc.) con posiciones de avance, ataques y muerte.
 * Redacción de la memoria
 	* Sección de objetivo del juego	 
 	* Sección de principales mecánicas (con preparación y edición de los gifs y las imágenes de combinaciones de teclas).
