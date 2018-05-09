@@ -3,13 +3,23 @@ Proyecto final de la asignatura Desarrollo de Videojuegos mediante Tecnologias W
 
 # Índice
 
-* [1.- Diseño del juego](https://github.com/DVI-SC4/SuperCastlevania4#1-dise%C3%B1o-del-juego)
-	* [1.1. Objetivo del juego](https://github.com/DVI-SC4/SuperCastlevania4#1-objetivo-del-juego) 
+* [1. Diseño del juego](https://github.com/DVI-SC4/SuperCastlevania4#1-dise%C3%B1o-del-juego)
+	* [1.1. Objetivo del juego](https://github.com/DVI-SC4/SuperCastlevania4#11-objetivo-del-juego) 
 	* [1.2. Principales mecánicas](https://github.com/DVI-SC4/SuperCastlevania4#2-principales-mec%C3%A1nicas)
-	* [1.3. Personajes](https://github.com/DVI-SC4/SuperCastlevania4#3-personajes)
-* [2.- Diseño de la implementación](https://github.com/DVI-SC4/SuperCastlevania4#2-dise%C3%B1o-de-la-implementaci%C3%B3n)
-* [3.- Equipo de trabajo y reparto de tareas](https://github.com/DVI-SC4/SuperCastlevania4#3-equipo-de-trabajo-y-reparto-de-tareas)
-* [4.- Fuentes y referencias](https://github.com/DVI-SC4/SuperCastlevania4#4-fuentes-y-referencias)
+		* [Avance y retroceso](https://github.com/DVI-SC4/SuperCastlevania4#1-avance-y-retroceso)
+		* [Agacharse](https://github.com/DVI-SC4/SuperCastlevania4#2-agacharse)
+		* [Salto](https://github.com/DVI-SC4/SuperCastlevania4#3-salto)
+		* [Subir y bajar escaleras](https://github.com/DVI-SC4/SuperCastlevania4#4-subir-y-bajar-escaleras)
+		* [Ataque](https://github.com/DVI-SC4/SuperCastlevania4#5-ataque)
+			*  []()
+		* [Uso de armas secundarias](https://github.com/DVI-SC4/SuperCastlevania4#6-uso-de-armas-secundarias)  
+	* [1.3. Personajes](https://github.com/DVI-SC4/SuperCastlevania4#13-personajes)
+* [2. Diseño de la implementación](https://github.com/DVI-SC4/SuperCastlevania4#2-dise%C3%B1o-de-la-implementaci%C3%B3n)
+* [3. Equipo de trabajo y reparto de tareas](https://github.com/DVI-SC4/SuperCastlevania4#3-equipo-de-trabajo-y-reparto-de-tareas)
+	* [	3.1. Integrantes](https://github.com/DVI-SC4/SuperCastlevania4#31-integrantes)
+	* [3.2. Tareas realizadas por cada integrante](https://github.com/DVI-SC4/SuperCastlevania4#32-tareas-realizadas-por-cada-integrante)
+	* [3.3. Carga de trabajo](https://github.com/DVI-SC4/SuperCastlevania4#33-carga-de-trabajo)
+* [4. Fuentes y referencias](https://github.com/DVI-SC4/SuperCastlevania4#4-fuentes-y-referencias)
 
 # 1. Diseño del juego
 
