@@ -6,7 +6,8 @@ Como de cara a la memoria y la entrega nos piden poner todo lo que se ha hecho y
 
 ### Carmen
 
-*
+* Preparando el tmx del nivel1
+* Preparando el cambio entre escenas
 
 ### César
 

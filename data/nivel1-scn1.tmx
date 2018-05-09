@@ -1,9 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="512" height="112" tilewidth="4" tileheight="4" infinite="0" nextobjectid="1">
+<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="512" height="112" tilewidth="4" tileheight="4" infinite="0" nextobjectid="21">
  <tileset firstgid="1" name="tiled" tilewidth="4" tileheight="4" tilecount="57344" columns="512">
   <image source="../images/stage-1-lvl-1-1.png" width="2048" height="448"/>
+  <tile id="22168">
+   <properties>
+    <property name="Class" value="CambioZona"/>
+   </properties>
+  </tile>
+  <tile id="29801">
+   <properties>
+    <property name="Class" value="CambioZona"/>
+   </properties>
+  </tile>
+  <tile id="29802">
+   <properties>
+    <property name="Class" value="CambioZona"/>
+   </properties>
+  </tile>
+  <tile id="29803">
+   <properties>
+    <property name="Class" value="CambioZona"/>
+   </properties>
+  </tile>
+  <tile id="29804">
+   <properties>
+    <property name="Class" value="CambioZona"/>
+   </properties>
+  </tile>
+  <tile id="30313">
+   <properties>
+    <property name="Class" value="CambioZona"/>
+   </properties>
+  </tile>
+  <tile id="30314">
+   <properties>
+    <property name="Class" value="CambioZona"/>
+   </properties>
+  </tile>
+  <tile id="30315">
+   <properties>
+    <property name="Class" value="CambioZona"/>
+   </properties>
+  </tile>
+  <tile id="30316">
+   <properties>
+    <property name="Class" value="CambioZona"/>
+   </properties>
+  </tile>
+  <tile id="30825">
+   <properties>
+    <property name="Class" value="CambioZona"/>
+   </properties>
+  </tile>
+  <tile id="30826">
+   <properties>
+    <property name="Class" value="CambioZona"/>
+   </properties>
+  </tile>
+  <tile id="30827">
+   <properties>
+    <property name="Class" value="CambioZona"/>
+   </properties>
+  </tile>
+  <tile id="30828">
+   <properties>
+    <property name="Class" value="CambioZona"/>
+   </properties>
+  </tile>
+  <tile id="36890">
+   <properties>
+    <property name="Class" value="Simon"/>
+   </properties>
+  </tile>
+  <tile id="42519">
+   <properties>
+    <property name="Class" value="Simon"/>
+   </properties>
+  </tile>
+  <tile id="44454">
+   <properties>
+    <property name="Class" value="CambioZona"/>
+   </properties>
+  </tile>
  </tileset>
- <imagelayer name="background" visible="0">
+ <imagelayer name="background">
   <image source="../images/stage-1-lvl-1-1.png" width="2048" height="448"/>
  </imagelayer>
  <layer name="Collision" width="512" height="112">
@@ -57357,4 +57437,8 @@
    <tile gid="57344"/>
   </data>
  </layer>
+ <objectgroup name="Cosas">
+  <object id="14" name="CambioZona" gid="44455" x="1688" y="348" width="4" height="4"/>
+  <object id="20" name="Simon" gid="36891" x="168" y="332" width="4" height="4"/>
+ </objectgroup>
 </map>
