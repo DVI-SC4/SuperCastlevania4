@@ -14,8 +14,7 @@ Como de cara a la memoria y la entrega nos piden poner todo lo que se ha hecho y
 ### César
 
 * Optimizar en general todo el código de Simon, que sea también más legible y sencillo.
-* Arreglando posición de látigo correcta con Simon escalado al doble. 
-* Redactando parte de la memoria.
+* Arreglando posición de látigo correcta con Simon escalado al doble.
 
 ### Sergio
 
@@ -40,7 +39,10 @@ Como de cara a la memoria y la entrega nos piden poner todo lo que se ha hecho y
 * Preparación de sprites de objetos recogibles (mejora de látigo, carne, corazones, etc.).
 * Preparación de sprites, jsons y animaciones por frames de enemigos básicos (murciélago, esqueleto, bicéfalo, etc.) con posiciones de avance, ataques y muerte.
 * Preparación de sprite, json y animación por frames del jefe final del nivel.
-* Guía de movimientos del personaje para la memoria (edición de gifs e imágenes de combinaciones de teclas).
+* Redacción de la memoria
+	* Sección de objetivo del juego	 
+	* Sección de principales mecánicas (con preparación y edición de los gifs y las imágenes de combinaciones de teclas).
+	* Sección de Simon en personajes.
 
 ### Sergio
 
