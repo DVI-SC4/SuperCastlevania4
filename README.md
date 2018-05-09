@@ -5,13 +5,14 @@ Proyecto final de la asignatura Desarrollo de Videojuegos mediante Tecnologias W
 
 * [1. Diseño del juego](https://github.com/DVI-SC4/SuperCastlevania4#1-dise%C3%B1o-del-juego)
 	* [1.1. Objetivo del juego](https://github.com/DVI-SC4/SuperCastlevania4#11-objetivo-del-juego) 
-	* [1.2. Principales mecánicas](https://github.com/DVI-SC4/SuperCastlevania4#2-principales-mec%C3%A1nicas)
+	* [1.2. Principales mecánicas](https://github.com/DVI-SC4/SuperCastlevania4#12-principales-mec%C3%A1nicas)
 		* [Avance y retroceso](https://github.com/DVI-SC4/SuperCastlevania4#1-avance-y-retroceso)
 		* [Agacharse](https://github.com/DVI-SC4/SuperCastlevania4#2-agacharse)
 		* [Salto](https://github.com/DVI-SC4/SuperCastlevania4#3-salto)
 		* [Subir y bajar escaleras](https://github.com/DVI-SC4/SuperCastlevania4#4-subir-y-bajar-escaleras)
 		* [Ataque](https://github.com/DVI-SC4/SuperCastlevania4#5-ataque)
-			*  []()
+			*  [Ataques desde el suelo](https://github.com/DVI-SC4/SuperCastlevania4#51-ataques-desde-el-suelo)
+			*  [Ataques en el aire](https://github.com/DVI-SC4/SuperCastlevania4#52-ataques-en-el-aire)
 		* [Uso de armas secundarias](https://github.com/DVI-SC4/SuperCastlevania4#6-uso-de-armas-secundarias)  
 	* [1.3. Personajes](https://github.com/DVI-SC4/SuperCastlevania4#13-personajes)
 * [2. Diseño de la implementación](https://github.com/DVI-SC4/SuperCastlevania4#2-dise%C3%B1o-de-la-implementaci%C3%B3n)
@@ -23,7 +24,7 @@ Proyecto final de la asignatura Desarrollo de Videojuegos mediante Tecnologias W
 
 # 1. Diseño del juego
 
-(se puede confeccionar a partir del documento de concepto entregado anteriormente, ampliando con las nuevas mecánicas añadidas y explicando mínimamente en qué consisten. Acompañar de algunas imágenes o capturas de nuestros recursos o cosas ya implementadas)
+(se puede confeccionar a partir del documento de concepto entregado anteriormente, ampliando con las nuevas mecánicas añadidas y explicando mínimamente en qué consisten. Acompañar de algunas imágenes o capturas de nuestros recursos o cosas ya implementadas) (podemos empezar diciendo que usamos Quintus y qué base hemos usado para las pruebas y demás)
 	
 ## 1.1. Objetivo del juego
 
