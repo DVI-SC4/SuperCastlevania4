@@ -189,114 +189,114 @@ Q.Sprite.extend("EscaleraArriba",{
 
 
 	  Q.animations("andando_normal", {
-		  anda_derecha: { frames: [0,1,2,3,4,5], rate: 5/15},
-		  anda_izquierda: { frames: [6,7,8,9,10,11], rate: 5/15}
+	      anda_derecha: { frames: [0,1,2,3,4,5], rate: 5/15},
+	      anda_izquierda: { frames: [6,7,8,9,10,11], rate: 5/15}
 	  });
 
 	  Q.animations("atacando", {
-		  ataca_derecha: { frames: [0,1,2], rate: 2/15, loop:false, trigger: "showwhip"},
-		  ataca_izquierda: { frames: [3,4,5], rate: 2/15, loop:false, trigger: "showwhip"}
+	      ataca_derecha: { frames: [0,1,2], rate: 2/15, loop:false, trigger: "showwhip"},
+	      ataca_izquierda: { frames: [3,4,5], rate: 2/15, loop:false, trigger: "showwhip"}
 	  });
 
 	  Q.animations("agachado_atacando", {
-		  ataca_agachado_derecha: { frames: [0,1,2], rate: 2/15, loop:false, trigger: "showwhip_ducked"},
-		  ataca_agachado_izquierda: { frames: [3,4,5], rate: 2/15, loop:false, trigger: "showwhip_ducked"}
+	      ataca_agachado_derecha: { frames: [0,1,2], rate: 2/15, loop:false, trigger: "showwhip_ducked"},
+	      ataca_agachado_izquierda: { frames: [3,4,5], rate: 2/15, loop:false, trigger: "showwhip_ducked"}
 	  });
 
 	  Q.animations("normalito", {
-		  pose_normal_derecha: { frames: [0], rate: 5/15, loop:false},
-		  pose_normal_izquierda: { frames: [1], rate: 5/15, loop:false}
+	      pose_normal_derecha: { frames: [0], rate: 5/15, loop:false},
+	      pose_normal_izquierda: { frames: [1], rate: 5/15, loop:false}
 	  });
 
 	  Q.animations("agachado", {
-		  pose_agachado_derecha: { frames: [0], rate: 5/15, loop:false},
-		  pose_agachado_izquierda: { frames: [1], rate: 5/15, loop:false}
+	      pose_agachado_derecha: { frames: [0], rate: 5/15, loop:false},
+	      pose_agachado_izquierda: { frames: [1], rate: 5/15, loop:false}
 	  });
 
 	  Q.animations("andando_agachado", {
-		  pose_andando_agachado_derecha: { frames: [0,1,2,3,4], rate: 6/15},
-		  pose_andando_agachado_izquierda: { frames: [5,6,7,8,9], rate: 6/15}
+	      pose_andando_agachado_derecha: { frames: [0,1,2,3,4], rate: 6/15},
+	      pose_andando_agachado_izquierda: { frames: [5,6,7,8,9], rate: 6/15}
 	  });
 
 	  Q.animations("saltando", {
-		  salta_derecha: { frames: [0], rate: 5/15},
-		  salta_izquierda: { frames: [1], rate: 5/15}
+	      salta_derecha: { frames: [0], rate: 5/15},
+	      salta_izquierda: { frames: [1], rate: 5/15}
 	  });
 
 	  Q.animations("saltando_atacando", {
-		  saltataca_derecha: { frames: [0,1,2], rate: 3/15, loop:false, trigger: "showwhip_jumping"},
-		  saltataca_izquierda: { frames: [3,4,5], rate: 3/15, loop:false, trigger: "showwhip_jumping"}
+	      saltataca_derecha: { frames: [0,1,2], rate: 3/15, loop:false, trigger: "showwhip_jumping"},
+	      saltataca_izquierda: { frames: [3,4,5], rate: 3/15, loop:false, trigger: "showwhip_jumping"}
 	  });
 
 	  Q.animations("atacando_haciarriba", {
-		  ataca_haciarriba_derecha: { frames: [0,1,2], rate: 2/15, loop:false, trigger: "showwhip_upwards"},
-		  ataca_haciarriba_izquierda: { frames: [3,4,5], rate: 2/15, loop:false, trigger: "showwhip_upwards"}
+	      ataca_haciarriba_derecha: { frames: [0,1,2], rate: 2/15, loop:false, trigger: "showwhip_upwards"},
+	      ataca_haciarriba_izquierda: { frames: [3,4,5], rate: 2/15, loop:false, trigger: "showwhip_upwards"}
 	  });
 
 	  Q.animations("atacando_diagonal", {
-		  ataca_diagonal_derecha: { frames: [0,1,2], rate: 2/15, loop:false, trigger: "showwhip_diagonal"},
-		  ataca_diagonal_izquierda: { frames: [3,4,5], rate: 2/15, loop:false, trigger: "showwhip_diagonal"}
+	      ataca_diagonal_derecha: { frames: [0,1,2], rate: 2/15, loop:false, trigger: "showwhip_diagonal"},
+	      ataca_diagonal_izquierda: { frames: [3,4,5], rate: 2/15, loop:false, trigger: "showwhip_diagonal"}
 	  });
 
 	  Q.animations("saltando_atacando_haciarriba", {
-		  saltataca_haciarriba_derecha: { frames: [0,1,2], rate: 2/15, loop:false, trigger: "showwhip_upwards_jumping"},
-		  saltataca_haciarriba_izquierda: { frames: [3,4,5], rate: 2/15, loop:false, trigger: "showwhip_upwards_jumping"}
+	      saltataca_haciarriba_derecha: { frames: [0,1,2], rate: 2/15, loop:false, trigger: "showwhip_upwards_jumping"},
+	      saltataca_haciarriba_izquierda: { frames: [3,4,5], rate: 2/15, loop:false, trigger: "showwhip_upwards_jumping"}
 	  });
 
 	  Q.animations("saltando_atacando_diagonalarriba", {
-		  saltataca_diagonal_haciarriba_derecha: { frames: [0,1,2], rate: 2/15, loop:false, trigger: "showwhip_upwards_jumping_diagonal"},
-		  saltataca_diagonal_haciarriba_izquierda: { frames: [3,4,5], rate: 2/15, loop:false, trigger: "showwhip_upwards_jumping_diagonal"}
+	      saltataca_diagonal_haciarriba_derecha: { frames: [0,1,2], rate: 2/15, loop:false, trigger: "showwhip_upwards_jumping_diagonal"},
+	      saltataca_diagonal_haciarriba_izquierda: { frames: [3,4,5], rate: 2/15, loop:false, trigger: "showwhip_upwards_jumping_diagonal"}
 	  });
 
 	  Q.animations("saltando_atacando_diagonalabajo", {
-		  saltataca_diagonal_haciabajo_derecha: { frames: [0,1,2], rate: 2/15, loop:false, trigger: "showwhip_downwards_jumping_diagonal"},
-		  saltataca_diagonal_haciabajo_izquierda: { frames: [3,4,5], rate: 2/15, loop:false, trigger: "showwhip_downwards_jumping_diagonal"}
+	      saltataca_diagonal_haciabajo_derecha: { frames: [0,1,2], rate: 2/15, loop:false, trigger: "showwhip_downwards_jumping_diagonal"},
+	      saltataca_diagonal_haciabajo_izquierda: { frames: [3,4,5], rate: 2/15, loop:false, trigger: "showwhip_downwards_jumping_diagonal"}
 	  });
 
 	  Q.animations("saltando_atacando_haciabajo", {
-		  saltataca_haciabajo_derecha: { frames: [0,1,2], rate: 2/15, loop:false, trigger: "showwhip_downwards_jumping"},
-		  saltataca_haciabajo_izquierda: { frames: [3,4,5], rate: 2/15, loop:false, trigger: "showwhip_downwards_jumping"}
+	      saltataca_haciabajo_derecha: { frames: [0,1,2], rate: 2/15, loop:false, trigger: "showwhip_downwards_jumping"},
+	      saltataca_haciabajo_izquierda: { frames: [3,4,5], rate: 2/15, loop:false, trigger: "showwhip_downwards_jumping"}
 	  });
 
 	  Q.animations("simon_muriendo", {
-		  muriendo: { frames: [0,1,2], rate: 6/15, loop:false} //se me olvidó hacer su versión hacia la izquierda, pero se podrá hacer un flip X aunque pierda algo de calidad
+	      muriendo: { frames: [0,1,2], rate: 6/15, loop:false} //se me olvidó hacer su versión hacia la izquierda, pero se podrá hacer un flip X aunque pierda algo de calidad
 	  });
 
 
 	  //CARMEN estas animaciones de abajo son las que te interesa activar para probar las escaleras en ciertos momentos del step de Simon
 	  Q.animations("subiendo_escaleras", {
-		  sube_escaleras_haciaderecha: { frames: [0,1,2,3,4,5,6], rate: 5/15, loop:false},
-		  sube_escaleras_haciaizquierda: { frames: [7,8,9,10,11,12,13], rate: 5/15, loop:false}
+	      sube_escaleras_haciaderecha: { frames: [0,1,2,3,4,5,6], rate: 5/15, loop:false},
+	      sube_escaleras_haciaizquierda: { frames: [7,8,9,10,11,12,13], rate: 5/15, loop:false}
 	  });
 
 	  Q.animations("subiendo_escaleras_atacando", {
-		  sube_escaleras_haciaderecha_atacando: { frames: [0,1,2,3,4,5], rate: 5/15, loop:false},
-		  sube_escaleras_haciaizquierda_atacando: { frames: [6,7,8,9,10,11], rate: 5/15, loop:false}
+	      sube_escaleras_haciaderecha_atacando: { frames: [0,1,2,3,4,5], rate: 5/15, loop:false},
+	      sube_escaleras_haciaizquierda_atacando: { frames: [6,7,8,9,10,11], rate: 5/15, loop:false}
 	  });
 
 	  Q.animations("subiendo_escaleras_atacando_haciarriba", {
-		  sube_escaleras_haciaderecha_atacando_haciarriba: { frames: [0,1,2], rate: 5/15, loop:false},
-		  sube_escaleras_haciaizquierda_atacando_haciarriba: { frames: [3,4,5], rate: 5/15, loop:false}
+	      sube_escaleras_haciaderecha_atacando_haciarriba: { frames: [0,1,2], rate: 5/15, loop:false},
+	      sube_escaleras_haciaizquierda_atacando_haciarriba: { frames: [3,4,5], rate: 5/15, loop:false}
 	  });
 
 	  Q.animations("subiendo_escaleras_atacando_diagonal", {
-		  sube_escaleras_haciaderecha_atacando_diagonal: { frames: [0,1,2], rate: 5/15, loop:false},
-		  sube_escaleras_haciaizquierda_atacando_diagonal: { frames: [3,4,5], rate: 5/15, loop:false}
+	      sube_escaleras_haciaderecha_atacando_diagonal: { frames: [0,1,2], rate: 5/15, loop:false},
+	      sube_escaleras_haciaizquierda_atacando_diagonal: { frames: [3,4,5], rate: 5/15, loop:false}
 	  });
 
 	  Q.animations("bajando_escaleras", {
-		  baja_escaleras_haciaizquierda: { frames: [0,1,2,3,4,5], rate: 5/15, loop:false},
-		  baja_escaleras_haciaderecha: { frames: [6,7,8,9,10,11], rate: 5/15, loop:false}
+	      baja_escaleras_haciaizquierda: { frames: [0,1,2,3,4,5], rate: 5/15, loop:false},
+	      baja_escaleras_haciaderecha: { frames: [6,7,8,9,10,11], rate: 5/15, loop:false}
 	  });
 
 	   Q.animations("bajando_escaleras_atacando", {
-		  baja_escaleras_haciaizquierda_atacando: { frames: [0,1,2], rate: 5/15, loop:false},
-		  baja_escaleras_haciaderecha_atacando: { frames: [3,4,5], rate: 5/15, loop:false}
+	      baja_escaleras_haciaizquierda_atacando: { frames: [0,1,2], rate: 5/15, loop:false},
+	      baja_escaleras_haciaderecha_atacando: { frames: [3,4,5], rate: 5/15, loop:false}
 	  });
 
 	   Q.animations("bajando_escaleras_atacando_diagonal", {
-		  baja_escaleras_haciaizquierda_atacando_diagonal: { frames: [0,1,2], rate: 5/15, loop:false},
-		  baja_escaleras_haciaderecha_atacando_diagonal: { frames: [3,4,5], rate: 5/15, loop:false}
+	      baja_escaleras_haciaizquierda_atacando_diagonal: { frames: [0,1,2], rate: 5/15, loop:false},
+	      baja_escaleras_haciaderecha_atacando_diagonal: { frames: [3,4,5], rate: 5/15, loop:false}
 	  });
 
 
@@ -1357,7 +1357,7 @@ Q.Sprite.extend("EscaleraArriba",{
 				this.stage.viewport.offsetX = 0;
 				this.stage.viewport.offsetY = 60;
 			}
-			if((this.p.x > (this.p.AnchoMapa - Q.width/2))&&(this.p.x < Q.width/2)){
+			if((this.p.x > (this.p.AnchoMapa - Q.width/2)) || (this.p.x < Q.width/2)){
 				this.stage.add("viewport").unfollow();
 			}
 
