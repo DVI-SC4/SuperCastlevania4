@@ -1,5 +1,5 @@
 var level=1;
-var escena = 1;
+var escena = 2;
 var MAX_ESCENA=2;
 var game = function() {
 	
@@ -22,7 +22,6 @@ Q.Sprite.extend("CambioZona",{
 						asset: "simon_normal.png",
 						w: 10,
 						h: 10,
-						fill: "rgba(250,0,0,0.5)",
 						type: Q.SPRITE_ENEMY,
 						gravity:0,
 						cambiandoZona: false,
@@ -33,12 +32,12 @@ Q.Sprite.extend("CambioZona",{
 					}); 
 
 			this.add('2d, aiBounce, animation');
-
+			console.log(this);
 			this.on("bump.left,bump.right, bump.top, bump.bottom",function(collision) {
 
 				console.log("taschocao");
 				//console.log(this.stage.viewport);
-				this.stage.del(".viewport");
+				this.stage.del("viewport");
 				this.p.cambiandoZona = true;
 				this.p.type = Q.SPRITE_NONE;
 				this.p.collisionMask = Q.SPRITE_NONE;
@@ -75,8 +74,44 @@ Q.Sprite.extend("CambioZona",{
 
 		}//step
 
-	});//extend Goomba
+	});
 
+
+/*-----------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------- Cambio de zona ------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------*/
+
+Q.Sprite.extend("EscaleraArriba",{
+
+		init: function(p) {
+
+			console.log("Estamos creando una instancia de escalera");
+
+			this._super(p, {
+						/*asset: "simon_normal.png",*/
+						w:10,
+						h:10,
+						gravity:0,
+						type: Q.SPRITE_ENEMY
+					}); 
+
+			this.add('2d, aiBounce, animation');
+
+			this.on("bump.left,bump.right, bump.top, bump.bottom",function(collision) {
+				console.log("holaaaaaaaaaaaaaaaaaa");
+				if(collision.obj.isA("Simon")) {
+			 		collision.obj.p.vy = -300;
+			 		console.log("HOLIIIIIIIIIII");
+				}
+			});
+			//console.log(this);
+
+		},//init 
+		step: function (dt){
+			
+		}//step
+
+	});
 
 
 
@@ -120,11 +155,7 @@ Q.Sprite.extend("CambioZona",{
 	});//scene startgame
 
 
-	
 
-/*
-nivel1.tmx, nivel2.tmx, nivel3.tmx,nivel4.tmx, mario_small.png, mario_small.json, goomba.png, goomba.json, bloopa.png, bloopa.json, block1.png, block.json, koopa.png, koopa.json, princess.png, mainTitle.png,100.gif,200.gif,400.gif, music_main.ogg, music_level_complete.ogg, music_die.ogg, coin.ogg, coin.png, coin.json, life.png, jump.mp3, unlocked.mp3, coin.gif, vida.png, score.png, big.png
-*/
 
 	Q.loadTMX(" mario_small.png, mario_small.json,mainTitle1.jpg, nivel1-scn1.tmx,  nivel1-scn2.tmx, simon_intro.png, simon_intro.json, whip.png, basic_whip.png, simon_normal.png, simon_normal.json, simon_normal_andando.png, simon_normal_andando.json, simon_agachado.png, simon_agachado.json, simon_normal_atacando.png, simon_normal_atacando.json, simon_agachado_atacando.png, simon_agachado_atacando.json, simon_agachado_andando.png, simon_agachado_andando.json, simon_saltando.png, simon_saltando.json, simon_saltando_atacando.png, simon_saltando_atacando.json, simon_atacando_haciarriba.png, simon_atacando_haciarriba.json, simon_herido.png, simon_muerto.png, simon_muerto.json, simon_atacando_diagonal.png, simon_atacando_diagonal.json, simon_saltando_atacando_haciarriba.png, simon_saltando_atacando_haciarriba.json, simon_saltando_atacando_diagonalarriba.png, simon_saltando_atacando_diagonalarriba.json, simon_saltando_atacando_diagonalabajo.png, simon_saltando_atacando_diagonalabajo.json, simon_saltando_atacando_haciabajo.png, simon_saltando_atacando_haciabajo.json, simon_subescaleras.png, simon_subescaleras.json, simon_subescaleras_atacando.png, simon_subescaleras_atacando.json, simon_subescaleras_atacando_haciarriba.png, simon_subescaleras_atacando_haciarriba.json, simon_subescaleras_atacando_diagonal.png, simon_subescaleras_atacando_diagonal.json, simon_bajaescaleras.png, simon_bajaescaleras.json, simon_bajaescaleras_atacando.png, simon_bajaescaleras_atacando.json, simon_bajaescaleras_atacando_diagonal.png, simon_bajaescaleras_atacando_diagonal.json", function() {
 	  
@@ -290,8 +321,6 @@ nivel1.tmx, nivel2.tmx, nivel3.tmx,nivel4.tmx, mario_small.png, mario_small.json
 
 
 
-
-
 	Q.Sprite.extend("Simon",{ 
 	//SOLUCIONAR QUE SI DEJO PULSADO LATIGO MIENTRAS ATACO DE PIE, NO PUEDA SALTAR NI AGACHARSE HASTA QUE LO SUELTE. 
 	//Y MIENTRAS PULSO LATIGO AGACHADO, QUE NO PUEDA PONERSE EN PIE NI SALTAR HASTA QUE LO SUELTE
@@ -306,11 +335,12 @@ nivel1.tmx, nivel2.tmx, nivel3.tmx,nivel4.tmx, mario_small.png, mario_small.json
 			this._super(p, {
 								sheet: "normalito",
 								sprite: "normalito",
-								x: 60,//55,
-								y: 10,
+								x: 1200,//55,
+								y: 528,
 								gravity: 0.7,
+								scale: 2,
 								latigo: null,
-								latigoMejorado: false,
+								latigoMejorado: true,
 								latigoActivado: false,
 								agachado: false,
 								saltando: false,
@@ -318,8 +348,8 @@ nivel1.tmx, nivel2.tmx, nivel3.tmx,nivel4.tmx, mario_small.png, mario_small.json
 								atacando_verticalmente: false,
 								atacando_verticalmente_abajo: false,
 								atacando_diagonalmente: false,
-								atacando_diagonalmente_abajo: false,
-								scale: 2.0
+								atacando_diagonalmente_abajo: false
+								
 								//alturaActualDePie: 528
 						   }
 						); //_super
@@ -340,6 +370,70 @@ nivel1.tmx, nivel2.tmx, nivel3.tmx,nivel4.tmx, mario_small.png, mario_small.json
 
 
 		},//init 
+
+		posicionaLatigo: function(valorAngulo, valorFlip, despXmejorado, despYmejorado, despXizq, despYizq, despX, despY,despXmejoradoIzq, despYmejoradoIzq){
+			//var desplazamientoX = 0;
+			//var desplazamientoY = 0;
+			//var valorAngulo = -45;
+			var dibujoLatigo = "";
+
+			if(this.p.direction == "left"){
+				if(this.p.latigoMejorado){
+					desplazamientoX = despXmejoradoIzq;
+					desplazamientoY = despYmejoradoIzq;
+				}
+				else{
+					desplazamientoX = despXizq;
+					desplazamientoY = despYizq;
+				}
+				
+				valorAngulo = valorAngulo;
+			}
+			else if(this.p.direction == "right"){
+				if(this.p.latigoMejorado){
+					desplazamientoX = this.p.w+3;
+					desplazamientoY = -this.p.h+7;
+					dibujoLatigo = "whip.png";
+				}
+				else {
+					desplazamientoX = this.p.w-1;
+					desplazamientoY = -this.p.h+11;
+					dibujoLatigo = "basic_whip.png";
+				}
+			}
+
+
+
+			if(this.p.latigoMejorado){
+				desplazamientoX = this.p.w+3;
+				desplazamientoY = -this.p.h+7;
+				dibujoLatigo = "whip.png";
+			}
+			else {
+				desplazamientoX = this.p.w-1;
+				desplazamientoY = -this.p.h+11;
+				dibujoLatigo = "basic_whip.png";
+			}
+
+			if(this.p.direction == "left") {
+				if(this.p.latigoMejorado){
+					desplazamientoX = -this.p.w-4;
+					desplazamientoY = -this.p.h+5;
+				}
+				else{
+					desplazamientoX = -this.p.w-1;
+					desplazamientoY = -this.p.h+11;
+				}
+				
+				valorAngulo = -135;
+			}
+
+			desplazamientoX *= this.p.scale;
+			desplazamientoY *= this.p.scale;
+
+			this.p.latigo = this.stage.insert(new Q.Whip({asset: dibujoLatigo, x: this.p.x+desplazamientoX, y:this.p.y+desplazamientoY, angle: valorAngulo}));
+
+		},
 
 		//TODAS ESTAS FUNCIONES QUE HAY HASTA QUE COMIENZA EL STEP SE PUEDEN GENERALIZAR, SE HARÁ MÁS ADELANTE SE LIMPIARÁ+OPTIMIZARÁ EL CÓDIGO
 		dibujalatigo_depie: function() {
@@ -364,6 +458,9 @@ nivel1.tmx, nivel2.tmx, nivel3.tmx,nivel4.tmx, mario_small.png, mario_small.json
 				desplazamientoX *= -1;
 				valorFlip = "x";
 			}
+
+			desplazamientoX *= this.p.scale;
+			desplazamientoY *= this.p.scale;
 
 			this.p.latigo = this.stage.insert(new Q.Whip({asset: dibujoLatigo, x: this.p.x+desplazamientoX, y:this.p.y+desplazamientoY, flip: valorFlip}));
 			
@@ -391,6 +488,9 @@ nivel1.tmx, nivel2.tmx, nivel3.tmx,nivel4.tmx, mario_small.png, mario_small.json
 				valorFlip = "x";
 			}
 
+			desplazamientoX *= this.p.scale;
+			desplazamientoY *= this.p.scale;
+
 			this.p.latigo = this.stage.insert(new Q.Whip({asset: dibujoLatigo, x: this.p.x+desplazamientoX, y:this.p.y+desplazamientoY, flip: valorFlip}));
 		},
 
@@ -417,6 +517,9 @@ nivel1.tmx, nivel2.tmx, nivel3.tmx,nivel4.tmx, mario_small.png, mario_small.json
 				valorFlip = "x";
 			}
 
+			desplazamientoX *= this.p.scale;
+			desplazamientoY *= this.p.scale;
+
 			this.p.latigo = this.stage.insert(new Q.Whip({asset: dibujoLatigo, x: this.p.x+desplazamientoX, y:this.p.y+desplazamientoY, flip: valorFlip}));
 
 		},
@@ -442,6 +545,9 @@ nivel1.tmx, nivel2.tmx, nivel3.tmx,nivel4.tmx, mario_small.png, mario_small.json
 			if(this.p.direction == "left") {
 				desplazamientoX = -5;
 			}
+
+			desplazamientoX *= this.p.scale;
+			desplazamientoY *= this.p.scale;
 
 			this.p.latigo = this.stage.insert(new Q.Whip({asset: dibujoLatigo, x: this.p.x+desplazamientoX, y:this.p.y+desplazamientoY, angle: valorAngulo}));
 
@@ -478,6 +584,9 @@ nivel1.tmx, nivel2.tmx, nivel3.tmx,nivel4.tmx, mario_small.png, mario_small.json
 				valorAngulo = -135;
 			}
 
+			desplazamientoX *= this.p.scale;
+			desplazamientoY *= this.p.scale;
+
 			this.p.latigo = this.stage.insert(new Q.Whip({asset: dibujoLatigo, x: this.p.x+desplazamientoX, y:this.p.y+desplazamientoY, angle: valorAngulo}));
 
 		},
@@ -503,6 +612,9 @@ nivel1.tmx, nivel2.tmx, nivel3.tmx,nivel4.tmx, mario_small.png, mario_small.json
 			if(this.p.direction == "left") {
 				desplazamientoX = -5;
 			}
+
+			desplazamientoX *= this.p.scale;
+			desplazamientoY *= this.p.scale;
 
 			this.p.latigo = this.stage.insert(new Q.Whip({asset: dibujoLatigo, x: this.p.x+desplazamientoX, y:this.p.y+desplazamientoY, angle: valorAngulo}));
 			
@@ -533,6 +645,9 @@ nivel1.tmx, nivel2.tmx, nivel3.tmx,nivel4.tmx, mario_small.png, mario_small.json
 				valorAngulo = -135;
 			}
 
+			desplazamientoX *= this.p.scale;
+			desplazamientoY *= this.p.scale;
+
 			this.p.latigo = this.stage.insert(new Q.Whip({asset: dibujoLatigo, x: this.p.x+desplazamientoX, y:this.p.y+desplazamientoY, angle: valorAngulo}));
 
 		},
@@ -560,6 +675,9 @@ nivel1.tmx, nivel2.tmx, nivel3.tmx,nivel4.tmx, mario_small.png, mario_small.json
 				valorAngulo = 135;
 			}
 
+			desplazamientoX *= this.p.scale;
+			desplazamientoY *= this.p.scale;
+
 			this.p.latigo = this.stage.insert(new Q.Whip({asset: dibujoLatigo, x: this.p.x+desplazamientoX, y:this.p.y+desplazamientoY, angle: valorAngulo}));
 
 		},
@@ -586,6 +704,9 @@ nivel1.tmx, nivel2.tmx, nivel3.tmx,nivel4.tmx, mario_small.png, mario_small.json
 				desplazamientoX = -3;
 			}
 
+			desplazamientoX *= this.p.scale;
+			desplazamientoY *= this.p.scale;
+
 			this.p.latigo = this.stage.insert(new Q.Whip({asset: dibujoLatigo, x: this.p.x+desplazamientoX, y:this.p.y+desplazamientoY, angle: valorAngulo}));
 
 		},
@@ -608,7 +729,7 @@ nivel1.tmx, nivel2.tmx, nivel3.tmx,nivel4.tmx, mario_small.png, mario_small.json
 				//this.play("still_left");
 			}
 			*/
-			//console.log(this.p.x);
+
 			//compruebo con cada step que todo esté consistente
 			if(!this.p.latigo) this.p.latigoActivado = false;
 			if(!Q.inputs['Q'] && !this.p.saltando && !Q.inputs['W'] && !Q.inputs['right'] && !Q.inputs['up'] && !Q.inputs['down'] && !Q.inputs['left']){
@@ -1088,6 +1209,9 @@ nivel1.tmx, nivel2.tmx, nivel3.tmx,nivel4.tmx, mario_small.png, mario_small.json
 							
 						if(this.p.direction == "left") desplazamientoX *= -1;
 
+						desplazamientoX *= this.p.scale;
+						desplazamientoY *= this.p.scale;
+
 						this.p.latigo.p.x = this.p.x+desplazamientoX;
 						this.p.latigo.p.y = this.p.y+desplazamientoY;
 					}
@@ -1164,6 +1288,9 @@ nivel1.tmx, nivel2.tmx, nivel3.tmx,nivel4.tmx, mario_small.png, mario_small.json
 							
 						}
 
+						desplazamientoX *= this.p.scale;
+						desplazamientoY *= this.p.scale;
+
 						this.p.latigo.p.x = this.p.x+desplazamientoX;
 						this.p.latigo.p.y = this.p.y+desplazamientoY;
 
@@ -1205,6 +1332,9 @@ nivel1.tmx, nivel2.tmx, nivel3.tmx,nivel4.tmx, mario_small.png, mario_small.json
 							
 						}
 
+						desplazamientoX *= this.p.scale;
+						desplazamientoY *= this.p.scale;
+
 						this.p.latigo.p.x = this.p.x+desplazamientoX;
 						this.p.latigo.p.y = this.p.y+desplazamientoY;
 					}
@@ -1218,16 +1348,17 @@ nivel1.tmx, nivel2.tmx, nivel3.tmx,nivel4.tmx, mario_small.png, mario_small.json
 			if(this.p["y"] > 444){
 				
 				console.log("Tas caio lol");
-				//Q.stageScene("endGame",2, { label: "You Died", sound: "music_die.ogg" }); 
+				Q.stageScene("endGame",2, { label: "You Died", sound: "music_die.ogg" }); 
 				this.destroy();
 			}
-			//console.log(this);
-			if(this.p.x >= Q.width/2){
-				//console.log(this.stage);
+//
+			if((this.p.x >= Q.width/2)&&(this.p.x <= (this.p.AnchoMapa - Q.width/2))){
 				this.stage.add("viewport").follow(this,{ x: true, y: false });
 				this.stage.viewport.offsetX = 0;
 				this.stage.viewport.offsetY = 60;
-				//console.log(this.stage);
+			}
+			if((this.p.x > (this.p.AnchoMapa - Q.width/2))&&(this.p.x < Q.width/2){
+				this.stage.add("viewport").unfollow();
 			}
 
 		}//step
@@ -1248,11 +1379,13 @@ nivel1.tmx, nivel2.tmx, nivel3.tmx,nivel4.tmx, mario_small.png, mario_small.json
 
 			this._super(p, {
 								asset: "basic_whip.png", //por defecto el personaje siempre empieza con el latigo basico, y éste se actualiza al recoger la mejora. Si el personaje pierde una vida, el latigo vuelve a ser basico
+								x: 100, 
+								y: 528, 
 								yaColisionada: false,
+								scale: 2,
 								gravity: 0,
 								sensor: true,
 								collisionMask: Q.SPRITE_NONE,
-								scale:2.0,
 								damage_hits: null //con el latigo basico hará falta dar el doble de golpes que con el mejorado, pues es menos potente. 
 						   }
 						); //_super
@@ -1276,6 +1409,7 @@ nivel1.tmx, nivel2.tmx, nivel3.tmx,nivel4.tmx, mario_small.png, mario_small.json
 		}*/
 
 	});//extend Whip
+
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

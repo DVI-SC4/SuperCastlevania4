@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="512" height="112" tilewidth="4" tileheight="4" infinite="0" nextobjectid="21">
+<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="512" height="112" tilewidth="4" tileheight="4" infinite="0" nextobjectid="43">
  <tileset firstgid="1" name="tiled" tilewidth="4" tileheight="4" tilecount="57344" columns="512">
   <image source="../images/stage-1-lvl-1-1.png" width="2048" height="448"/>
   <tile id="22168">
@@ -77,13 +77,59 @@
     <property name="Class" value="Simon"/>
    </properties>
   </tile>
+  <tile id="43531">
+   <properties>
+    <property name="Class" value="EscaleraArriba"/>
+    <property name="hola" value="he"/>
+   </properties>
+  </tile>
   <tile id="44454">
    <properties>
     <property name="Class" value="CambioZona"/>
    </properties>
   </tile>
+  <tile id="49776">
+   <properties>
+    <property name="Class" value="EscaleraArriba"/>
+   </properties>
+  </tile>
+  <tile id="49777">
+   <properties>
+    <property name="Class" value="EscaleraArriba"/>
+   </properties>
+  </tile>
+  <tile id="49778">
+   <properties>
+    <property name="Class" value="EscaleraArriba"/>
+   </properties>
+  </tile>
+  <tile id="49779">
+   <properties>
+    <property name="Class" value="EscaleraArriba"/>
+   </properties>
+  </tile>
+  <tile id="49780">
+   <properties>
+    <property name="Class" value="EscaleraArriba"/>
+   </properties>
+  </tile>
+  <tile id="49781">
+   <properties>
+    <property name="Class" value="EscaleraArriba"/>
+   </properties>
+  </tile>
+  <tile id="49782">
+   <properties>
+    <property name="Class" value="EscaleraArriba"/>
+   </properties>
+  </tile>
+  <tile id="49783">
+   <properties>
+    <property name="Class" value="EscaleraArriba"/>
+   </properties>
+  </tile>
  </tileset>
- <imagelayer name="background">
+ <imagelayer name="background" visible="0">
   <image source="../images/stage-1-lvl-1-1.png" width="2048" height="448"/>
  </imagelayer>
  <layer name="Collision" width="512" height="112">
@@ -41687,14 +41733,14 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="41597"/>
-   <tile gid="41598"/>
-   <tile gid="41599"/>
-   <tile gid="41600"/>
-   <tile gid="41601"/>
-   <tile gid="41602"/>
-   <tile gid="41603"/>
-   <tile gid="41604"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -42199,14 +42245,14 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="42109"/>
-   <tile gid="42110"/>
-   <tile gid="42111"/>
-   <tile gid="42112"/>
-   <tile gid="42113"/>
-   <tile gid="42114"/>
-   <tile gid="42115"/>
-   <tile gid="42116"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -42711,14 +42757,14 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="42621"/>
-   <tile gid="42622"/>
-   <tile gid="42623"/>
-   <tile gid="42624"/>
-   <tile gid="42625"/>
-   <tile gid="42626"/>
-   <tile gid="42627"/>
-   <tile gid="42628"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -43223,14 +43269,14 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="43133"/>
-   <tile gid="43134"/>
-   <tile gid="43135"/>
-   <tile gid="43136"/>
-   <tile gid="43137"/>
-   <tile gid="43138"/>
-   <tile gid="43139"/>
-   <tile gid="43140"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -43731,14 +43777,14 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="43641"/>
-   <tile gid="43642"/>
-   <tile gid="43643"/>
-   <tile gid="43644"/>
-   <tile gid="43645"/>
-   <tile gid="43646"/>
-   <tile gid="43647"/>
-   <tile gid="43648"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -44243,14 +44289,14 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="44153"/>
-   <tile gid="44154"/>
-   <tile gid="44155"/>
-   <tile gid="44156"/>
-   <tile gid="44157"/>
-   <tile gid="44158"/>
-   <tile gid="44159"/>
-   <tile gid="44160"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -44755,14 +44801,14 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="44665"/>
-   <tile gid="44666"/>
-   <tile gid="44667"/>
-   <tile gid="44668"/>
-   <tile gid="44669"/>
-   <tile gid="44670"/>
-   <tile gid="44671"/>
-   <tile gid="44672"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -45267,14 +45313,14 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="45177"/>
-   <tile gid="45178"/>
-   <tile gid="45179"/>
-   <tile gid="45180"/>
-   <tile gid="45181"/>
-   <tile gid="45182"/>
-   <tile gid="45183"/>
-   <tile gid="45184"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -45775,14 +45821,14 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="45685"/>
-   <tile gid="45686"/>
-   <tile gid="45687"/>
-   <tile gid="45688"/>
-   <tile gid="45689"/>
-   <tile gid="45690"/>
-   <tile gid="45691"/>
-   <tile gid="45692"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -46287,14 +46333,14 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="46197"/>
-   <tile gid="46198"/>
-   <tile gid="46199"/>
-   <tile gid="46200"/>
-   <tile gid="46201"/>
-   <tile gid="46202"/>
-   <tile gid="46203"/>
-   <tile gid="46204"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -46799,14 +46845,14 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="46709"/>
-   <tile gid="46710"/>
-   <tile gid="46711"/>
-   <tile gid="46712"/>
-   <tile gid="46713"/>
-   <tile gid="46714"/>
-   <tile gid="46715"/>
-   <tile gid="46716"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -47311,14 +47357,14 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="47221"/>
-   <tile gid="47222"/>
-   <tile gid="47223"/>
-   <tile gid="47224"/>
-   <tile gid="47225"/>
-   <tile gid="47226"/>
-   <tile gid="47227"/>
-   <tile gid="47228"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -47819,14 +47865,14 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="47729"/>
-   <tile gid="47730"/>
-   <tile gid="47731"/>
-   <tile gid="47732"/>
-   <tile gid="47733"/>
-   <tile gid="47734"/>
-   <tile gid="47735"/>
-   <tile gid="47736"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -48331,14 +48377,14 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="48241"/>
-   <tile gid="48242"/>
-   <tile gid="48243"/>
-   <tile gid="48244"/>
-   <tile gid="48245"/>
-   <tile gid="48246"/>
-   <tile gid="48247"/>
-   <tile gid="48248"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -48843,14 +48889,14 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="48753"/>
-   <tile gid="48754"/>
-   <tile gid="48755"/>
-   <tile gid="48756"/>
-   <tile gid="48757"/>
-   <tile gid="48758"/>
-   <tile gid="48759"/>
-   <tile gid="48760"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -49355,14 +49401,14 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="49265"/>
-   <tile gid="49266"/>
-   <tile gid="49267"/>
-   <tile gid="49268"/>
-   <tile gid="49269"/>
-   <tile gid="49270"/>
-   <tile gid="49271"/>
-   <tile gid="49272"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -49859,22 +49905,22 @@
    <tile gid="49766"/>
    <tile gid="49767"/>
    <tile gid="49768"/>
-   <tile gid="49769"/>
-   <tile gid="49770"/>
-   <tile gid="49771"/>
-   <tile gid="49772"/>
-   <tile gid="49773"/>
-   <tile gid="49774"/>
-   <tile gid="49775"/>
-   <tile gid="49776"/>
-   <tile gid="49777"/>
-   <tile gid="49778"/>
-   <tile gid="49779"/>
-   <tile gid="49780"/>
-   <tile gid="49781"/>
-   <tile gid="49782"/>
-   <tile gid="49783"/>
-   <tile gid="49784"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile gid="49785"/>
    <tile gid="49786"/>
    <tile gid="49787"/>
@@ -57440,5 +57486,26 @@
  <objectgroup name="Cosas">
   <object id="14" name="CambioZona" gid="44455" x="1688" y="348" width="4" height="4"/>
   <object id="20" name="Simon" gid="36891" x="168" y="332" width="4" height="4"/>
+  <object id="23" name="e" gid="49777" x="448" y="392" width="4" height="4"/>
+  <object id="24" name="e" gid="49778" x="452" y="392" width="4" height="4"/>
+  <object id="25" name="e" gid="49779" x="456" y="392" width="4" height="4"/>
+  <object id="26" name="e" gid="49780" x="460" y="392" width="4" height="4"/>
+  <object id="27" name="e" gid="49781" x="464" y="392" width="4" height="4"/>
+  <object id="28" name="e" gid="49782" x="468" y="392" width="4" height="4"/>
+  <object id="29" name="e" gid="49783" x="472" y="392" width="4" height="4"/>
+  <object id="30" name="e" gid="49784" x="476" y="392" width="4" height="4"/>
+  <object id="34" gid="49777" x="416" y="392" width="4" height="4"/>
+  <object id="35" gid="49777" x="420" y="392" width="4" height="4"/>
+  <object id="36" gid="49777" x="424" y="392" width="4" height="4"/>
+  <object id="37" gid="49777" x="428" y="392" width="4" height="4"/>
+  <object id="38" gid="49777" x="432" y="392" width="4" height="4"/>
+  <object id="39" gid="49777" x="436" y="392" width="4" height="4"/>
+  <object id="40" gid="49777" x="444" y="392" width="4" height="4"/>
+  <object id="41" gid="49777" x="440" y="392" width="4" height="4"/>
+  <object id="42" gid="49777" x="412" y="392" width="4" height="4">
+   <properties>
+    <property name="direccion" value="derecha"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

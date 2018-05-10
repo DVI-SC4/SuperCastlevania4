@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="1023" height="112" tilewidth="4" tileheight="4" infinite="0" nextobjectid="3">
+<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="1023" height="112" tilewidth="4" tileheight="4" infinite="0" nextobjectid="5">
  <tileset firstgid="1" name="tiled2" tilewidth="4" tileheight="4" tilecount="114576" columns="1023">
   <image source="../../pruebasCastlevania/images/stage-2-lvl-1.png" width="4092" height="448"/>
   <tile id="56235">
@@ -114600,7 +114600,11 @@
   </data>
  </layer>
  <objectgroup name="Cosas">
-  <object id="1" name="simon" gid="77755" x="44" y="312" width="4" height="4"/>
+  <object id="1" name="simon" gid="77755" x="44" y="312" width="4" height="4">
+   <properties>
+    <property name="AnchoMapa" type="int" value="4092"/>
+   </properties>
+  </object>
   <object id="2" gid="56236" x="3948" y="400" width="4" height="4"/>
  </objectgroup>
 </map>
