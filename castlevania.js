@@ -2,10 +2,10 @@ var level=1;
 var escena = 2;
 var MAX_ESCENA=2;
 var game = function() {
-	
+
 	var Q = window.Q = Quintus({audioSupported: [ 'mp3','ogg','wav' ]})
-						.include("Sprites, Scenes, Input, Touch, UI, Anim, TMX, 2D, Audio") 
-						.setup({width: 448, height: 448}) 
+						.include("Sprites, Scenes, Input, Touch, UI, Anim, TMX, 2D, Audio")
+						.setup({width: 448, height: 448})
 						.controls().touch().enableSound();
 
 /*-----------------------------------------------------------------------------------------------------------*/
@@ -29,7 +29,7 @@ Q.Sprite.extend("CambioZona",{
 						temporizazdorZona:0,
 						temporizazdorZonaNueva:0,
 						sensor: true
-					}); 
+					});
 
 			this.add('2d, aiBounce, animation');
 			console.log(this);
@@ -41,18 +41,18 @@ Q.Sprite.extend("CambioZona",{
 				this.p.cambiandoZona = true;
 				this.p.type = Q.SPRITE_NONE;
 				this.p.collisionMask = Q.SPRITE_NONE;
-				
+
 
 			});
 
-		},//init 
+		},//init
 		step: function (dt){
 			var opasidad = 0.1;
 			if(this.p.cambiandoZona){
 				this.p.temporizazdorZona++;
 			}
 			if((this.p.temporizazdorZona > 20) && this.p.cambiandoZona){
-				
+
 				this.p.cambiandoZona=false;
 				this.p.zonaNueva=true;
 				this.p.temporizazdorZona=0;
@@ -93,7 +93,7 @@ Q.Sprite.extend("EscaleraArriba",{
 						h:10,
 						gravity:0,
 						type: Q.SPRITE_ENEMY
-					}); 
+					});
 
 			this.add('2d, aiBounce, animation');
 
@@ -106,9 +106,9 @@ Q.Sprite.extend("EscaleraArriba",{
 			});
 			//console.log(this);
 
-		},//init 
+		},//init
 		step: function (dt){
-			
+
 		}//step
 
 	});
@@ -126,21 +126,21 @@ Q.Sprite.extend("EscaleraArriba",{
 		console.log(Q.width);
 		// Create the player and add them to the stage
 		//var player = stage.insert(new Q.Simon());
-	
+
 	});//scene level1
 
 
 	Q.scene('startGame',function(stage) {
-		
+
 		Q.state.reset({ monedasRecogidas: 0, lives: 3, puntuacion: 0});
 
 		var container = stage.insert(new Q.UI.Container({
-															x: Q.width/2, 
-															y: Q.height/2, 
+															x: Q.width/2,
+															y: Q.height/2,
 															fill: "rgba(0,0,0,0.5)"
 														}));
 
-		var button = container.insert(new Q.UI.Button({ x:0 , y: 0, h: Q.height, w: Q.width, asset: "mainTitle1.jpg", })); 
+		var button = container.insert(new Q.UI.Button({ x:0 , y: 0, h: Q.height, w: Q.width, asset: "mainTitle1.jpg", }));
 		button.on("click",function() {
 		  Q.stageScene('level');
 		  //Q.stageScene("hud",1);
@@ -150,7 +150,7 @@ Q.Sprite.extend("EscaleraArriba",{
 		  Q.stageScene('level');
 		 	//Q.stageScene("hud",1);
 		});
-		
+
 
 	});//scene startgame
 
@@ -158,7 +158,7 @@ Q.Sprite.extend("EscaleraArriba",{
 
 
 	Q.loadTMX(" mario_small.png, mario_small.json,mainTitle1.jpg, nivel1-scn1.tmx,  nivel1-scn2.tmx, simon_intro.png, simon_intro.json, whip.png, basic_whip.png, simon_normal.png, simon_normal.json, simon_normal_andando.png, simon_normal_andando.json, simon_agachado.png, simon_agachado.json, simon_normal_atacando.png, simon_normal_atacando.json, simon_agachado_atacando.png, simon_agachado_atacando.json, simon_agachado_andando.png, simon_agachado_andando.json, simon_saltando.png, simon_saltando.json, simon_saltando_atacando.png, simon_saltando_atacando.json, simon_atacando_haciarriba.png, simon_atacando_haciarriba.json, simon_herido.png, simon_muerto.png, simon_muerto.json, simon_atacando_diagonal.png, simon_atacando_diagonal.json, simon_saltando_atacando_haciarriba.png, simon_saltando_atacando_haciarriba.json, simon_saltando_atacando_diagonalarriba.png, simon_saltando_atacando_diagonalarriba.json, simon_saltando_atacando_diagonalabajo.png, simon_saltando_atacando_diagonalabajo.json, simon_saltando_atacando_haciabajo.png, simon_saltando_atacando_haciabajo.json, simon_subescaleras.png, simon_subescaleras.json, simon_subescaleras_atacando.png, simon_subescaleras_atacando.json, simon_subescaleras_atacando_haciarriba.png, simon_subescaleras_atacando_haciarriba.json, simon_subescaleras_atacando_diagonal.png, simon_subescaleras_atacando_diagonal.json, simon_bajaescaleras.png, simon_bajaescaleras.json, simon_bajaescaleras_atacando.png, simon_bajaescaleras_atacando.json, simon_bajaescaleras_atacando_diagonal.png, simon_bajaescaleras_atacando_diagonal.json", function() {
-	  
+
 	  Q.compileSheets("simon_normal.png", "simon_normal.json");
 	  Q.compileSheets("simon_normal_andando.png", "simon_normal_andando.json");
 	  Q.compileSheets("simon_agachado.png", "simon_agachado.json");
@@ -184,7 +184,7 @@ Q.Sprite.extend("EscaleraArriba",{
 	  Q.compileSheets("simon_bajaescaleras_atacando.png", "simon_bajaescaleras_atacando.json");
 	  Q.compileSheets("simon_bajaescaleras_atacando_diagonal.png", "simon_bajaescaleras_atacando_diagonal.json");
 
-	  
+
 
 
 
@@ -266,37 +266,37 @@ Q.Sprite.extend("EscaleraArriba",{
 	  //CARMEN estas animaciones de abajo son las que te interesa activar para probar las escaleras en ciertos momentos del step de Simon
 	  Q.animations("subiendo_escaleras", {
 		  sube_escaleras_haciaderecha: { frames: [0,1,2,3,4,5,6], rate: 5/15, loop:false},
-		  sube_escaleras_haciaizquierda: { frames: [7,8,9,10,11,12,13], rate: 5/15, loop:false}	  
+		  sube_escaleras_haciaizquierda: { frames: [7,8,9,10,11,12,13], rate: 5/15, loop:false}
 	  });
 
 	  Q.animations("subiendo_escaleras_atacando", {
 		  sube_escaleras_haciaderecha_atacando: { frames: [0,1,2,3,4,5], rate: 5/15, loop:false},
-		  sube_escaleras_haciaizquierda_atacando: { frames: [6,7,8,9,10,11], rate: 5/15, loop:false}	  
+		  sube_escaleras_haciaizquierda_atacando: { frames: [6,7,8,9,10,11], rate: 5/15, loop:false}
 	  });
 
 	  Q.animations("subiendo_escaleras_atacando_haciarriba", {
 		  sube_escaleras_haciaderecha_atacando_haciarriba: { frames: [0,1,2], rate: 5/15, loop:false},
-		  sube_escaleras_haciaizquierda_atacando_haciarriba: { frames: [3,4,5], rate: 5/15, loop:false}  
+		  sube_escaleras_haciaizquierda_atacando_haciarriba: { frames: [3,4,5], rate: 5/15, loop:false}
 	  });
 
 	  Q.animations("subiendo_escaleras_atacando_diagonal", {
 		  sube_escaleras_haciaderecha_atacando_diagonal: { frames: [0,1,2], rate: 5/15, loop:false},
-		  sube_escaleras_haciaizquierda_atacando_diagonal: { frames: [3,4,5], rate: 5/15, loop:false}  
+		  sube_escaleras_haciaizquierda_atacando_diagonal: { frames: [3,4,5], rate: 5/15, loop:false}
 	  });
 
 	  Q.animations("bajando_escaleras", {
 		  baja_escaleras_haciaizquierda: { frames: [0,1,2,3,4,5], rate: 5/15, loop:false},
-		  baja_escaleras_haciaderecha: { frames: [6,7,8,9,10,11], rate: 5/15, loop:false}	  
+		  baja_escaleras_haciaderecha: { frames: [6,7,8,9,10,11], rate: 5/15, loop:false}
 	  });
 
 	   Q.animations("bajando_escaleras_atacando", {
 		  baja_escaleras_haciaizquierda_atacando: { frames: [0,1,2], rate: 5/15, loop:false},
-		  baja_escaleras_haciaderecha_atacando: { frames: [3,4,5], rate: 5/15, loop:false}	  
+		  baja_escaleras_haciaderecha_atacando: { frames: [3,4,5], rate: 5/15, loop:false}
 	  });
 
 	   Q.animations("bajando_escaleras_atacando_diagonal", {
 		  baja_escaleras_haciaizquierda_atacando_diagonal: { frames: [0,1,2], rate: 5/15, loop:false},
-		  baja_escaleras_haciaderecha_atacando_diagonal: { frames: [3,4,5], rate: 5/15, loop:false}  
+		  baja_escaleras_haciaderecha_atacando_diagonal: { frames: [3,4,5], rate: 5/15, loop:false}
 	  });
 
 
@@ -321,17 +321,17 @@ Q.Sprite.extend("EscaleraArriba",{
 
 
 
-	Q.Sprite.extend("Simon",{ 
-	//SOLUCIONAR QUE SI DEJO PULSADO LATIGO MIENTRAS ATACO DE PIE, NO PUEDA SALTAR NI AGACHARSE HASTA QUE LO SUELTE. 
+	Q.Sprite.extend("Simon",{
+	//SOLUCIONAR QUE SI DEJO PULSADO LATIGO MIENTRAS ATACO DE PIE, NO PUEDA SALTAR NI AGACHARSE HASTA QUE LO SUELTE.
 	//Y MIENTRAS PULSO LATIGO AGACHADO, QUE NO PUEDA PONERSE EN PIE NI SALTAR HASTA QUE LO SUELTE
 	//Y MIENTRAS ATACO HACIA ARRIBA, QUE TAMPOCO PUEDA HACER NADA MAS HASTA SOLTAR EL LATIGO
 	//EN GENERAL, HAY QUE CAPARLE ALGUNOS MOVIMIENTOS MIENTRAS HACE LOS DIFERENTES TIPOS DE ATAQUE
 
-		
+
 		init: function(p) {
 
 			console.log("Estamos creando una instancia de Simon");
-	    	
+
 			this._super(p, {
 								sheet: "normalito",
 								sprite: "normalito",
@@ -349,7 +349,7 @@ Q.Sprite.extend("EscaleraArriba",{
 								atacando_verticalmente_abajo: false,
 								atacando_diagonalmente: false,
 								atacando_diagonalmente_abajo: false
-								
+
 								//alturaActualDePie: 528
 						   }
 						); //_super
@@ -369,7 +369,7 @@ Q.Sprite.extend("EscaleraArriba",{
 
 
 
-		},//init 
+		},//init
 
 		posicionaLatigo: function(valorAngulo, valorFlip, despXmejorado, despYmejorado, despXizq, despYizq, despX, despY,despXmejoradoIzq, despYmejoradoIzq){
 			//var desplazamientoX = 0;
@@ -386,7 +386,7 @@ Q.Sprite.extend("EscaleraArriba",{
 					desplazamientoX = despXizq;
 					desplazamientoY = despYizq;
 				}
-				
+
 				valorAngulo = valorAngulo;
 			}
 			else if(this.p.direction == "right"){
@@ -424,7 +424,7 @@ Q.Sprite.extend("EscaleraArriba",{
 					desplazamientoX = -this.p.w-1;
 					desplazamientoY = -this.p.h+11;
 				}
-				
+
 				valorAngulo = -135;
 			}
 
@@ -463,7 +463,7 @@ Q.Sprite.extend("EscaleraArriba",{
 			desplazamientoY *= this.p.scale;
 
 			this.p.latigo = this.stage.insert(new Q.Whip({asset: dibujoLatigo, x: this.p.x+desplazamientoX, y:this.p.y+desplazamientoY, flip: valorFlip}));
-			
+
 		},
 
 		dibujalatigo_agachado: function() {
@@ -525,7 +525,7 @@ Q.Sprite.extend("EscaleraArriba",{
 		},
 
 		dibujalatigo_haciarriba: function() {
-			
+
 			var desplazamientoX = 0;
 			var desplazamientoY = 0;
 			var valorAngulo = -90;
@@ -554,7 +554,7 @@ Q.Sprite.extend("EscaleraArriba",{
 		},
 
 		dibujalatigo_diagonal: function() {
-			
+
 			var desplazamientoX = 0;
 			var desplazamientoY = 0;
 			var valorAngulo = -45;
@@ -580,7 +580,7 @@ Q.Sprite.extend("EscaleraArriba",{
 					desplazamientoX = -this.p.w-1;
 					desplazamientoY = -this.p.h+11;
 				}
-				
+
 				valorAngulo = -135;
 			}
 
@@ -592,7 +592,7 @@ Q.Sprite.extend("EscaleraArriba",{
 		},
 
 		dibujalatigo_haciarriba_saltando: function() {
-			
+
 			var desplazamientoX = 0;
 			var desplazamientoY = 0;
 			var valorAngulo = -90;
@@ -617,12 +617,12 @@ Q.Sprite.extend("EscaleraArriba",{
 			desplazamientoY *= this.p.scale;
 
 			this.p.latigo = this.stage.insert(new Q.Whip({asset: dibujoLatigo, x: this.p.x+desplazamientoX, y:this.p.y+desplazamientoY, angle: valorAngulo}));
-			
+
 
 		},
-		
+
 		dibujalatigo_haciarriba_saltando_diagonal: function() {
-			
+
 			var desplazamientoX = 0;
 			var desplazamientoY = 0;
 			var valorAngulo = -45;
@@ -653,7 +653,7 @@ Q.Sprite.extend("EscaleraArriba",{
 		},
 
 		dibujalatigo_haciabajo_saltando_diagonal: function() {
-			
+
 			var desplazamientoX = 0;
 			var desplazamientoY = 0;
 			var valorAngulo = 45;
@@ -683,7 +683,7 @@ Q.Sprite.extend("EscaleraArriba",{
 		},
 
 		dibujalatigo_haciabajo_saltando: function() {
-			
+
 			var desplazamientoX = 0;
 			var desplazamientoY = 0;
 			var valorAngulo = 90;
@@ -719,9 +719,9 @@ Q.Sprite.extend("EscaleraArriba",{
 			}
 			else if(this.p.direction == "right") {
 				//this.play("still_right");
-				
+
 			}
-			
+
 			if(Q.inputs['left']){
 				//this.play("run_left");
 			}
@@ -767,7 +767,7 @@ Q.Sprite.extend("EscaleraArriba",{
 				if(this.p.direction == "right") this.play("salta_derecha");
 				else if(this.p.direction == "left") this.play("salta_izquierda");
 				Q._generateCollisionPoints(this);
-				
+
 			}//saltando
 
 
@@ -814,12 +814,12 @@ Q.Sprite.extend("EscaleraArriba",{
 				}
 
 			}
-			
+
 
 
 			/*
 			if(Q.inputs['up']){
-				
+
 				if(!this.p.agachado && !this.p.andando && this.p.latigoActivado){
 					if(this.p.saltando){
 						//ya haré esta animacion
@@ -831,14 +831,14 @@ Q.Sprite.extend("EscaleraArriba",{
 						else if(this.p.direction == "left") this.play("ataca_haciarriba_izquierda");
 						Q._generateCollisionPoints(this);
 					}
-					
+
 				}
-					
+
 			}//pulsando arriba
 			else{
 				//Al soltar arriba, no me interesa interrumpir el ataque vertical
 
-				
+
 			}
 			*/
 
@@ -853,7 +853,7 @@ Q.Sprite.extend("EscaleraArriba",{
 
 
 			if(Q.inputs['down']){
-				
+
 				if(!this.p.agachado && !this.p.atacando_diagonalmente && !this.p.atacando_verticalmente && !this.p.saltando){
 					console.log("se agacha");
 					this.p.agachado = true;
@@ -871,7 +871,7 @@ Q.Sprite.extend("EscaleraArriba",{
 
 
 				}
-					
+
 			}//agachandose
 			else{
 				if(this.p.agachado == true){
@@ -917,18 +917,18 @@ Q.Sprite.extend("EscaleraArriba",{
 				this.p.latigo = null;
 				this.p.latigoActivado = false;
 			}*/
-			
+
 			/*if(Q.inputs['W']) {
 				if(this.p.latigoActivado == true) console.log("LATIGO ACTIVADO");
 				else console.log("LATIGO DESACTIVADO");
 			}*/
 			if(Q.inputs['W'] && !this.p.latigoActivado){
-				
+
 				this.p.latigoActivado = true;
 				this.p.posicionAtaque = this.p.x;
 				//console.log("recien activado");
 
-				
+
 				//console.log(this.p.agachado);
 
 				if(this.p.saltando && !this.p.atacando_verticalmente && !this.p.atacando_diagonalmente){
@@ -938,7 +938,7 @@ Q.Sprite.extend("EscaleraArriba",{
 					else if(this.p.direction == "left") this.play("saltataca_izquierda");
 					Q._generateCollisionPoints(this);
 
-					//this.p.latigo.p.x = 
+					//this.p.latigo.p.x =
 				}
 				else if(!this.p.saltando && !this.p.agachado){
 					//this.p.asset = null;
@@ -960,20 +960,20 @@ Q.Sprite.extend("EscaleraArriba",{
 						else if(this.p.direction == "left") this.play("ataca_haciarriba_izquierda");
 						Q._generateCollisionPoints(this);
 					}
-					
 
-					
+
+
 				}
 				else if(this.p.agachado && !this.p.atacando_verticalmente && !this.p.atacando_diagonalmente){
-					
+
 					this.sheet("agachado_atacando", true);
 					this.p.sprite = "agachado_atacando";
 					if(this.p.direction == "right") this.play("ataca_agachado_derecha");
 					else if(this.p.direction == "left") this.play("ataca_agachado_izquierda");
-					
+
 					//console.log(this.sheet());
 					Q._generateCollisionPoints(this);
-				}	
+				}
 
 			}//activando el latigo
 			else if (!Q.inputs['W'] && this.p.latigo){ //al soltar tecla W y si sigue el latigo presente
@@ -1010,7 +1010,7 @@ Q.Sprite.extend("EscaleraArriba",{
 					if(this.p.direction == "right") this.play("pose_agachado_derecha");
 					else if(this.p.direction == "left") this.play("pose_agachado_izquierda");
 				}
-				
+
 				Q._generateCollisionPoints(this);
 
 				//this.play("pose_normal");
@@ -1068,11 +1068,11 @@ Q.Sprite.extend("EscaleraArriba",{
 							this.play("anda_derecha");
 							Q._generateCollisionPoints(this);
 						}
-						
+
 					}
 				}
 
-				
+
 
 			}//pulsando derecha
 			else{ //ya no pulsa la derecha
@@ -1100,7 +1100,7 @@ Q.Sprite.extend("EscaleraArriba",{
 				//console.log(this.p);
 
 				if(this.p.latigoActivado){// && !this.p.saltando){
-					
+
 
 					if(!this.p.saltando && !Q.inputs['up']) this.p.x = this.p.posicionAtaque; //para que se quede quieto mientras ataca
 					else if(!this.p.saltando && !this.p.atacando_diagonalmente){
@@ -1146,11 +1146,11 @@ Q.Sprite.extend("EscaleraArriba",{
 							this.play("anda_izquierda");
 							Q._generateCollisionPoints(this);
 						}
-						
+
 					}
 				}
 
-				
+
 			}//pulsando izquierda
 			else{ //ya no pulsa la izquierda
 				if(this.p.agachado && !this.p.latigoActivado && this.p.direction == "left"){
@@ -1191,7 +1191,7 @@ Q.Sprite.extend("EscaleraArriba",{
 						this.p.latigo.destroy();
 						this.p.latigoActivado = false;
 					}
-					
+
 				}
 				else if(this.p.latigo){
 					if(!this.p.atacando_verticalmente && !this.p.atacando_diagonalmente){
@@ -1206,7 +1206,7 @@ Q.Sprite.extend("EscaleraArriba",{
 							desplazamientoX = 37;
 							desplazamientoY = -7;
 						}
-							
+
 						if(this.p.direction == "left") desplazamientoX *= -1;
 
 						desplazamientoX *= this.p.scale;
@@ -1223,16 +1223,16 @@ Q.Sprite.extend("EscaleraArriba",{
 								desplazamientoY = -this.p.h;
 							}
 							else {
-								
+
 								desplazamientoX = 2;
 								desplazamientoY = -this.p.h+7;
 							}
-								
+
 							if(this.p.direction == "left") {
 								desplazamientoX = -5;
 								//desplazamientoY = -this.p.h+11;
 							}
-							
+
 						}
 						/*else {
 							if(this.p.latigoMejorado) {
@@ -1244,14 +1244,14 @@ Q.Sprite.extend("EscaleraArriba",{
 								desplazamientoX = 5;
 								desplazamientoY = this.p.h-20;
 							}
-								
+
 							if(this.p.direction == "left") {
 								desplazamientoX = -3;
 								//desplazamientoY = -this.p.h+11;
 							}
-							
+
 						}*/
-						
+
 						else {
 							if(!Q.inputs['left']){ //movidas de Quintus por pulsar varias teclas a la vez...es una ñapa pero así evito el error
 								if(this.p.latigoMejorado) {
@@ -1263,7 +1263,7 @@ Q.Sprite.extend("EscaleraArriba",{
 									desplazamientoX = 5;
 									desplazamientoY = this.p.h-20;
 								}
-									
+
 								if(this.p.direction == "left") {
 									desplazamientoX = -3;
 									//desplazamientoY = -this.p.h+11;
@@ -1278,14 +1278,14 @@ Q.Sprite.extend("EscaleraArriba",{
 									desplazamientoX = this.p.w+2;
 									desplazamientoY = 25;
 								}
-									
+
 								if(this.p.direction == "left") {
 									desplazamientoX = -this.p.w-2;
 									desplazamientoY = 27;
 								}
 							}
-							
-							
+
+
 						}
 
 						desplazamientoX *= this.p.scale;
@@ -1296,7 +1296,7 @@ Q.Sprite.extend("EscaleraArriba",{
 
 					}
 					else if(this.p.atacando_diagonalmente){ // if atacando diagonalmente y saltando
-						
+
 						var desplazamientoX = 0;
 						var desplazamientoY = 0;
 						if(!this.p.atacando_diagonalmente_abajo){
@@ -1308,14 +1308,14 @@ Q.Sprite.extend("EscaleraArriba",{
 								desplazamientoX = this.p.w-1;
 								desplazamientoY = -this.p.h+11;
 							}
-								
+
 							if(this.p.direction == "left") {
 								desplazamientoX = -this.p.w-4;
 								desplazamientoY = -this.p.h+11;
 							}
 						}
 						else{
-							
+
 							if(this.p.latigoMejorado) {
 								desplazamientoX = this.p.w+8;
 								desplazamientoY = 35;
@@ -1324,12 +1324,12 @@ Q.Sprite.extend("EscaleraArriba",{
 								desplazamientoX = this.p.w+2;
 								desplazamientoY = 25;
 							}
-								
+
 							if(this.p.direction == "left") {
 								desplazamientoX = -this.p.w-2;
 								desplazamientoY = 27;
 							}
-							
+
 						}
 
 						desplazamientoX *= this.p.scale;
@@ -1338,7 +1338,7 @@ Q.Sprite.extend("EscaleraArriba",{
 						this.p.latigo.p.x = this.p.x+desplazamientoX;
 						this.p.latigo.p.y = this.p.y+desplazamientoY;
 					}
-					
+
 				}
 			}
 
@@ -1346,9 +1346,9 @@ Q.Sprite.extend("EscaleraArriba",{
 
 
 			if(this.p["y"] > 444){
-				
+
 				console.log("Tas caio lol");
-				Q.stageScene("endGame",2, { label: "You Died", sound: "music_die.ogg" }); 
+				Q.stageScene("endGame",2, { label: "You Died", sound: "music_die.ogg" });
 				this.destroy();
 			}
 //
@@ -1357,7 +1357,7 @@ Q.Sprite.extend("EscaleraArriba",{
 				this.stage.viewport.offsetX = 0;
 				this.stage.viewport.offsetY = 60;
 			}
-			if((this.p.x > (this.p.AnchoMapa - Q.width/2))&&(this.p.x < Q.width/2){
+			if((this.p.x > (this.p.AnchoMapa - Q.width/2))&&(this.p.x < Q.width/2)){
 				this.stage.add("viewport").unfollow();
 			}
 
@@ -1379,29 +1379,29 @@ Q.Sprite.extend("EscaleraArriba",{
 
 			this._super(p, {
 								asset: "basic_whip.png", //por defecto el personaje siempre empieza con el latigo basico, y éste se actualiza al recoger la mejora. Si el personaje pierde una vida, el latigo vuelve a ser basico
-								x: 100, 
-								y: 528, 
+								x: 100,
+								y: 528,
 								yaColisionada: false,
 								scale: 2,
 								gravity: 0,
 								sensor: true,
 								collisionMask: Q.SPRITE_NONE,
-								damage_hits: null //con el latigo basico hará falta dar el doble de golpes que con el mejorado, pues es menos potente. 
+								damage_hits: null //con el latigo basico hará falta dar el doble de golpes que con el mejorado, pues es menos potente.
 						   }
 						); //_super
 
 			this.add('2d');
 			this.on("bump.top,bump.left,bump.right,bump.bottom",function(collision) {
-		
-				
-				if(collision.obj.isA("Bloopa") || collision.obj.isA("Koopa")) { 
+
+
+				if(collision.obj.isA("Bloopa") || collision.obj.isA("Koopa")) {
 					//this.destroy();
 					console.log("latigo colisiona con bloopa O koopa");
 					collision.obj.destroy();
 				}
 			});//on
 
-		}/*,//init 
+		}/*,//init
 
 		step: function(dt){
 			//console.log(this.p);
