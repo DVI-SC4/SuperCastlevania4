@@ -28,7 +28,7 @@ Proyecto final de la asignatura Desarrollo de Videojuegos mediante Tecnologias W
 	
 ## 1.1. Objetivo del juego
 
-En nuestra versión reducida de Super Castlevania IV podemos a jugar al primer nivel del juego, en el cual entramos al castillo y atravesamos parte de unos jardines y un edificio anexo, ambos plagados de los enemigos básicos. 
+En nuestra versión reducida de Super Castlevania IV podemos a jugar al primer nivel del juego, en el cual entramos al castillo y atravesamos parte de unos jardines y unas ruinas anexas, ambos lugares plagados de los enemigos básicos. 
 
 Como en el original, el objetivo principal del nivel es avanzar hasta su final y, una vez allí, enfrentarse y derrotar al jefe final. Opcionalmente, podemos recoger armas secundarias en el camino que nos ayuden un poco más a la hora de luchar. Una vez derrotado el jefe, una esfera brillante aparece y, al recogerla, queda completado el nivel.
 
