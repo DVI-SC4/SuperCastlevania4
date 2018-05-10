@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="1023" height="112" tilewidth="4" tileheight="4" infinite="0" nextobjectid="5">
+<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="1023" height="112" tilewidth="4" tileheight="4" infinite="0" nextobjectid="16">
  <tileset firstgid="1" name="tiled2" tilewidth="4" tileheight="4" tilecount="114576" columns="1023">
   <image source="../../pruebasCastlevania/images/stage-2-lvl-1.png" width="4092" height="448"/>
   <tile id="56235">
@@ -10,6 +10,22 @@
   <tile id="77754">
    <properties>
     <property name="Class" value="Simon"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="114577" name="esqueleto" tilewidth="25" tileheight="46" tilecount="2" columns="2">
+  <image source="../images/esqueleto_caminando.png" width="50" height="46"/>
+  <tile id="0">
+   <properties>
+    <property name="Class" value="Esqueleto"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="114579" name="murcielago" tilewidth="16" tileheight="15" tilecount="3" columns="3">
+  <image source="../images/murcielago_volando.png" width="48" height="15"/>
+  <tile id="0">
+   <properties>
+    <property name="Class" value="Murcielago"/>
    </properties>
   </tile>
  </tileset>
@@ -114605,6 +114621,13 @@
     <property name="AnchoMapa" type="int" value="4092"/>
    </properties>
   </object>
-  <object id="2" gid="56236" x="3948" y="400" width="4" height="4"/>
+  <object id="2" name="cambiozona" gid="56236" x="3948" y="400" width="4" height="4"/>
+  <object id="5" name="esqueleto" gid="114577" x="716" y="260" width="25" height="46"/>
+  <object id="7" name="esqueleto" gid="114577" x="2224" y="324" width="25" height="46"/>
+  <object id="9" name="esqueleto" gid="114577" x="984" y="324" width="25" height="46"/>
+  <object id="10" name="murcielago" gid="114579" x="2944" y="40" width="16" height="15"/>
+  <object id="13" name="esqueleto" gid="114577" x="3480" y="352" width="25" height="46"/>
+  <object id="14" name="murcielago" gid="114579" x="3896" y="340" width="16" height="15"/>
+  <object id="15" name="murcielago" gid="114579" x="3780" y="344" width="16" height="15"/>
  </objectgroup>
 </map>
