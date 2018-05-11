@@ -1,16 +1,13 @@
-var CASTLEVANIA = CASTLEVANIA || {};
-
-CASTLEVANIA.init = function () {
+window.addEventListener('load', function () {
     let level = 1;
     let escena = 2;
     let MAX_ESCENA = 2;
 
     const Q = window.Q = Quintus({audioSupported: ['mp3', 'ogg', 'wav']})
         .include("Sprites, Scenes, Input, Touch, UI, Anim, TMX, 2D, Audio")
+        .include("Simon")
         .setup({width: 448, height: 448})
         .controls().touch().enableSound();
-
-    CASTLEVANIA.createSimon(this.Q);
 
     Q.Sprite.extend("CambioZona", {
         init: function (p) {
@@ -252,4 +249,4 @@ CASTLEVANIA.init = function () {
 
         Q.stageScene("startGame");
     });
-};
+});
