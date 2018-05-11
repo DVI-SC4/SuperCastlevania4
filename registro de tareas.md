@@ -19,7 +19,8 @@ Como de cara a la memoria y la entrega nos piden poner todo lo que se ha hecho y
 
 ### Sergio
 
-* Separacion de codigo, para personaje, enemigos, etc.
+* Separacion y reestructuración de codigo: para personaje, enemigos, elementos, etc.
+* Enemigos: skeleton y bat.
 
 ## Tareas completadas
 
@@ -46,4 +47,5 @@ Como de cara a la memoria y la entrega nos piden poner todo lo que se ha hecho y
 
 ### Sergio
 
-*
+* Separación y reestructuración de código.
+
