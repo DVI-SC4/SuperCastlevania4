@@ -6,6 +6,7 @@ window.addEventListener('load', function () {
     const Q = window.Q = Quintus({audioSupported: ['mp3', 'ogg', 'wav']})
         .include("Sprites, Scenes, Input, Touch, UI, Anim, TMX, 2D, Audio")
         .include("Simon")
+        .include("Skeleton, Bat")
         .setup({width: 448, height: 448})
         .controls().touch().enableSound();
 
@@ -87,7 +88,6 @@ window.addEventListener('load', function () {
     Q.scene('level', function(stage) {
         const nivel = "nivel" + level + "-scn" + escena + ".tmx";
         Q.stageTMX(nivel, stage);
-        console.log(Q.width);
     });
 
     Q.scene('startGame',function(stage) {
