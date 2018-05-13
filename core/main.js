@@ -3,11 +3,11 @@ window.addEventListener('load', function () {
     let escena = 2;
     let MAX_ESCENA = 2;
 
-    const Q = window.Q = Quintus({audioSupported: ['mp3', 'ogg', 'wav']})
+    const Q = window.Q = Quintus({audioSupported: ['ogg', 'mp3']})
         .include("Sprites, Scenes, Input, Touch, UI, Anim, TMX, 2D, Audio")
         .include("Simon")
         .include("Skeleton, Bat")
-        .setup({width: 448, height: 448})
+        .setup({width: 584, height: 448})
         .controls().touch().enableSound();
 
     Q.Sprite.extend("CambioZona", {
@@ -90,7 +90,7 @@ window.addEventListener('load', function () {
         Q.stageTMX(nivel, stage);
     });
 
-    Q.scene('startGame',function(stage) {
+    Q.scene('inicio',function(stage) {
         Q.state.reset({ monedasRecogidas: 0, lives: 3, puntuacion: 0});
         const container = stage.insert(new Q.UI.Container({
             x: Q.width / 2,
@@ -105,14 +105,105 @@ window.addEventListener('load', function () {
             asset: "mainTitle1.jpg",
         }));
         button.on("click",function() {
-            Q.stageScene('level');
+            Q.stageScene('introLogos');
         });
         Q.input.on("confirm",stage,function() {
+            Q.stageScene('introLogos');
+        });
+    });//inicio
+
+    Q.Sprite.extend("parte2intro", {
+        init: function(p) {
+            this._super(p, {
+                asset: "intro/parte2.png",
+                x:-300,
+                y:230,
+                gravity:0,
+                scale: 1.2
+            });
+            
+        },
+        step: function (dt){
+            
+            if(this.p.x < 300)  this.p.x += 18;
+
+            if(this.p.x >= 300){
+                if(this.p.parte1.p.opacity < 1) this.p.parte1.p.opacity = 1;
+                if(this.p.parte0.p.opacity == 0) this.p.parte0.p.opacity = 1;
+                if(this.p.y < 800) this.p.y += 18;
+            }
+
+            if(this.p.y >= 800) {
+                this.destroy();
+                this.p.parte1.p.ready = true;
+            }
+        }
+    });
+
+    Q.Sprite.extend("parte1intro", {
+        init: function(p) {
+            this._super(p, {
+                asset: "intro/parte1.png",
+                x:292,
+                y:224,
+                gravity:0,
+                opacity: 0,
+                scale: 1.1,
+                ready: false
+            });
+
+        },
+        step: function (dt){
+            
+            if(this.p.ready){
+                
+                if(this.p.opacity == 1) Q.audio.play("sonido_logotipo_intro.ogg");
+                this.p.opacity -= 0.020;
+                if(this.p.opacity <= 0.05) {
+                    this.p.ready = false;
+                    this.p.horaDeCambiar = (new Date().getTime()/1000)+3;
+                }
+            }
+
+            let horaActual = (new Date().getTime())/1000;
+            if(horaActual >= this.p.horaDeCambiar) {
+                Q.clearStages();
+                Q.stageScene('level'); //aquí cambiar por el menu principal del juego
+            }
+            
+        }
+    });
+
+    Q.Sprite.extend("parte0intro", {
+        init: function(p) {
+            this._super(p, {
+                asset: "intro/parte0.png",
+                x:292,
+                y:224,
+                gravity:0,
+                scale: 1.1,
+                opacity: 0
+            });
+            
+        },
+        step: function (dt){}
+    });
+
+    Q.scene('introLogos',function(stage) {
+        
+        //console.log("estas en la intro");
+
+        let parte0 = stage.insert(new Q.parte0intro());
+        let parte1 = stage.insert(new Q.parte1intro({parte0: parte0}));
+        let parte2 = stage.insert(new Q.parte2intro({parte1: parte1, parte0: parte0}));
+
+        Q.input.on("confirm",stage,function() { //pulsamos enter durante la intro para saltarla
+            Q.clearStages();
             Q.stageScene('level');
         });
     });
 
-    Q.loadTMX("mario_small.png, mario_small.json,mainTitle1.jpg, nivel1-scn1.tmx,  nivel1-scn2.tmx, simon_intro.png, simon_intro.json, whip.png, basic_whip.png, simon_normal.png, simon_normal.json, simon_normal_andando.png, simon_normal_andando.json, simon_agachado.png, simon_agachado.json, simon_normal_atacando.png, simon_normal_atacando.json, simon_agachado_atacando.png, simon_agachado_atacando.json, simon_agachado_andando.png, simon_agachado_andando.json, simon_saltando.png, simon_saltando.json, simon_saltando_atacando.png, simon_saltando_atacando.json, simon_atacando_haciarriba.png, simon_atacando_haciarriba.json, simon_herido.png, simon_muerto.png, simon_muerto.json, simon_atacando_diagonal.png, simon_atacando_diagonal.json, simon_saltando_atacando_haciarriba.png, simon_saltando_atacando_haciarriba.json, simon_saltando_atacando_diagonalarriba.png, simon_saltando_atacando_diagonalarriba.json, simon_saltando_atacando_diagonalabajo.png, simon_saltando_atacando_diagonalabajo.json, simon_saltando_atacando_haciabajo.png, simon_saltando_atacando_haciabajo.json, simon_subescaleras.png, simon_subescaleras.json, simon_subescaleras_atacando.png, simon_subescaleras_atacando.json, simon_subescaleras_atacando_haciarriba.png, simon_subescaleras_atacando_haciarriba.json, simon_subescaleras_atacando_diagonal.png, simon_subescaleras_atacando_diagonal.json, simon_bajaescaleras.png, simon_bajaescaleras.json, simon_bajaescaleras_atacando.png, simon_bajaescaleras_atacando.json, simon_bajaescaleras_atacando_diagonal.png, simon_bajaescaleras_atacando_diagonal.json", function() {
+    Q.loadTMX("mario_small.png, mario_small.json,mainTitle1.jpg, sonido_logotipo_intro.ogg, intro/parte0.png, intro/parte1.png, intro/parte2.png, nivel1-scn1.tmx,  nivel1-scn2.tmx, simon_intro.png, simon_intro.json, whip.png, basic_whip.png, simon_normal.png, simon_normal.json, simon_normal_andando.png, simon_normal_andando.json, simon_agachado.png, simon_agachado.json, simon_normal_atacando.png, simon_normal_atacando.json, simon_agachado_atacando.png, simon_agachado_atacando.json, simon_agachado_andando.png, simon_agachado_andando.json, simon_saltando.png, simon_saltando.json, simon_saltando_atacando.png, simon_saltando_atacando.json, simon_atacando_haciarriba.png, simon_atacando_haciarriba.json, simon_herido.png, simon_muerto.png, simon_muerto.json, simon_atacando_diagonal.png, simon_atacando_diagonal.json, simon_saltando_atacando_haciarriba.png, simon_saltando_atacando_haciarriba.json, simon_saltando_atacando_diagonalarriba.png, simon_saltando_atacando_diagonalarriba.json, simon_saltando_atacando_diagonalabajo.png, simon_saltando_atacando_diagonalabajo.json, simon_saltando_atacando_haciabajo.png, simon_saltando_atacando_haciabajo.json, simon_subescaleras.png, simon_subescaleras.json, simon_subescaleras_atacando.png, simon_subescaleras_atacando.json, simon_subescaleras_atacando_haciarriba.png, simon_subescaleras_atacando_haciarriba.json, simon_subescaleras_atacando_diagonal.png, simon_subescaleras_atacando_diagonal.json, simon_bajaescaleras.png, simon_bajaescaleras.json, simon_bajaescaleras_atacando.png, simon_bajaescaleras_atacando.json, simon_bajaescaleras_atacando_diagonal.png, simon_bajaescaleras_atacando_diagonal.json", function() {
         Q.compileSheets("simon_normal.png", "simon_normal.json");
         Q.compileSheets("simon_normal_andando.png", "simon_normal_andando.json");
         Q.compileSheets("simon_agachado.png", "simon_agachado.json");
@@ -247,6 +338,6 @@ window.addEventListener('load', function () {
             baja_escaleras_haciaderecha_atacando_diagonal: { frames: [3,4,5], rate: 5/15, loop:false}
         });
 
-        Q.stageScene("startGame");
+        Q.stageScene("inicio");
     });
 });
