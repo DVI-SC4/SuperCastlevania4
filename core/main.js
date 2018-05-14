@@ -706,7 +706,6 @@ window.addEventListener('load', function () {
             da_latigazo: { frames: [0,1,2,3,4,5,6], rate: 5/15, loop: false}
         });
 
-        //Q.stageScene("inicio");
-        Q.stageScene("creditos");
+        Q.stageScene("inicio");
     });
 });
