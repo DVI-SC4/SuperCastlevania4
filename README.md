@@ -1,5 +1,5 @@
 # Super Castlevania IV
-Proyecto final de la asignatura Desarrollo de Videojuegos mediante Tecnologias Web de la Universidad Complutense de Madrid.
+Proyecto final de la asignatura Desarrollo de Videojuegos mediante Tecnologías Web de la Universidad Complutense de Madrid.
 
 # Índice
 

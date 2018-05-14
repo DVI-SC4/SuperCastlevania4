@@ -7,6 +7,9 @@ Como de cara a la memoria y la entrega nos piden poner todo lo que se ha hecho y
 
 ## Tareas en curso
 
+### Que no se nos olvide quitar, al final, trozos de código comentado y todos los console.log().
+### Comentar nuestro código por encima.
+
 ### Carmen
 
 * Preparando el tmx del nivel1
@@ -14,8 +17,7 @@ Como de cara a la memoria y la entrega nos piden poner todo lo que se ha hecho y
 
 ### César
 
-* Optimizar en general todo el código de Simon, que sea también más legible y sencillo.
-* Prepararé el sprite, json y animación por frames del jefe final del nivel cuando decidamos cuál queremos implementar.
+* Revisar código de Simon si es necesario arreglar posibles bugs o añadir/modificar cosas.
 
 ### Sergio
 
@@ -41,9 +43,13 @@ Como de cara a la memoria y la entrega nos piden poner todo lo que se ha hecho y
 * Preparación de sprites de objetos recogibles (mejora de látigo, carne, corazones, etc.).
 * Preparación de sprites y jsons de enemigos básicos (murciélago, esqueleto, bicéfalo, etc.) con posiciones de avance, ataques y muerte.
 * Redacción de la memoria
-	* Sección de objetivo del juego	 
-	* Sección de principales mecánicas (con preparación y edición de los gifs y las imágenes de combinaciones de teclas).
-	* Sección de Simon en personajes.
+	* Sección 1.1 Objetivo del juego	 
+	* Sección 1.2 Principales mecánicas (con preparación y edición de los gifs y las imágenes de combinaciones de teclas).
+	* Sección de Simon en 1.3 Personajes.
+* Realización de la intro del juego con los logos de la UCM y FdI.
+* Realización del menú principal del juego, junto con el sprite animado del selector en forma de llama.
+* Realización de la sección de controles del personaje, junto a las capturas de las poses de Simon.
+* Realización de los créditos del juego junto con el sprite animado de Simon al final y composición de los mensajes con las letras oficiales del juego.
 
 ### Sergio
 
