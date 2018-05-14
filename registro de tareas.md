@@ -50,6 +50,7 @@ Como de cara a la memoria y la entrega nos piden poner todo lo que se ha hecho y
 * Realización del menú principal del juego, junto con el sprite animado del selector en forma de llama.
 * Realización de la sección de controles del personaje, junto a las capturas de las poses de Simon.
 * Realización de los créditos del juego junto con el sprite animado de Simon al final y composición de los mensajes con las letras oficiales del juego.
+* Preparación de las imágenes con letras para la pantalla de Game Over.
 
 ### Sergio
 
