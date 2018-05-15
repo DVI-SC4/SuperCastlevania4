@@ -10,12 +10,10 @@ window.addEventListener('load', function () {
         .setup({width: 584, height: 448})
         .controls().touch().enableSound();
 
-
     /********************************************* NIVEL *******************************************************/
     //
     //
     /***********************************************************************************************************/
-
 
     Q.Sprite.extend("CambioZona", {
         init: function (p) {
@@ -95,14 +93,15 @@ window.addEventListener('load', function () {
     Q.scene('level', function(stage) {
         const nivel = "nivel" + level + "-scn" + escena + ".tmx";
         Q.stageTMX(nivel, stage);
-    });
 
+        //stage.insert(new Q.Esqueleto({ x: 250, y: 200 }));
+        //stage.insert(new Q.Murcielago({ x: 350, y: 300 }));
+    });
 
     /***************************************** PANTALLA DE INICIO **********************************************/
     //
     //
     /***********************************************************************************************************/
-
 
     Q.scene('inicio',function(stage) {
         Q.state.reset({ monedasRecogidas: 0, lives: 3, puntuacion: 0});
@@ -126,14 +125,10 @@ window.addEventListener('load', function () {
         });
     });//inicio
 
-    
-
-
     /********************************************* CONTROLES ***************************************************/
     //
     //
     /***********************************************************************************************************/
-
 
     Q.Sprite.extend("ilustracionControl", {
         init: function(p) {
@@ -161,7 +156,6 @@ window.addEventListener('load', function () {
             Q.stageScene('menuPrincipal');
         });
     });
-
 
     /********************************************* CREDITOS *****************************************************/
     //
@@ -204,11 +198,11 @@ window.addEventListener('load', function () {
 
         step: function (dt){
 
-            if(this.p.duracionSegundosVida != 0){
+            if(this.p.duracionSegundosVida !== 0){
                 let horaActual = new Date().getTime()/1000;
                 if(horaActual >= this.p.horaCreacion+this.p.duracionSegundosVida) {
                     this.destroy();
-                    if(this.p.id == 14){
+                    if(this.p.id === 14){
                         Q.clearStages();
                         Q.stageScene('menuPrincipal');
                     }
@@ -216,10 +210,10 @@ window.addEventListener('load', function () {
 
                 if(horaActual >= this.p.horaCreacion){
                     this.fadeIn();
-                    if(this.p.id == 2 && this.p.puedeDesvanecerse){
+                    if(this.p.id === 2 && this.p.puedeDesvanecerse){
                         if(this.p.y > 60) this.p.y -= 1;
                     }
-                    if(this.p.id == 14 && this.p.puedeDesvanecerse){
+                    if(this.p.id === 14 && this.p.puedeDesvanecerse){
                         if(horaActual < this.p.horaVisible+2) this.play("da_latigazo");
                     }
                     this.fadeOut(horaActual);
@@ -290,7 +284,7 @@ window.addEventListener('load', function () {
 
             if(this.p.x >= 300){
                 if(this.p.parte1.p.opacity < 1) this.p.parte1.p.opacity = 1;
-                if(this.p.parte0.p.opacity == 0) this.p.parte0.p.opacity = 1;
+                if(this.p.parte0.p.opacity === 0) this.p.parte0.p.opacity = 1;
                 if(this.p.y < 800) this.p.y += 18;
             }
 
@@ -318,7 +312,7 @@ window.addEventListener('load', function () {
             
             if(this.p.ready){
                 
-                if(this.p.opacity == 1) Q.audio.play("sonido_logotipo_intro.ogg");
+                if(this.p.opacity === 1) Q.audio.play("sonido_logotipo_intro.ogg");
                 this.p.opacity -= 0.020;
                 if(this.p.opacity <= 0.05) {
                     this.p.ready = false;
@@ -365,7 +359,6 @@ window.addEventListener('load', function () {
         });
     });
 
-
     /********************************************* MENU PRINCIPAL************************************************/
     //
     //
@@ -406,7 +399,7 @@ window.addEventListener('load', function () {
             //console.log(this.p.y);
 
             if(this.p.elegida) {
-                if(this.p.opacity == 1) this.p.opacity = 0;
+                if(this.p.opacity === 1) this.p.opacity = 0;
                 else this.p.opacity = 1;
 
                 //Q.audio.stop("menu_music.ogg");
@@ -418,16 +411,15 @@ window.addEventListener('load', function () {
                 if(horaActual-this.p.horaElegida >= 2000){
                     Q.clearStages();
 
-                    if(this.p.asset == "menu_principal/start.png") Q.stageScene("level");
-                    else if(this.p.asset == "menu_principal/controls.png") Q.stageScene("controles"); //console.log("escena de controles");
-                    else if(this.p.asset == "menu_principal/credits.png") Q.stageScene("creditos"); //console.log("escena de creditos");
+                    if(this.p.asset === "menu_principal/start.png") Q.stageScene("level");
+                    else if(this.p.asset === "menu_principal/controls.png") Q.stageScene("controles"); //console.log("escena de controles");
+                    else if(this.p.asset === "menu_principal/credits.png") Q.stageScene("creditos"); //console.log("escena de creditos");
                 }
 
                 
             }
         }
     });
-    
 
     Q.Sprite.extend("SelectorMenu", {
         init: function(p) {
@@ -454,11 +446,11 @@ window.addEventListener('load', function () {
         },
 
         actualizaCoordenadas: function(){
-            if(this.p.num_selector == 1){
+            if(this.p.num_selector === 1){
                 this.p.x = this.p.coordenadas_opciones_s1[this.p.opcion_apuntada].x;
                 this.p.y = this.p.coordenadas_opciones_s1[this.p.opcion_apuntada].y;
             }
-            else if(this.p.num_selector == 2){
+            else if(this.p.num_selector === 2){
                 this.p.x = this.p.coordenadas_opciones_s2[this.p.opcion_apuntada].x;
                 this.p.y = this.p.coordenadas_opciones_s2[this.p.opcion_apuntada].y;
             }
@@ -477,7 +469,7 @@ window.addEventListener('load', function () {
                     this.p.puede_usarse = false;
                     this.p.momento_yapuede = new Date().getTime() + 200; //0.1 segundos de margen entre pulsacion
 
-                    if(this.p.opcion_apuntada == 2) this.p.opcion_apuntada = 0;
+                    if(this.p.opcion_apuntada === 2) this.p.opcion_apuntada = 0;
                     else this.p.opcion_apuntada++;
 
                     this.actualizaCoordenadas();
@@ -488,7 +480,7 @@ window.addEventListener('load', function () {
                     this.p.puede_usarse = false;
                     this.p.momento_yapuede = new Date().getTime() + 200; //0.1 segundos de margen entre pulsacion
 
-                    if(this.p.opcion_apuntada == 0) this.p.opcion_apuntada = 2;
+                    if(this.p.opcion_apuntada === 0) this.p.opcion_apuntada = 2;
                     else this.p.opcion_apuntada--;
 
                     this.actualizaCoordenadas();
@@ -552,12 +544,10 @@ window.addEventListener('load', function () {
         
     });
 
-
     /************************************ CARGA DE RECURSOS Y ANIMACIONES***************************************/
     //
     //
     /***********************************************************************************************************/
-
 
     Q.loadTMX("intro/mainTitle.jpg, sonido_logotipo_intro.ogg, intro/parte0.png, intro/parte1.png, intro/parte2.png, menu_principal/fondo_menuprincipal.jpg, menu_principal/start.png, menu_principal/controls.png, menu_principal/credits.png, menu_principal/press_enter.png, menu_principal/selector.png, selector.json, menu_music.ogg, menu_music.ogg, menu_choice.ogg, menu_switching.ogg, controls.ogg, credits.ogg, controls/menu_press_enter.png, controls/controls.png, credits/nombre_juego.png, credits/introduccion_nombres.png, credits/nombre_cesar.png, credits/foto_cesar.jpg, credits/nombre_carmen.png, credits/foto_carmen.jpg, credits/nombre_sergio.png, credits/foto_sergio.jpg, credits/disclaimer.png, credits/nombre_asignatura.png, credits/nombre_uni.png, credits/logo_konami.jpg, credits/logo_principal.png, nivel1-scn1.tmx,  nivel1-scn2.tmx, simon_intro.png, simon_intro.json, whip.png, basic_whip.png, simon_normal.png, simon_normal.json, simon_normal_andando.png, simon_normal_andando.json, simon_agachado.png, simon_agachado.json, simon_normal_atacando.png, simon_normal_atacando.json, simon_agachado_atacando.png, simon_agachado_atacando.json, simon_agachado_andando.png, simon_agachado_andando.json, simon_saltando.png, simon_saltando.json, simon_saltando_atacando.png, simon_saltando_atacando.json, simon_atacando_haciarriba.png, simon_atacando_haciarriba.json, simon_herido.png, simon_muerto.png, simon_muerto.json, simon_atacando_diagonal.png, simon_atacando_diagonal.json, simon_saltando_atacando_haciarriba.png, simon_saltando_atacando_haciarriba.json, simon_saltando_atacando_diagonalarriba.png, simon_saltando_atacando_diagonalarriba.json, simon_saltando_atacando_diagonalabajo.png, simon_saltando_atacando_diagonalabajo.json, simon_saltando_atacando_haciabajo.png, simon_saltando_atacando_haciabajo.json, simon_subescaleras.png, simon_subescaleras.json, simon_subescaleras_atacando.png, simon_subescaleras_atacando.json, simon_subescaleras_atacando_haciarriba.png, simon_subescaleras_atacando_haciarriba.json, simon_subescaleras_atacando_diagonal.png, simon_subescaleras_atacando_diagonal.json, simon_bajaescaleras.png, simon_bajaescaleras.json, simon_bajaescaleras_atacando.png, simon_bajaescaleras_atacando.json, simon_bajaescaleras_atacando_diagonal.png, simon_bajaescaleras_atacando_diagonal.json", function() {
 

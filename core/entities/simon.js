@@ -44,14 +44,14 @@ Quintus.Simon = function(Q) {
 
         cambiaSprite: function (nombreSprite, nombreAnimacionDerecha, nombreAnimacionIzquierda) {
 
-            if(nombreSprite == "normalito" || nombreSprite == "agachado") {
+            if(nombreSprite === "normalito" || nombreSprite === "agachado") {
                 this.p.y += 6;
             }
 
             this.sheet(nombreSprite, true);
             this.p.sprite = nombreSprite;
-            if (this.p.direction == "right") this.play(nombreAnimacionDerecha);
-            else if (this.p.direction == "left") this.play(nombreAnimacionIzquierda);
+            if (this.p.direction === "right") this.play(nombreAnimacionDerecha);
+            else if (this.p.direction === "left") this.play(nombreAnimacionIzquierda);
             Q._generateCollisionPoints(this);
         },
 
