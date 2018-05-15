@@ -15,14 +15,14 @@ Proyecto final de la asignatura Desarrollo de Videojuegos mediante Tecnologías 
 			*  [Ataques desde el suelo](https://github.com/DVI-SC4/SuperCastlevania4#51-ataques-desde-el-suelo)
 			*  [Ataques en el aire](https://github.com/DVI-SC4/SuperCastlevania4#52-ataques-en-el-aire)
 		* [Uso de armas secundarias](https://github.com/DVI-SC4/SuperCastlevania4#6-uso-de-armas-secundarias)  
-	* [1.4. Personajes](https://github.com/DVI-SC4/SuperCastlevania4#13-personajes)
+	* [1.4. Personajes](https://github.com/DVI-SC4/SuperCastlevania4#14-personajes)
 * [2. Diseño de la implementación](https://github.com/DVI-SC4/SuperCastlevania4#2-dise%C3%B1o-de-la-implementaci%C3%B3n)
-	* [2.1. Arquitectura y jerarquía de archivos](https://github.com/DVI-SC4/SuperCastlevania4#21-sobre-el-juego-original)
-	* [2.2. Principales componentes](https://github.com/DVI-SC4/SuperCastlevania4#21-sobre-el-juego-original)
-	* [2.3. Implementaciones realizadas](https://github.com/DVI-SC4/SuperCastlevania4#21-sobre-el-juego-original)
-	* [2.4. Sobre el código](https://github.com/DVI-SC4/SuperCastlevania4#21-sobre-el-juego-original)
+	* [2.1. Arquitectura y jerarquía de archivos](https://github.com/DVI-SC4/SuperCastlevania4#21-arquitectura-y-jerarqu%C3%ADa-de-archivos)
+	* [2.2. Principales componentes](https://github.com/DVI-SC4/SuperCastlevania4#22-principales-componentes)
+	* [2.3. Implementaciones realizadas](https://github.com/DVI-SC4/SuperCastlevania4#23-implementaciones-realizadas)
+	* [2.4. Sobre el código](https://github.com/DVI-SC4/SuperCastlevania4#24-sobre-el-c%C3%B3digo)
 * [3. Equipo de trabajo y reparto de tareas](https://github.com/DVI-SC4/SuperCastlevania4#3-equipo-de-trabajo-y-reparto-de-tareas)
-	* [	3.1. Integrantes](https://github.com/DVI-SC4/SuperCastlevania4#31-integrantes)
+	* [3.1. Integrantes](https://github.com/DVI-SC4/SuperCastlevania4#31-integrantes)
 	* [3.2. Software y herramientas empleadas](https://github.com/DVI-SC4/SuperCastlevania4#32-software-y-herramientas-empleadas)
 	* [3.3. Tareas realizadas por cada integrante](https://github.com/DVI-SC4/SuperCastlevania4#33-tareas-realizadas-por-cada-integrante)
 	* [3.4. Carga de trabajo](https://github.com/DVI-SC4/SuperCastlevania4#34-carga-de-trabajo)
@@ -34,9 +34,9 @@ Proyecto final de la asignatura Desarrollo de Videojuegos mediante Tecnologías 
 
 ## 1.1 Sobre el juego original
 
-### Información
+### Información general
 
-Super Castlevania IV (en Japón: Akumajō Dracula 悪魔城ドラキュラ Akumajō Dorakyura, traducido literalmente como "Devil's Castle Dracula") es un videojuego de acción-aventura desarrollado y publicado por Konami a finales de 1991 en Japón y en Norteamérica, y en 1992 en Europa. Fue el primer videojuego de la serie Castlevania en aparecer para la videoconsola Super Nintendo aprovechándose de las mejores características técnicas en comparación con su predecesora, la videoconsola Nintendo Entertainment System (NES), apoyado en un hardware de 16 bits y ayudado de múltiples efectos como el Modo 7.
+Dentro de la nipona saga de juegos Castlevania, conocida a nivel mundial, tenemos el título "Super Castlevania IV" (en Japón: Akumajō Dracula 悪魔城ドラキュラ Akumajō Dorakyura, traducido literalmente como "Devil's Castle Dracula"). Éste un videojuego de acción-aventura desarrollado y publicado por Konami a finales de 1991 en Japón y en Norteamérica, y en 1992 en Europa. Fue el primer videojuego de la serie Castlevania en aparecer para la videoconsola Super Nintendo aprovechándose de las mejores características técnicas en comparación con su predecesora, la videoconsola Nintendo Entertainment System (NES), apoyado en un hardware de 16 bits y ayudado de múltiples efectos como el Modo 7.
 
 Aunque se trata de un remake del juego Castlevania de NES, en realidad es una secuela de Castlevania II: Simon's Quest.
 
@@ -309,7 +309,3 @@ https://i.gifer.com/CT80.gif
 https://media1.tenor.com/images/f477eb8dd0850d2a558e9c9656791561/tenor.gif?itemid=6563382
 https://thumbs.gfycat.com/PlayfulSoftAnkole-max-1mb.gif
 https://thumbs.gfycat.com/DisguisedScalyFritillarybutterfly-max-1mb.gif
-
-
-
-

@@ -43,9 +43,13 @@ Como de cara a la memoria y la entrega nos piden poner todo lo que se ha hecho y
 * Preparación de sprites de objetos recogibles (mejora de látigo, carne, corazones, etc.).
 * Preparación de sprites y jsons de enemigos básicos (murciélago, esqueleto, bicéfalo, etc.) con posiciones de avance, ataques y muerte.
 * Redacción de la memoria
-	* Sección 1.1 Objetivo del juego	 
-	* Sección 1.2 Principales mecánicas (con preparación y edición de los gifs y las imágenes de combinaciones de teclas).
-	* Sección de Simon en 1.3 Personajes.
+	* Sección 1.1 Sobre el juego original
+	* Sección 1.2 Objetivo del juego	 
+	* Sección 1.3 Principales mecánicas (con preparación y edición de los gifs y las imágenes de combinaciones de teclas).
+	* Sección de Simon en 1.4 Personajes.
+	* Sección 2.3 Implementaciones realizadas
+	* Sección 3.2 Software y herramientas empleadas
+	* Sección 4 Fuentes y referencias
 * Realización de la intro del juego con los logos de la UCM y FdI.
 * Realización del menú principal del juego, junto con el sprite animado del selector en forma de llama.
 * Realización de la sección de controles del personaje, junto a las capturas de las poses de Simon.
@@ -55,4 +59,3 @@ Como de cara a la memoria y la entrega nos piden poner todo lo que se ha hecho y
 ### Sergio
 
 * Separación y reestructuración de código.
-
