@@ -19,18 +19,7 @@ Quintus.Skeleton = function(Q) {
                 vx: -50
             });
             this.add('2d, aiBounce, animation');
-            this.on('bump.left', function(collision) {
-                if (collision.obj.isA('Simon')) {
-                    this.p.vx = 0;
-                    this.play('ataca_izquierda');
-                }
-            });
-            this.on('bump.right', function(collision) {
-                if (collision.obj.isA('Simon')) {
-                    this.p.vx = 0;
-                    this.play('ataca_derecha');
-                }
-            });
+            this.add('enemy');
         },
         step: function (dt){
             if (this.p.vx > 0) {

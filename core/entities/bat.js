@@ -4,7 +4,7 @@ Quintus.Bat = function(Q) {
     });
 
     Q.animations('bat', {
-        vuela_derecha: { frames: [1, 0], rate: 1/15 }
+        vuela_derecha: { frames: [1, 0], rate: 5/15 }
     });
 
     Q.Sprite.extend('Murcielago',{
