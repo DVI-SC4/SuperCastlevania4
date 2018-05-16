@@ -57485,7 +57485,11 @@
  </layer>
  <objectgroup name="Cosas">
   <object id="14" name="CambioZona" gid="44455" x="1688" y="348" width="4" height="4"/>
-  <object id="20" name="Simon" gid="36891" x="168" y="332" width="4" height="4"/>
+  <object id="20" name="Simon" gid="36891" x="168" y="332" width="4" height="4">
+   <properties>
+    <property name="AnchoMapa" type="int" value="2048"/>
+   </properties>
+  </object>
   <object id="23" name="e" gid="49777" x="448" y="392" width="4" height="4"/>
   <object id="24" name="e" gid="49778" x="452" y="392" width="4" height="4"/>
   <object id="25" name="e" gid="49779" x="456" y="392" width="4" height="4"/>
