@@ -1,10 +1,11 @@
 Quintus.Skeleton = function(Q) {
-    Q.load('esqueleto_caminando.png, skeleton.json', function () {
-        Q.compileSheets('esqueleto_caminando.png', 'skeleton.json');
+    Q.load('skeleton.png, skeleton.json', function () {
+        Q.compileSheets('skeleton.png', 'skeleton.json');
     });
 
     Q.animations('skeleton', {
-        camina_derecha: { frames: [1, 0], rate: 5/15 }
+        camina_izquierda: { frames: [1,0], rate: 5/15 },
+        camina_derecha: { frames: [2,3], rate: 5/15 }
     });
 
     Q.Sprite.extend('Esqueleto',{
@@ -21,7 +22,7 @@ Quintus.Skeleton = function(Q) {
             if (this.p.vx > 0) {
                 this.play('camina_derecha');
             } else {
-                this.play('camina_derecha');
+                this.play('camina_izquierda');
             }
         }
     });
