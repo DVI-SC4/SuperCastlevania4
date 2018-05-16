@@ -5,7 +5,9 @@ Quintus.Skeleton = function(Q) {
 
     Q.animations('skeleton', {
         camina_izquierda: { frames: [1,0], rate: 5/15 },
-        camina_derecha: { frames: [2,3], rate: 5/15 }
+        camina_derecha: { frames: [2,3], rate: 5/15 },
+        ataca_izquierda: { frames: [4,5,6], rate: 5/15 },
+        ataca_derecha: { frames: [7,8,9], rate: 5/15 }
     });
 
     Q.Sprite.extend('Esqueleto',{
@@ -17,11 +19,23 @@ Quintus.Skeleton = function(Q) {
                 vx: -50
             });
             this.add('2d, aiBounce, animation');
+            this.on('bump.left', function(collision) {
+                if (collision.obj.isA('Simon')) {
+                    this.p.vx = 0;
+                    this.play('ataca_izquierda');
+                }
+            });
+            this.on('bump.right', function(collision) {
+                if (collision.obj.isA('Simon')) {
+                    this.p.vx = 0;
+                    this.play('ataca_derecha');
+                }
+            });
         },
         step: function (dt){
             if (this.p.vx > 0) {
                 this.play('camina_derecha');
-            } else {
+            } else if (this.p.vx < 0) {
                 this.play('camina_izquierda');
             }
         }
