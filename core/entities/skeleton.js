@@ -4,7 +4,7 @@ Quintus.Skeleton = function(Q) {
     });
 
     Q.animations('skeleton', {
-        camina_derecha: { frames: [1, 0], rate: 1/15 }
+        camina_derecha: { frames: [1, 0], rate: 5/15 }
     });
 
     Q.Sprite.extend('Esqueleto',{
