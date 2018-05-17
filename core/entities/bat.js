@@ -17,6 +17,7 @@ Quintus.Bat = function(Q) {
                 vx: -50
             });
             this.add('2d, aiBounce, animation');
+            this.add('enemy');
         },
         step: function (dt){
             if (this.p.vx > 0) {

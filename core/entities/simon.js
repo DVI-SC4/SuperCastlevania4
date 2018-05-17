@@ -1,4 +1,8 @@
 Quintus.Simon = function(Q) {
+    Q.load({
+        'normal_whip': 'normal_whip.ogg'
+    });
+
     Q.Sprite.extend("Simon", {
         //holiSOLUCIONAR QUE SI DEJO PULSADO LATIGO MIENTRAS ATACO DE PIE, NO PUEDA SALTAR NI AGACHARSE HASTA QUE LO SUELTE.
         //Y MIENTRAS PULSO LATIGO AGACHADO, QUE NO PUEDA PONERSE EN PIE NI SALTAR HASTA QUE LO SUELTE
@@ -102,6 +106,7 @@ Quintus.Simon = function(Q) {
                     flip: valorFlip
                 }));
 
+                Q.audio.play('normal_whip');
                 this.p.latigo.horaDeDesaparicion = (new Date().getTime()/1000)+0.15; //coge la hora actual, en segundos, y le digo que debe desaparecer 0.15 segundos después de aparecer
 
             }
@@ -202,6 +207,7 @@ Quintus.Simon = function(Q) {
                 }
                 else {
                     
+
                     if (this.p.agachado && !this.p.andando_agachado && this.p.direction == "right") {
                         this.p.andando = true;
                         this.p.andando_agachado = true;
@@ -230,6 +236,7 @@ Quintus.Simon = function(Q) {
 
                 
 
+
                 if (this.p.agachado && !this.p.latigoActivado && this.p.direction == "right" && !this.p.atacando_agachado && this.p.andando) {
 
                     this.p.andando = false;
@@ -252,6 +259,10 @@ Quintus.Simon = function(Q) {
                     this.cambiaSprite("saltando", "salta_derecha", "salta_izquierda");
                     //console.log(this.p.vy);
                     this.p.en_aire = true;
+                //console.log("hola");
+                this.cambiaSprite("saltando", "salta_derecha", "salta_izquierda");
+                //console.log(this.p.vy);
+                this.p.en_aire = true;
             }
 
 
@@ -455,49 +466,49 @@ Quintus.Simon = function(Q) {
                 }
 
             }//activando el latigo
-            
+
             //if (!Q.inputs['W']){// && this.p.latigo) { //no se pulsa  W y si sigue el latigo presente
 
-                //VIGILAR, PORQUE EL LATIGO SE CREA AL TERMINAR LA ANIMACION DE ATAQUE,
-                //SI PULSAMOS Y SOLTAMOS W MUY RAPIDO, LA ANIMACION NO TERMINA Y P.LATIGO NO APUNTA A NADA
+            //VIGILAR, PORQUE EL LATIGO SE CREA AL TERMINAR LA ANIMACION DE ATAQUE,
+            //SI PULSAMOS Y SOLTAMOS W MUY RAPIDO, LA ANIMACION NO TERMINA Y P.LATIGO NO APUNTA A NADA
 
-                if(this.p.latigo){
-                    var horaActual = new Date().getTime()/1000;
+            if(this.p.latigo){
+                var horaActual = new Date().getTime()/1000;
 
-                    if(horaActual >= this.p.latigo.horaDeDesaparicion){
-                        this.p.latigo.destroy();
+                if(horaActual >= this.p.latigo.horaDeDesaparicion){
+                    this.p.latigo.destroy();
 
-                        this.p.latigo = null;
-                        this.p.latigoActivado = false;
-                        this.p.posicionAtaque = null;
-                        this.p.atacando_agachado = false;
-                        this.p.atacando_verticalmente = false;
-                        this.p.atacando_verticalmente_abajo = false;
-                        this.p.atacando_diagonalmente = false;
-                        this.p.atacando_diagonalmente_abajo = false;
-                        //console.log("has soltado W " + this.p.latigoActivado);
+                    this.p.latigo = null;
+                    this.p.latigoActivado = false;
+                    this.p.posicionAtaque = null;
+                    this.p.atacando_agachado = false;
+                    this.p.atacando_verticalmente = false;
+                    this.p.atacando_verticalmente_abajo = false;
+                    this.p.atacando_diagonalmente = false;
+                    this.p.atacando_diagonalmente_abajo = false;
+                    //console.log("has soltado W " + this.p.latigoActivado);
 
-                        this.p.listoAtacarDenuevo = false;
-                        if (this.p.en_aire == true) {
+                    this.p.listoAtacarDenuevo = false;
+                    if (this.p.en_aire == true) {
 
-                            this.cambiaSprite("saltando", "salta_derecha", "salta_izquierda");
-                        }
-                        else if (!this.p.agachado) {
+                        this.cambiaSprite("saltando", "salta_derecha", "salta_izquierda");
+                    }
+                    else if (!this.p.agachado) {
 
-                            this.cambiaSprite("normalito", "pose_normal_derecha", "pose_normal_izquierda");
-                        }
-                        else {
+                        this.cambiaSprite("normalito", "pose_normal_derecha", "pose_normal_izquierda");
+                    }
+                    else {
 
-                            this.cambiaSprite("agachado", "pose_agachado_derecha", "pose_agachado_izquierda");
-                        }
+                        this.cambiaSprite("agachado", "pose_agachado_derecha", "pose_agachado_izquierda");
                     }
                 }
+            }
 
-                if(!Q.inputs['W'] && !this.p.en_aire) {
-                    this.p.listoAtacarDenuevo = true;
-                    //console.log("ya puedes");
-                }
-                
+            if(!Q.inputs['W'] && !this.p.en_aire) {
+                this.p.listoAtacarDenuevo = true;
+                //console.log("ya puedes");
+            }
+
             //}
             this.subeEscalera();
 
