@@ -372,13 +372,9 @@ Quintus.Simon = function(Q) {
         },
 
         step: function (dt) {
-<<<<<<< HEAD
+
             
             if(this.p.en_aire && this.p.vy >= 0 && !this.p.subiendoEscaleras) 
-=======
-
-            if(this.p.en_aire && this.p.vy >= 0)
->>>>>>> 5891c8954778e70e5243bf2e84d8830cb1a8b054
                 this.p.gravity = 0.9;
 
             //compruebo con cada step que todo esté consistente
