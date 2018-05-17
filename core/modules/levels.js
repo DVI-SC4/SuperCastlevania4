@@ -57,17 +57,18 @@ Quintus.CastlevaniaLevels = function (Q) {
     Q.Sprite.extend("EscaleraArriba", {
         init: function(p) {
             this._super(p, {
+                /*asset: "simon_normal.png",*/
                 w:10,
-                h:10,
+                h:1,
                 gravity:0,
                 type: Q.SPRITE_ENEMY
             });
             this.add('2d, aiBounce, animation');
             this.on("bump.left,bump.right, bump.top, bump.bottom",function(collision) {
-                console.log("holaaaaaaaaaaaaaaaaaa");
-                if(collision.obj.isA("Simon")) {
-                    collision.obj.p.vy = -300;
-                    console.log("HOLIIIIIIIIIII");
+                //console.log("holaaaaaaaaaaaaaaaaaa");
+                if(collision.obj.isA("Simon") && Q.inputs['up'] && Q.inputs['right']) {
+                    collision.obj.p.x = this.p.posicion_inicial;
+                    collision.obj.p.subiendoEscaleras = true;
                 }
             });
         },

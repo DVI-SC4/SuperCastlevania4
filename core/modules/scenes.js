@@ -1,6 +1,6 @@
 Quintus.CastlevaniaScenes = function (Q) {
     let level = 1;
-    let escena = 2;
+    let escena = 1;
     let MAX_ESCENA = 2;
 
     Q.scene('inicio',function(stage) {
@@ -18,10 +18,10 @@ Quintus.CastlevaniaScenes = function (Q) {
             asset: "intro/mainTitle.jpg",
         }));
         button.on("click",function() {
-            Q.stageScene('introLogos');
+            Q.stageScene('level');
         });
         Q.input.on("confirm",stage,function() {
-            Q.stageScene('introLogos');
+            Q.stageScene('level');
         });
     });
 

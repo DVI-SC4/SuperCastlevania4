@@ -361,13 +361,17 @@ Quintus.Simon = function(Q) {
         },
 
         subeEscalera: function(){
-            if (this.p.subiendoEscaleras && (Q.inputs['right'])) {
+            if (this.p.subiendoEscaleras && (Q.inputs['right']) && !this.p.latigoActivado) {
                 //console.log(this);
                 this.p.vy = -100;
                // this.p.y-=4;
                 this.p.gravity = 0;
-                this.cambiaSprite("subiendo_escaleras", "sube_escaleras_haciaderecha", "sube_escaleras_haciaderecha");
-                //console.log(this);
+                this.cambiaSprite("subiendo_escaleras", "sube_escaleras_haciaderecha", "sube_escaleras_haciaizquierda");
+                console.log(this);
+            }
+            if(this.p.subiendoEscaleras && !Q.inputs['right']  && !this.p.latigoActivado){
+                 this.p.vy = 0;
+                 //this.cambiaSprite("subiendo_escaleras", "sube_escaleras_parado_haciaderecha", "sube_escaleras_parado_haciaizquierda");
             }
         },
 
@@ -392,7 +396,7 @@ Quintus.Simon = function(Q) {
             }
 
 
-            if (Q.inputs['Q'] && !this.p.en_aire && !this.p.agachado) {
+            if (Q.inputs['Q'] && !this.p.en_aire && !this.p.agachado && !this.p.subiendoEscaleras) {
 
                 this.p.en_aire = true;
                 this.cambiaSprite("saltando", "salta_derecha", "salta_izquierda");
@@ -428,6 +432,7 @@ Quintus.Simon = function(Q) {
 
             }
 
+            this.subeEscalera();
             this.actuaAbajo();
 
             if (Q.inputs['W'] && !this.p.latigoActivado && this.p.listoAtacarDenuevo) {
@@ -504,13 +509,15 @@ Quintus.Simon = function(Q) {
             }
 
             //}
-            this.subeEscalera();
-
-            this.actuaDer();
-            this.actuaIzq();
-            this.controlaEnAire();
-
-            this.compruebaCaida();
+            
+            if(!this.p.subiendoEscaleras){
+               this.actuaDer();
+               this.actuaIzq();
+               this.controlaEnAire();
+               this.compruebaCaida(); 
+            }
+            
+            
             this.gestionaViewport();
 
         }//step

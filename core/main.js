@@ -111,8 +111,10 @@ window.addEventListener('load', function () {
         });
 
         Q.animations("subiendo_escaleras", {
-            sube_escaleras_haciaderecha: { frames: [0,1,2,3,4,5,6], rate: 5/15, loop:false},
-            sube_escaleras_haciaizquierda: { frames: [7,8,9,10,11,12,13], rate: 5/15, loop:false}
+            sube_escaleras_haciaderecha: { frames: [0,1,2,3,4,5,6], rate: 5/15},
+            sube_escaleras_haciaizquierda: { frames: [7,8,9,10,11,12,13], rate: 5/15},
+            sube_escaleras_parado_haciaderecha: { frames: [6], rate: 5/15,loop:false},
+            sube_escaleras_parado_haciaizquierda: { frames: [13], rate: 5/15,loop:false}
         });
 
         Q.animations("subiendo_escaleras_atacando", {
