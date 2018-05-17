@@ -105,7 +105,6 @@ Quintus.Simon = function(Q) {
                     angle: valorAngulo,
                     flip: valorFlip
                 }));
-
                 Q.audio.play('normal_whip');
                 this.p.latigo.horaDeDesaparicion = (new Date().getTime()/1000)+0.15; //coge la hora actual, en segundos, y le digo que debe desaparecer 0.15 segundos después de aparecer
 
@@ -206,7 +205,6 @@ Quintus.Simon = function(Q) {
                     }
                 }
                 else {
-                    
 
                     if (this.p.agachado && !this.p.andando_agachado && this.p.direction == "right") {
                         this.p.andando = true;
@@ -234,7 +232,6 @@ Quintus.Simon = function(Q) {
             }//pulsando derecha
             else { //ya no pulsa la derecha
 
-                
 
 
                 if (this.p.agachado && !this.p.latigoActivado && this.p.direction == "right" && !this.p.atacando_agachado && this.p.andando) {
@@ -255,10 +252,6 @@ Quintus.Simon = function(Q) {
 
         controlaEnAire: function(){
             if(!this.p.latigo && !this.p.latigoActivado && this.p.vy >= 70 && !Q.inputs['down'] &&  !this.p.atacando_verticalmente && !this.p.en_aire){ //no está saltando como tal pero se ha dejado caer desde una altura
-                    //console.log("hola");
-                    this.cambiaSprite("saltando", "salta_derecha", "salta_izquierda");
-                    //console.log(this.p.vy);
-                    this.p.en_aire = true;
                 //console.log("hola");
                 this.cambiaSprite("saltando", "salta_derecha", "salta_izquierda");
                 //console.log(this.p.vy);
@@ -379,8 +372,13 @@ Quintus.Simon = function(Q) {
         },
 
         step: function (dt) {
+<<<<<<< HEAD
             
             if(this.p.en_aire && this.p.vy >= 0 && !this.p.subiendoEscaleras) 
+=======
+
+            if(this.p.en_aire && this.p.vy >= 0)
+>>>>>>> 5891c8954778e70e5243bf2e84d8830cb1a8b054
                 this.p.gravity = 0.9;
 
             //compruebo con cada step que todo esté consistente
