@@ -21,7 +21,7 @@ Quintus.CastlevaniaScenes = function (Q) {
             Q.stageScene('introLogos');
         });
         Q.input.on("confirm",stage,function() {
-            Q.stageScene('level');
+            Q.stageScene('introLogos');
         });
     });
 
