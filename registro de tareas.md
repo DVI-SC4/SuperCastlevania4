@@ -62,3 +62,5 @@ Como de cara a la memoria y la entrega nos piden poner todo lo que se ha hecho y
 * Codigo y animación para enemigo Bat.
 * Sprite para skeleton.
 * Conversion .ogg a .mp3
+* Animacion muerte enemigos.
+* Componente para enemigos.
