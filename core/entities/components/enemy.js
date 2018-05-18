@@ -8,7 +8,22 @@ Quintus.CastlevaniaEnemy = function(Q) {
     });
 
     Q.animations('muerte_enemigo', {
-        muerte: { frames: [0,1,2,3,4], rate: 1/15 }
+        muerte: { frames: [0,1,2,3,4], rate: 3/15, loop: false, trigger: 'muerto' }
+    });
+
+    Q.Sprite.extend('Llama', {
+        init: function(p) {
+            this._super(p, {
+                sprite: 'muerte_enemigo',
+                sheet: 'muerte_enemigo',
+                scale: 2
+            });
+            this.add('animation');
+            this.on('muerto', this, 'destruir');
+        },
+        destruir: function () {
+            this.destroy();
+        }
     });
 
     Q.component('enemy', {
@@ -22,12 +37,14 @@ Quintus.CastlevaniaEnemy = function(Q) {
             });
             this.entity.on('hit.sprite', function (collision) {
                 if (collision.obj.isA('Whip')) {
-                    Q.audio.play('enemy_destroyed');
-                    this.p.sheet = 'muerte_enemigo';
-                    this.play('muerte');
+                    collision.obj.destroy();
                     this.destroy();
+                    Q.audio.play('enemy_destroyed');
+                    const llama = new Q.Llama({x: this.p.x, y: this.p.y});
+                    this.stage.insert(llama);
+                    llama.play('muerte');
                 }
-            })
+            });
         }
     });
 };
