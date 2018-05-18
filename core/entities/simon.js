@@ -367,11 +367,11 @@ Quintus.Simon = function(Q) {
                // this.p.y-=4;
                 this.p.gravity = 0;
                 this.cambiaSprite("subiendo_escaleras", "sube_escaleras_haciaderecha", "sube_escaleras_haciaizquierda");
-                console.log(this);
+                //console.log(this);
             }
             if(this.p.subiendoEscaleras && !Q.inputs['right']  && !this.p.latigoActivado){
                  this.p.vy = 0;
-                 //this.cambiaSprite("subiendo_escaleras", "sube_escaleras_parado_haciaderecha", "sube_escaleras_parado_haciaizquierda");
+                 this.cambiaSprite("subiendo_escaleras", "sube_escaleras_parado_haciaderecha", "sube_escaleras_parado_haciaizquierda");
             }
         },
 
@@ -432,7 +432,7 @@ Quintus.Simon = function(Q) {
 
             }
 
-            this.subeEscalera();
+            
             this.actuaAbajo();
 
             if (Q.inputs['W'] && !this.p.latigoActivado && this.p.listoAtacarDenuevo) {
@@ -509,7 +509,7 @@ Quintus.Simon = function(Q) {
             }
 
             //}
-            
+            this.subeEscalera();
             if(!this.p.subiendoEscaleras){
                this.actuaDer();
                this.actuaIzq();

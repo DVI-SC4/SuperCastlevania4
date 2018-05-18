@@ -61,7 +61,7 @@ Quintus.CastlevaniaLevels = function (Q) {
                 w:10,
                 h:1,
                 gravity:0,
-                type: Q.SPRITE_ENEMY
+                type: Q.SPRITE_FRIENDLY
             });
             this.add('2d, aiBounce, animation');
             this.on("bump.left,bump.right, bump.top, bump.bottom",function(collision) {
@@ -69,6 +69,9 @@ Quintus.CastlevaniaLevels = function (Q) {
                 if(collision.obj.isA("Simon") && Q.inputs['up'] && Q.inputs['right']) {
                     collision.obj.p.x = this.p.posicion_inicial;
                     collision.obj.p.subiendoEscaleras = true;
+                    console.log(collision.obj.p.collisionMask);
+                    collision.obj.p.collisionMask = Q.SPRITE_FRIENDLY;
+
                 }
             });
         },
