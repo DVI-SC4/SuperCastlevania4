@@ -31,7 +31,8 @@ Quintus.Simon = function(Q) {
                     atacando_verticalmente_abajo: false,
                     atacando_diagonalmente: false,
                     atacando_diagonalmente_abajo: false,
-                    subiendoEscaleras: false
+                    subiendoEscaleras: false,
+                    direccionEscaleras: " "
                 }
             );
             this.add('2d, platformerControls, animation');
@@ -321,7 +322,7 @@ Quintus.Simon = function(Q) {
         },
 
         actuaAbajo: function(){
-            if (Q.inputs['down']) {
+            if (Q.inputs['down'] && !this.p.subiendoEscaleras) {
 
                 if (!this.p.agachado && !this.p.atacando_diagonalmente && !this.p.atacando_verticalmente && !this.p.en_aire) {
 
@@ -361,7 +362,7 @@ Quintus.Simon = function(Q) {
         },
 
         subeEscalera: function(){
-            if (this.p.subiendoEscaleras && (Q.inputs['right']) && !this.p.latigoActivado) {
+            if (this.p.subiendoEscaleras && (Q.inputs['right']) && !(Q.inputs['left']) && !this.p.latigoActivado) {
                 //console.log(this);
                 this.p.vy = -100;
                // this.p.y-=4;

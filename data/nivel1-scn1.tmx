@@ -7,6 +7,12 @@
     <property name="Class" value="CambioZona"/>
    </properties>
   </tile>
+  <tile id="25248">
+   <properties>
+    <property name="Class" value="FinEscalera"/>
+    <property name="posicionFin" type="int" value="0"/>
+   </properties>
+  </tile>
   <tile id="29801">
    <properties>
     <property name="Class" value="CambioZona"/>
