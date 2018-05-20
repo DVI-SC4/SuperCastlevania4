@@ -14,8 +14,6 @@ Quintus.Simon = function(Q) {
             this._super(p, {
                     sheet: "normalito",
                     sprite: "normalito",
-                    x: 1200,//55,
-                    y: 528,
                     gravity: 0.6,
                     scale: 2,
                     latigo: null,
@@ -392,7 +390,7 @@ Quintus.Simon = function(Q) {
 
             
             if(this.p.en_aire && this.p.vy >= 0 && !this.p.subiendoEscaleras) 
-                this.p.gravity = 0.9;
+                this.p.gravity = 0.6;
 
             //compruebo con cada step que todo esté consistente
             if (!this.p.latigo) this.p.latigoActivado = false;

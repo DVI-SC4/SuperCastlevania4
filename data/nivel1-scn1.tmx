@@ -17,7 +17,7 @@
    <properties>
     <property name="Class" value="EscaleraAbajo"/>
     <property name="direccion" value="derecha"/>
-    <property name="posicion_inicial" type="int" value="850"/>
+    <property name="posicion_inicial" type="int" value="860"/>
    </properties>
   </tile>
   <tile id="29801">

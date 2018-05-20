@@ -1,7 +1,5 @@
 Quintus.CastlevaniaScenes = function (Q) {
-    let level = 1;
-    let escena = 1;
-    let MAX_ESCENA = 2;
+    
 
     Q.scene('inicio',function(stage) {
         Q.state.reset({ monedasRecogidas: 0, lives: 3, puntuacion: 0});
@@ -26,6 +24,7 @@ Quintus.CastlevaniaScenes = function (Q) {
     });
 
     Q.scene('level', function(stage) {
+        console.log(escena);
         const nivel = "nivel" + level + "-scn" + escena + ".tmx";
         Q.stageTMX(nivel, stage);
     });

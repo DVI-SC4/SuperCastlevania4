@@ -11,7 +11,13 @@ Quintus.CastlevaniaEscaleras = function (Q) {
             this.add('2d, aiBounce, animation');
             this.on("bump.left,bump.right, bump.top, bump.bottom",function(collision) {
                 
+                /* if ( collision.obj.isA("Simon")){
+                    console.log(collision.obj.p.x);
+                 }*/
+
+
                 if ( collision.obj.isA("Simon") && (((this.p.direccion == "derecha") && Q.inputs['up'] && Q.inputs['right']) || ((this.p.direccion == "izquierda") && Q.inputs['up'] && Q.inputs['left']))) {
+                    
                     collision.obj.p.x = this.p.posicion_inicial;
                     collision.obj.p.subiendoEscaleras = true;
                     collision.obj.p.direccionEscaleras = this.p.direccion;
@@ -37,12 +43,12 @@ Quintus.CastlevaniaEscaleras = function (Q) {
                 gravity:0,
                 type: Q.SPRITE_FRIENDLY
             });
-            console.log(this.p.x);
+           // console.log(this.p.x);
             this.add('2d, aiBounce, animation');
             this.on("bump.left,bump.right, bump.top, bump.bottom",function(collision) {
                 
                 if ( collision.obj.isA("Simon") && (((this.p.direccion == "derecha") && Q.inputs['down'] && Q.inputs['right']) || ((this.p.direccion == "izquierda") && Q.inputs['down'] && Q.inputs['left']))) {
-                   console.log("HOLI);");
+                   //console.log("HOLI);");
                     collision.obj.p.x = this.p.posicion_inicial;
                     collision.obj.p.subiendoEscaleras = true;
                     collision.obj.p.direccionEscaleras = this.p.direccion;
@@ -62,17 +68,18 @@ Quintus.CastlevaniaEscaleras = function (Q) {
     Q.Sprite.extend("FinEscalera", {
         init: function(p) {
             this._super(p, {
-               /* asset: "simon_normal.png",*/
+                asset: "simon_normal.png",
                 w:10,
                 h:10,
                 gravity:0,
                 sensor: true,
                 type: Q.SPRITE_FRIENDLY
             });
-            
+            console.log(this.p.y);
             this.add('2d, aiBounce, animation');
             this.on("bump.left,bump.right, bump.top, bump.bottom",function(collision) {
                  if ( collision.obj.isA("Simon")){
+                    
                     this.p.collisionMask = Q.SPRITE_NONE;
                     collision.obj.p.subiendoEscaleras = false;
                     collision.obj.p.collisionMask = Q.SPRITE_DEFAULT;
