@@ -18,10 +18,16 @@ Quintus.Skeleton = function(Q) {
                 scale: 2,
                 vx: -50
             });
+            this.p.xInicial = this.p.x;
             this.add('2d, aiBounce, animation');
             this.add('enemy');
         },
         step: function (dt){
+            if(this.p.x <= this.p.xInicial-50){
+                this.p.vx = 50;
+            }else if(this.p.x >= this.p.xInicial+50){
+                this.p.vx = -50;
+            }
             if (this.p.vx > 0) {
                 this.play('camina_derecha');
             } else if (this.p.vx < 0) {
