@@ -133,8 +133,10 @@ window.addEventListener('load', function () {
         });
 
         Q.animations("bajando_escaleras", {
-            baja_escaleras_haciaizquierda: { frames: [0,1,2,3,4,5], rate: 5/15, loop:false},
-            baja_escaleras_haciaderecha: { frames: [6,7,8,9,10,11], rate: 5/15, loop:false}
+            baja_escaleras_haciaizquierda: { frames: [0,1,2,3,4,5], rate: 5/15},
+            baja_escaleras_haciaderecha: { frames: [6,7,8,9,10,11], rate: 5/15},
+            baja_escaleras_parado_haciaderecha: { frames: [11], rate: 5/15,loop:false},
+            baja_escaleras_parado_haciaizquierda: { frames: [5], rate: 5/15,loop:false}
         });
 
         Q.animations("bajando_escaleras_atacando", {

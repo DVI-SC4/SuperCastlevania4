@@ -32,11 +32,12 @@ Quintus.Simon = function(Q) {
                     atacando_diagonalmente: false,
                     atacando_diagonalmente_abajo: false,
                     subiendoEscaleras: false,
-                    direccionEscaleras: " "
+                    direccionEscaleras: " ",
+                    subeObaja: " "
                 }
             );
             this.add('2d, platformerControls, animation');
-
+        
             this.on("showwhip", this, "dibujalatigo_depie");
             this.on("showwhip_ducked", this, "dibujalatigo_agachado");
             this.on("showwhip_jumping", this, "dibujalatigo_saltando");
@@ -363,16 +364,27 @@ Quintus.Simon = function(Q) {
 
         subeEscalera: function(){
             if (this.p.subiendoEscaleras && (Q.inputs['right']) && !(Q.inputs['left']) && !this.p.latigoActivado) {
-                //console.log(this);
-                this.p.vy = -100;
-               // this.p.y-=4;
-                this.p.gravity = 0;
-                this.cambiaSprite("subiendo_escaleras", "sube_escaleras_haciaderecha", "sube_escaleras_haciaizquierda");
-                //console.log(this);
+                if(this.p.subeObaja == "sube"){
+                    this.p.vy = -100;
+                    this.p.gravity = 0;
+                    this.cambiaSprite("subiendo_escaleras", "sube_escaleras_haciaderecha", "sube_escaleras_haciaizquierda");
+                }
+                if(this.p.subeObaja == "baja"){
+                    this.p.vy = 100;
+                    this.p.gravity = 0;
+                    this.cambiaSprite("bajando_escaleras", "baja_escaleras_haciaderecha", "baja_escaleras_haciaizquierda");
+                }
+                
             }
             if(this.p.subiendoEscaleras && !Q.inputs['right']  && !this.p.latigoActivado){
-                 this.p.vy = 0;
-                 this.cambiaSprite("subiendo_escaleras", "sube_escaleras_parado_haciaderecha", "sube_escaleras_parado_haciaizquierda");
+                this.p.vy = 0;
+                if(this.p.subeObaja == "sube"){
+                    this.cambiaSprite("subiendo_escaleras", "sube_escaleras_parado_haciaderecha", "sube_escaleras_parado_haciaizquierda");
+                }
+                if(this.p.subeObaja == "baja"){
+                    this.cambiaSprite("bajando_escaleras", "baja_escaleras_parado_haciaderecha", "baja_escaleras_parado_haciaizquierda");
+                }
+                 
             }
         },
 
