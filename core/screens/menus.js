@@ -45,7 +45,10 @@ Quintus.CastlevaniaMenus = function (Q) {
                 if(horaActual-this.p.horaElegida >= 2000){
                     Q.clearStages();
 
-                    if(this.p.asset === "menu_principal/start.png") Q.stageScene("level");
+                    if(this.p.asset === "menu_principal/start.png"){
+                      Q.stageScene("level"); 
+                      Q.stageScene("hud",1); 
+                    } 
                     else if(this.p.asset === "menu_principal/controls.png") Q.stageScene("controles"); //console.log("escena de controles");
                     else if(this.p.asset === "menu_principal/credits.png") Q.stageScene("creditos"); //console.log("escena de creditos");
                 }

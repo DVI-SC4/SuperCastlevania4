@@ -2,7 +2,7 @@ Quintus.CastlevaniaScenes = function (Q) {
     
 
     Q.scene('inicio',function(stage) {
-        Q.state.reset({ monedasRecogidas: 0, lives: 3, puntuacion: 0});
+        Q.state.reset({puntuacion: -1});
         const container = stage.insert(new Q.UI.Container({
             x: Q.width / 2,
             y: Q.height / 2,
@@ -17,9 +17,12 @@ Quintus.CastlevaniaScenes = function (Q) {
         }));
         button.on("click",function() {
             Q.stageScene('level');
+            Q.stageScene("hud",1);
+            Q.state.inc("puntuacion",1);
         });
         Q.input.on("confirm",stage,function() {
             Q.stageScene('level');
+            Q.stageScene("hud",1);
         });
     });
 

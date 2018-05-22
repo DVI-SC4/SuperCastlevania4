@@ -40,6 +40,7 @@ Quintus.CastlevaniaEnemy = function(Q) {
                     collision.obj.destroy();
                     this.destroy();
                     Q.audio.play('enemy_destroyed');
+                    Q.state.inc("puntuacion",1);
                     const llama = new Q.Llama({x: this.p.x, y: this.p.y});
                     this.stage.insert(llama);
                     llama.play('muerte');
