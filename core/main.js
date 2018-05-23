@@ -1,6 +1,6 @@
 var level = 1;
 var escena = 2;
-var MAX_ESCENA = 3;
+var MAX_ESCENA = 2;
 
 window.addEventListener('load', function () {
     const Q = window.Q = Quintus({audioSupported: ['ogg', 'mp3']})

@@ -30,6 +30,7 @@ Quintus.CastlevaniaEnemy = function(Q) {
         added: function() {
             this.entity.on('bump.left, bump.right', function(collision) {
                 if (collision.obj.isA('Simon')) {
+                    Q.state.dec("health",1);
                     this.p.vx = 0;
                     collision.obj.p.vx = -1000;
                     this.p.vx = -50;
@@ -41,6 +42,7 @@ Quintus.CastlevaniaEnemy = function(Q) {
                     this.destroy();
                     Q.audio.play('enemy_destroyed');
                     Q.state.inc("puntuacion",1);
+
                     const llama = new Q.Llama({x: this.p.x, y: this.p.y});
                     this.stage.insert(llama);
                     llama.play('muerte');

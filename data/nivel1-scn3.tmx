@@ -46,7 +46,7 @@
  <tileset firstgid="114582" name="tiled2v2" tilewidth="8" tileheight="8" tilecount="28616" columns="511">
   <image source="../images/stage-2-lvl-1.png" width="4092" height="448"/>
  </tileset>
- <imagelayer name="background">
+ <imagelayer name="background" visible="0">
   <image source="../images/stage-2-lvl-1.png" width="4092" height="448"/>
  </imagelayer>
  <layer name="Collision" width="512" height="56">

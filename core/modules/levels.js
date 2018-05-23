@@ -50,6 +50,7 @@ Quintus.CastlevaniaLevels = function (Q) {
                 Q.clearStages();
                 escena++;
                 Q.stageScene('level');
+                Q.stageScene("hud",1);
             }
         }
     });
