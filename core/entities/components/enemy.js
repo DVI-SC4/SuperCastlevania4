@@ -30,10 +30,32 @@ Quintus.CastlevaniaEnemy = function(Q) {
         added: function() {
             this.entity.on('bump.left, bump.right', function(collision) {
                 if (collision.obj.isA('Simon')) {
-                    Q.state.dec("health",1);
                     this.p.vx = 0;
                     collision.obj.p.vx = -1000;
                     this.p.vx = -50;
+                    console.log(Q.state.get("health"))
+                    if(Q.state.get("health") >= 0){
+                        Q.state.dec("health",1); 
+                    }else{
+                        if(Q.state.get("vidas") >= 0){ 
+                            Q.clearStages();
+                            Q.stageScene('level');
+                            Q.stageScene("hud",1);
+                            Q.state.inc("health",15);
+                            Q.state.dec("vidas",1);
+                            Q.state.inc("puntuacion",1);
+                            Q.state.dec("puntuacion",1);
+                            /*
+                            Q.state.inc("health",1);
+                            Q.state.dec("health",1);*/
+                        }else{
+                            Q.clearStages();
+                            Q.stageScene('GameOver');
+                        }
+                        
+
+                    }
+                    
                 }
             });
             this.entity.on('hit.sprite', function (collision) {
@@ -41,7 +63,7 @@ Quintus.CastlevaniaEnemy = function(Q) {
                     collision.obj.destroy();
                     this.destroy();
                     Q.audio.play('enemy_destroyed');
-                    Q.state.inc("puntuacion",1);
+                    Q.state.inc("puntuacion",10);
 
                     const llama = new Q.Llama({x: this.p.x, y: this.p.y});
                     this.stage.insert(llama);

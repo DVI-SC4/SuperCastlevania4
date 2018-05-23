@@ -21,6 +21,28 @@ Quintus.CastlevaniaHUD = function (Q) {
     stage.insert(new Q.Numero({asset: assetEscena, x:522, y:31}));
 
     containerHUD.insert(new Q.Salud());
+
+
+
+    let vidasAct = Q.state.get("vidas");
+    vidasAct = vidasAct.toString();
+    let assetVidas = "numeros/0.png";
+    let posX = 424;
+    for(let i=0; i<2;i++){
+      if(vidasAct[vidasAct.length - i - 1]){
+        assetPuntos = "numeros/"+vidasAct[vidasAct.length - i - 1]+".png";
+      }else{
+        assetPuntos = "numeros/0.png";
+      }
+   
+      
+      stage.insert(new Q.Numero({asset: assetPuntos, x:posX, y:48}));
+      
+      posX -= 16;
+      
+    }
+
+  
   });
 
  Q.Sprite.extend('Numero',{
@@ -74,7 +96,7 @@ Q.UI.Container.extend("Score",{
     
     for(let i=0; i<9;i++){
       if(puntuacionAct[puntuacionAct.length - i - 1]){
-        assetPuntos = "numeros/"+puntuacionAct[i]+".png";
+        assetPuntos = "numeros/"+puntuacionAct[puntuacionAct.length - i - 1]+".png";
       }else{
         assetPuntos = "numeros/0.png";
       }
@@ -109,7 +131,7 @@ Q.UI.Container.extend("Salud",{
   update_salud: function(health) {
     /*let puntuacionAct = puntuacion.toString();
     let asset = "numeros/0.png";*/
-    console.log(health);
+    
     let i=0;
     let posXs = 165;
     while(i<health){

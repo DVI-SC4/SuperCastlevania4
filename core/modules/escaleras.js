@@ -75,7 +75,7 @@ Quintus.CastlevaniaEscaleras = function (Q) {
                 sensor: true,
                 type: Q.SPRITE_FRIENDLY
             });
-            console.log(this.p.y);
+            //console.log(this.p.y);
             this.add('2d, aiBounce, animation');
             this.on("bump.left,bump.right, bump.top, bump.bottom",function(collision) {
                  if ( collision.obj.isA("Simon")){

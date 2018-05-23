@@ -1,8 +1,10 @@
 Quintus.CastlevaniaScenes = function (Q) {
-    
+  Q.load('end_title.png', function () {
+        
+  });  
 
     Q.scene('inicio',function(stage) {
-        Q.state.reset({puntuacion: -1, health: 15});
+        Q.state.reset({puntuacion: -1, health: 14, vidas: 4});
         const container = stage.insert(new Q.UI.Container({
             x: Q.width / 2,
             y: Q.height / 2,
@@ -31,5 +33,35 @@ Quintus.CastlevaniaScenes = function (Q) {
         console.log(escena);
         const nivel = "nivel" + level + "-scn" + escena + ".tmx";
         Q.stageTMX(nivel, stage);
+    });
+
+    Q.scene('GameOver',function(stage) {
+        escena=1;
+        level=1;
+        Q.state.reset({puntuacion: -1, health: 15, vidas: 4});
+        const container = stage.insert(new Q.UI.Container({
+            x: Q.width / 2,
+            y: Q.height / 2,
+            fill: "rgba(0,0,0,0.5)"
+        }));
+        const button = container.insert(new Q.UI.Button({
+            x: 0,
+            y: 0,
+            h: Q.height,
+            w: Q.width,
+            asset: "end_title.png",
+        }));
+        button.on("click",function() {
+            Q.stageScene('level');
+            Q.stageScene("hud",1);
+            Q.state.inc("puntuacion",1);
+            Q.state.inc("health",1);
+        });
+        Q.input.on("confirm",stage,function() {
+            Q.stageScene('level');
+            Q.stageScene("hud",1);
+            Q.state.inc("puntuacion",1);
+            Q.state.inc("health",1);
+        });
     });
 }
