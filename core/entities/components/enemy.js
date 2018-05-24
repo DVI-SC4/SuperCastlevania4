@@ -29,11 +29,12 @@ Quintus.CastlevaniaEnemy = function(Q) {
     Q.component('enemy', {
         added: function() {
             this.entity.on('bump.left, bump.right', function(collision) {
-                if (collision.obj.isA('Simon')) {
+                if (collision.obj.isA('Simon') && !collision.obj.p.inmune) {
                     this.p.vx = 0;
-                    collision.obj.p.x -= 100;
+                    collision.obj.p.x -= 30;
                     this.p.vx = -50;
-                    
+                    collision.obj.p.inmune=true;
+                    collision.obj.p.temporizadorInmune = 0;
                     if(Q.state.get("health") > 0){
                         console.log("estoy decreciendo la salud");
                         Q.state.dec("health",1); 
@@ -55,6 +56,7 @@ Quintus.CastlevaniaEnemy = function(Q) {
                     }
                     console.log(Q.state.get("health"));
                 }
+             
             });
             this.entity.on('hit.sprite', function (collision) {
                 if (collision.obj.isA('Whip')) {

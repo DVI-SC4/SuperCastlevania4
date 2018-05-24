@@ -23,6 +23,8 @@ Quintus.Simon = function(Q) {
                     agachado: false,
                     en_aire: false,
                     andando: false,
+                    inmune: false,
+                    temporizadorInmune: 0,
                     andando_agachado: false,
                     listoAtacarDenuevo: true,
                     atacando_agachado: false,
@@ -587,6 +589,14 @@ Quintus.Simon = function(Q) {
             
             
             this.gestionaViewport();
+            if (this.p.inmune) {
+              this.p.temporizadorInmune++;
+              this.p.opacity = 0.5;
+              if (this.p.temporizadorInmune >50) {
+                this.p.inmune = false;
+                this.p.opacity = 1;
+              }
+            }
 
         }//step
 
