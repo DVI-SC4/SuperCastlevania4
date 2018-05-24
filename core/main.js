@@ -1,6 +1,6 @@
 var level = 1;
-var escena = 2;
-var MAX_ESCENA = 2;
+var escena = 3;
+var MAX_ESCENA = 3;
 
 window.addEventListener('load', function () {
     const Q = window.Q = Quintus({audioSupported: ['ogg', 'mp3']})
@@ -154,7 +154,7 @@ window.addEventListener('load', function () {
         });
     });
 
-    Q.loadTMX("controls/menu_press_enter.png, controls/controls.png, credits/nombre_juego.png, credits/introduccion_nombres.png, credits/nombre_cesar.png, credits/foto_cesar.jpg, credits/nombre_carmen.png, credits/foto_carmen.jpg, credits/nombre_sergio.png, credits/foto_sergio.jpg, credits/disclaimer.png, credits/nombre_asignatura.png, credits/nombre_uni.png, credits/logo_konami.jpg, credits/logo_principal.png, nivel1-scn1.tmx,  nivel1-scn2.tmx", function() {
+    Q.loadTMX("controls/menu_press_enter.png, controls/controls.png, credits/nombre_juego.png, credits/introduccion_nombres.png, credits/nombre_cesar.png, credits/foto_cesar.jpg, credits/nombre_carmen.png, credits/foto_carmen.jpg, credits/nombre_sergio.png, credits/foto_sergio.jpg, credits/disclaimer.png, credits/nombre_asignatura.png, credits/nombre_uni.png, credits/logo_konami.jpg, credits/logo_principal.png, nivel1-scn1.tmx,  nivel1-scn2.tmx, nivel1-scn3.tmx", function() {
         Q.stageScene("inicio");
     });
 });
