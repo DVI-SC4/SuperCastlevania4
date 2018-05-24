@@ -31,13 +31,13 @@ Quintus.CastlevaniaEnemy = function(Q) {
             this.entity.on('bump.left, bump.right', function(collision) {
                 if (collision.obj.isA('Simon')) {
                     this.p.vx = 0;
-                    collision.obj.p.vx = -1000;
+                    collision.obj.p.x -= 100;
                     this.p.vx = -50;
                     console.log(Q.state.get("health"))
-                    if(Q.state.get("health") >= 0){
+                    if(Q.state.get("health") > 0){
                         Q.state.dec("health",1); 
                     }else{
-                        if(Q.state.get("vidas") >= 0){ 
+                        if(Q.state.get("vidas") > 0){ 
                             Q.clearStages();
                             Q.stageScene('level');
                             Q.stageScene("hud",1);

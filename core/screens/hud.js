@@ -134,7 +134,7 @@ Q.UI.Container.extend("Salud",{
     
     let i=0;
     let posXs = 165;
-    while(i<health){
+    while(i<=health){
       
       if(!this.saludes[i]){
         //let posX = posicionesScore[i];

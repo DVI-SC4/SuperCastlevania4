@@ -18,7 +18,7 @@ Quintus.CastlevaniaEscaleras = function (Q) {
                  //console.log("holi");
 
                 if ( collision.obj.isA("Simon") && (((this.p.direccion == "derecha") && Q.inputs['up'] && Q.inputs['right']) || ((this.p.direccion == "izquierda") && Q.inputs['up'] && Q.inputs['left']))) {
-                    console.log(collision.obj.p.subiendoEscaleras);
+                   //console.log(collision.obj.p.subiendoEscaleras);
                     if(!collision.obj.p.subiendoEscaleras){
                         collision.obj.p.x = this.p.posicion_inicial;
                         //collision.obj.p.vy = -10;
@@ -34,13 +34,13 @@ Quintus.CastlevaniaEscaleras = function (Q) {
                         }
                     }
                 }
-                 if ( collision.obj.isA("Simon") && !(Q.inputs['up']) ){
-                    console.log(collision.obj.p.subiendoEscaleras);
+                if ( collision.obj.isA("Simon") && !(Q.inputs['up']) ){
+                    //console.log(collision.obj.p.subiendoEscaleras);
                     if(collision.obj.p.subiendoEscaleras){
                        collision.obj.p.subiendoEscaleras = false;
                         collision.obj.p.collisionMask = Q.SPRITE_DEFAULT;
                         collision.obj.p.subeObaja == " ";
-                        console.log("ADSGASGASG"); 
+                        //console.log("ADSGASGASG"); 
                     }
                 }
             });
@@ -60,11 +60,13 @@ Quintus.CastlevaniaEscaleras = function (Q) {
            // console.log(this.p.x);
             this.add('2d, aiBounce, animation');
             this.on("bump.left,bump.right, bump.top, bump.bottom",function(collision) {
-                
+
                 if ( collision.obj.isA("Simon") && (((this.p.direccion == "derecha") && Q.inputs['down'] && Q.inputs['right']) || ((this.p.direccion == "izquierda") && Q.inputs['down'] && Q.inputs['left']))) {
-                   //console.log("HOLI);");
+                   //console.log(collision.obj.p.subiendoEscaleras);
+                    this.p.altinicial = collision.obj.p.y;
                     if(!collision.obj.p.subiendoEscaleras){
                         collision.obj.p.x = this.p.posicion_inicial;
+                        //collision.obj.p.vy = -10;
                         collision.obj.p.subiendoEscaleras = true;
                         collision.obj.p.direccionEscaleras = this.p.direccion;
                         collision.obj.p.subeObaja = "baja";
@@ -75,11 +77,16 @@ Quintus.CastlevaniaEscaleras = function (Q) {
                                 this.stage.items[i].p.collisionMask = Q.SPRITE_DEFAULT;
                             }
                         }
-                    }else{
-                        this.p.collisionMask = Q.SPRITE_NONE;
-                        collision.obj.p.subiendoEscaleras = false;
+                    }
+                }
+                if ( collision.obj.isA("Simon") && !(Q.inputs['down']) ){
+                    //console.log(collision.obj.p.subiendoEscaleras);
+                    if(collision.obj.p.subiendoEscaleras){
+                       collision.obj.p.subiendoEscaleras = false;
                         collision.obj.p.collisionMask = Q.SPRITE_DEFAULT;
                         collision.obj.p.subeObaja == " ";
+                        collision.obj.p.y = this.p.altinicial-2;
+                        //console.log("ADSGASGASG"); 
                     }
                 }
             });
@@ -105,6 +112,7 @@ Quintus.CastlevaniaEscaleras = function (Q) {
                     this.p.collisionMask = Q.SPRITE_NONE;
                     collision.obj.p.subiendoEscaleras = false;
                     collision.obj.p.collisionMask = Q.SPRITE_DEFAULT;
+                    collision.obj.p.gravity = 0.6;
                     if(collision.obj.p.subeObaja == "sube"){
                        collision.obj.p.y = this.p.posicionFin; 
                     }

@@ -366,42 +366,43 @@ Quintus.Simon = function(Q) {
             
             if(this.p.subiendoEscaleras){
                 this.del('platformerControls');
+                if((this.p.derOizq == "derecha") && (Q.inputs['right']) && !(Q.inputs['left']) && this.p.subeObaja == "sube" ){
+                    vY = -100;
+                    vX = 100;
+                    this.p.direction = "right";
+                }else if((this.p.derOizq == "derecha") && !(Q.inputs['right']) && (Q.inputs['left']) && this.p.subeObaja == "sube" ){
+                    vY = 100;
+                    vX = -100;
+                    this.p.direction = "left";
+                } else if((this.p.derOizq == "izquierda") && (Q.inputs['right']) && !(Q.inputs['left']) && this.p.subeObaja == "sube" ){
+                    vY = 100;
+                    vX = 100;
+                    this.p.direction = "right";
+                }else if((this.p.derOizq == "izquierda") && !(Q.inputs['right']) && (Q.inputs['left']) && this.p.subeObaja == "sube" ){
+                    vY = -100;
+                    vX = -100;
+                    this.p.direction = "left";
+                }else if((this.p.derOizq == "derecha") && (Q.inputs['right']) && !(Q.inputs['left']) && this.p.subeObaja == "baja" ){
+                    vY = 100;
+                    vX = 100;
+                    this.p.direction = "right";
+                }else if((this.p.derOizq == "derecha") && !(Q.inputs['right']) && (Q.inputs['left']) && this.p.subeObaja == "baja" ){
+                    vY = -100;
+                    vX = -100;
+                    this.p.direction = "left";
+                } else if((this.p.derOizq == "izquierda") && (Q.inputs['right']) && !(Q.inputs['left']) && this.p.subeObaja == "baja" ){
+                    vY = -100;
+                    vX = 100;
+                    this.p.direction = "right";
+                }else if((this.p.derOizq == "izquierda") && !(Q.inputs['right']) && (Q.inputs['left']) && this.p.subeObaja == "baja" ){
+                    vY = 100;
+                    vX = -100;
+                    this.p.direction = "left";
+                }
             }else{
                 this.add('platformerControls');
             }
-            if((this.p.derOizq == "derecha") && (Q.inputs['right']) && !(Q.inputs['left']) && this.p.subeObaja == "sube" ){
-                vY = -100;
-                vX = 100;
-                this.p.direction = "right";
-            }else if((this.p.derOizq == "derecha") && !(Q.inputs['right']) && (Q.inputs['left']) && this.p.subeObaja == "sube" ){
-                vY = 100;
-                vX = -100;
-                this.p.direction = "left";
-            } else if((this.p.derOizq == "izquierda") && (Q.inputs['right']) && !(Q.inputs['left']) && this.p.subeObaja == "sube" ){
-                vY = 100;
-                vX = 100;
-                this.p.direction = "right";
-            }else if((this.p.derOizq == "izquierda") && !(Q.inputs['right']) && (Q.inputs['left']) && this.p.subeObaja == "sube" ){
-                vY = -100;
-                vX = -100;
-                this.p.direction = "left";
-            }else if((this.p.derOizq == "derecha") && (Q.inputs['right']) && !(Q.inputs['left']) && this.p.subeObaja == "baja" ){
-                vY = 100;
-                vX = 100;
-                this.p.direction = "right";
-            }else if((this.p.derOizq == "derecha") && !(Q.inputs['right']) && (Q.inputs['left']) && this.p.subeObaja == "baja" ){
-                vY = -100;
-                vX = -100;
-                this.p.direction = "left";
-            } else if((this.p.derOizq == "izquierda") && (Q.inputs['right']) && !(Q.inputs['left']) && this.p.subeObaja == "baja" ){
-                vY = -100;
-                vX = 100;
-                this.p.direction = "right";
-            }else if((this.p.derOizq == "izquierda") && !(Q.inputs['right']) && (Q.inputs['left']) && this.p.subeObaja == "baja" ){
-                vY = 100;
-                vX = -100;
-                this.p.direction = "left";
-            }
+            
             if (this.p.subiendoEscaleras && !this.p.latigoActivado && ((Q.inputs['right']) || (Q.inputs['left']))) {
                 if(vY < 0){
                     this.p.vy = vY;
@@ -564,6 +565,7 @@ Quintus.Simon = function(Q) {
             }
 
             //}
+
             this.subeEscalera();
             if(!this.p.subiendoEscaleras){
                this.actuaDer();
