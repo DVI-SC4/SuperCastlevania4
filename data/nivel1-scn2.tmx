@@ -114642,15 +114642,6 @@
   <object id="13" name="esqueleto" gid="114577" x="3480" y="352" width="25" height="46"/>
   <object id="14" name="murcielago" gid="114579" x="3896" y="340" width="16" height="15"/>
   <object id="15" name="murcielago" gid="114579" x="3780" y="344" width="16" height="15"/>
-  <object id="16" gid="89128" x="540" y="356" width="4" height="4"/>
-  <object id="17" gid="89128" x="536" y="356" width="4" height="4"/>
-  <object id="18" gid="89128" x="532" y="356" width="4" height="4"/>
-  <object id="19" gid="89128" x="528" y="356" width="4" height="4"/>
-  <object id="20" gid="89128" x="524" y="356" width="4" height="4"/>
-  <object id="21" gid="89128" x="520" y="356" width="4" height="4"/>
-  <object id="22" gid="89128" x="516" y="356" width="4" height="4"/>
-  <object id="23" gid="89128" x="512" y="356" width="4" height="4"/>
-  <object id="24" gid="89128" x="508" y="356" width="4" height="4"/>
   <object id="25" gid="89128" x="504" y="356" width="4" height="4"/>
   <object id="28" gid="64611" x="644" y="252" width="4" height="4"/>
   <object id="29" gid="64611" x="644" y="248" width="4" height="4"/>

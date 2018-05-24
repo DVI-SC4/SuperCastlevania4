@@ -2,7 +2,8 @@ Quintus.Simon = function(Q) {
     Q.load({
         'normal_whip': 'normal_whip.ogg'
     });
-
+    var vX = 0;
+    var vY = 0;
     Q.Sprite.extend("Simon", {
         //holiSOLUCIONAR QUE SI DEJO PULSADO LATIGO MIENTRAS ATACO DE PIE, NO PUEDA SALTAR NI AGACHARSE HASTA QUE LO SUELTE.
         //Y MIENTRAS PULSO LATIGO AGACHADO, QUE NO PUEDA PONERSE EN PIE NI SALTAR HASTA QUE LO SUELTE
@@ -31,7 +32,8 @@ Quintus.Simon = function(Q) {
                     atacando_diagonalmente_abajo: false,
                     subiendoEscaleras: false,
                     direccionEscaleras: " ",
-                    subeObaja: " "
+                    subeObaja: " ",
+                    derOizq: " "
                 }
             );
             this.add('2d, platformerControls, animation');
@@ -361,25 +363,67 @@ Quintus.Simon = function(Q) {
         },
 
         subeEscalera: function(){
-            if (this.p.subiendoEscaleras && (Q.inputs['right']) && !(Q.inputs['left']) && !this.p.latigoActivado) {
-                if(this.p.subeObaja == "sube"){
-                    this.p.vy = -100;
+            
+            if(this.p.subiendoEscaleras){
+                this.del('platformerControls');
+            }else{
+                this.add('platformerControls');
+            }
+            if((this.p.derOizq == "derecha") && (Q.inputs['right']) && !(Q.inputs['left']) && this.p.subeObaja == "sube" ){
+                vY = -100;
+                vX = 100;
+                this.p.direction = "right";
+            }else if((this.p.derOizq == "derecha") && !(Q.inputs['right']) && (Q.inputs['left']) && this.p.subeObaja == "sube" ){
+                vY = 100;
+                vX = -100;
+                this.p.direction = "left";
+            } else if((this.p.derOizq == "izquierda") && (Q.inputs['right']) && !(Q.inputs['left']) && this.p.subeObaja == "sube" ){
+                vY = 100;
+                vX = 100;
+                this.p.direction = "right";
+            }else if((this.p.derOizq == "izquierda") && !(Q.inputs['right']) && (Q.inputs['left']) && this.p.subeObaja == "sube" ){
+                vY = -100;
+                vX = -100;
+                this.p.direction = "left";
+            }else if((this.p.derOizq == "derecha") && (Q.inputs['right']) && !(Q.inputs['left']) && this.p.subeObaja == "baja" ){
+                vY = 100;
+                vX = 100;
+                this.p.direction = "right";
+            }else if((this.p.derOizq == "derecha") && !(Q.inputs['right']) && (Q.inputs['left']) && this.p.subeObaja == "baja" ){
+                vY = -100;
+                vX = -100;
+                this.p.direction = "left";
+            } else if((this.p.derOizq == "izquierda") && (Q.inputs['right']) && !(Q.inputs['left']) && this.p.subeObaja == "baja" ){
+                vY = -100;
+                vX = 100;
+                this.p.direction = "right";
+            }else if((this.p.derOizq == "izquierda") && !(Q.inputs['right']) && (Q.inputs['left']) && this.p.subeObaja == "baja" ){
+                vY = 100;
+                vX = -100;
+                this.p.direction = "left";
+            }
+            if (this.p.subiendoEscaleras && !this.p.latigoActivado && ((Q.inputs['right']) || (Q.inputs['left']))) {
+                if(vY < 0){
+                    this.p.vy = vY;
+                    this.p.vx = vX;
                     this.p.gravity = 0;
                     this.cambiaSprite("subiendo_escaleras", "sube_escaleras_haciaderecha", "sube_escaleras_haciaizquierda");
                 }
-                if(this.p.subeObaja == "baja"){
-                    this.p.vy = 100;
+                if(vY > 0){
+                    this.p.vy = vY;
+                    this.p.vx = vX;
                     this.p.gravity = 0;
                     this.cambiaSprite("bajando_escaleras", "baja_escaleras_haciaderecha", "baja_escaleras_haciaizquierda");
                 }
                 
             }
-            if(this.p.subiendoEscaleras && !Q.inputs['right']  && !this.p.latigoActivado){
+            if(this.p.subiendoEscaleras && !this.p.latigoActivado && !Q.inputs['right'] && !Q.inputs['left'] ){
                 this.p.vy = 0;
-                if(this.p.subeObaja == "sube"){
+                this.p.vx = 0;
+                if(vY < 0){
                     this.cambiaSprite("subiendo_escaleras", "sube_escaleras_parado_haciaderecha", "sube_escaleras_parado_haciaizquierda");
                 }
-                if(this.p.subeObaja == "baja"){
+                if(vY > 0){
                     this.cambiaSprite("bajando_escaleras", "baja_escaleras_parado_haciaderecha", "baja_escaleras_parado_haciaizquierda");
                 }
                  
