@@ -12,9 +12,9 @@ Quintus.CastlevaniaEscaleras = function (Q) {
             this.add('2d, aiBounce, animation');
             this.on("bump.left,bump.right, bump.top, bump.bottom",function(collision) {
                 
-                /* if ( collision.obj.isA("Simon")){
+                 if ( collision.obj.isA("Simon")){
                     console.log(collision.obj.p.x);
-                 }*/
+                 }
                  //console.log("holi");
 
                 if ( collision.obj.isA("Simon") && (((this.p.direccion == "derecha") && Q.inputs['up'] && Q.inputs['right']) || ((this.p.direccion == "izquierda") && Q.inputs['up'] && Q.inputs['left']))) {
@@ -104,7 +104,8 @@ Quintus.CastlevaniaEscaleras = function (Q) {
                 sensor: true,
                 type: Q.SPRITE_FRIENDLY
             });
-            //console.log(this.p.y);
+            console.log(this.p.y);
+            console.log(this.p.x);
             this.add('2d, aiBounce, animation');
             this.on("bump.left,bump.right, bump.top, bump.bottom",function(collision) {
                  if ( collision.obj.isA("Simon")){

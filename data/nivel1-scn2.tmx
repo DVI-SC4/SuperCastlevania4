@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="1023" height="112" tilewidth="4" tileheight="4" infinite="0" nextobjectid="36">
+<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="1023" height="112" tilewidth="4" tileheight="4" infinite="0" nextobjectid="38">
  <tileset firstgid="1" name="tiled2" tilewidth="4" tileheight="4" tilecount="114576" columns="1023">
   <image source="../../pruebasCastlevania/images/stage-2-lvl-1.png" width="4092" height="448"/>
   <tile id="56235">
@@ -49757,10 +49757,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="78916"/>
-   <tile gid="78917"/>
-   <tile gid="78918"/>
-   <tile gid="78919"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile gid="83087"/>
    <tile gid="83088"/>
    <tile gid="83089"/>
@@ -50780,10 +50780,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="79939"/>
-   <tile gid="79940"/>
-   <tile gid="79941"/>
-   <tile gid="79942"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile gid="84110"/>
    <tile gid="84111"/>
    <tile gid="84112"/>
@@ -51803,10 +51803,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="80962"/>
-   <tile gid="80963"/>
-   <tile gid="80964"/>
-   <tile gid="80965"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile gid="85133"/>
    <tile gid="85134"/>
    <tile gid="85135"/>
@@ -52826,10 +52826,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="81985"/>
-   <tile gid="81986"/>
-   <tile gid="81987"/>
-   <tile gid="81988"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile gid="86156"/>
    <tile gid="86157"/>
    <tile gid="86158"/>
@@ -53845,10 +53845,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="78916"/>
-   <tile gid="78917"/>
-   <tile gid="78918"/>
-   <tile gid="78919"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -54868,10 +54868,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="79939"/>
-   <tile gid="79940"/>
-   <tile gid="79941"/>
-   <tile gid="79942"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -55891,10 +55891,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="80962"/>
-   <tile gid="80963"/>
-   <tile gid="80964"/>
-   <tile gid="80965"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -56914,10 +56914,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="81985"/>
-   <tile gid="81986"/>
-   <tile gid="81987"/>
-   <tile gid="81988"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -57933,10 +57933,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="78916"/>
-   <tile gid="78917"/>
-   <tile gid="78918"/>
-   <tile gid="78919"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -58956,10 +58956,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="79939"/>
-   <tile gid="79940"/>
-   <tile gid="79941"/>
-   <tile gid="79942"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -59979,10 +59979,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="80962"/>
-   <tile gid="80963"/>
-   <tile gid="80964"/>
-   <tile gid="80965"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -61002,10 +61002,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="81985"/>
-   <tile gid="81986"/>
-   <tile gid="81987"/>
-   <tile gid="81988"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -62021,10 +62021,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="78916"/>
-   <tile gid="78917"/>
-   <tile gid="78918"/>
-   <tile gid="78919"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -63044,10 +63044,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="79939"/>
-   <tile gid="79940"/>
-   <tile gid="79941"/>
-   <tile gid="79942"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -64067,10 +64067,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="80962"/>
-   <tile gid="80963"/>
-   <tile gid="80964"/>
-   <tile gid="80965"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -65090,10 +65090,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="81985"/>
-   <tile gid="81986"/>
-   <tile gid="81987"/>
-   <tile gid="81988"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -66109,10 +66109,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="78916"/>
-   <tile gid="78917"/>
-   <tile gid="78918"/>
-   <tile gid="78919"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -67132,10 +67132,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="79939"/>
-   <tile gid="79940"/>
-   <tile gid="79941"/>
-   <tile gid="79942"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -68155,10 +68155,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="80962"/>
-   <tile gid="80963"/>
-   <tile gid="80964"/>
-   <tile gid="80965"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -69178,10 +69178,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="81985"/>
-   <tile gid="81986"/>
-   <tile gid="81987"/>
-   <tile gid="81988"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -70197,10 +70197,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="78916"/>
-   <tile gid="78917"/>
-   <tile gid="78918"/>
-   <tile gid="78919"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -71220,10 +71220,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="79939"/>
-   <tile gid="79940"/>
-   <tile gid="79941"/>
-   <tile gid="79942"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -72243,10 +72243,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="80962"/>
-   <tile gid="80963"/>
-   <tile gid="80964"/>
-   <tile gid="80965"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -73266,10 +73266,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="81985"/>
-   <tile gid="81986"/>
-   <tile gid="81987"/>
-   <tile gid="81988"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -74285,10 +74285,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="78916"/>
-   <tile gid="78917"/>
-   <tile gid="78918"/>
-   <tile gid="78919"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -75308,10 +75308,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="79939"/>
-   <tile gid="79940"/>
-   <tile gid="79941"/>
-   <tile gid="79942"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -76331,10 +76331,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="80962"/>
-   <tile gid="80963"/>
-   <tile gid="80964"/>
-   <tile gid="80965"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -77354,10 +77354,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="81985"/>
-   <tile gid="81986"/>
-   <tile gid="81987"/>
-   <tile gid="81988"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -78373,10 +78373,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="78916"/>
-   <tile gid="78917"/>
-   <tile gid="78918"/>
-   <tile gid="78919"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -79396,10 +79396,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="79939"/>
-   <tile gid="79940"/>
-   <tile gid="79941"/>
-   <tile gid="79942"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -80419,10 +80419,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="80962"/>
-   <tile gid="80963"/>
-   <tile gid="80964"/>
-   <tile gid="80965"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -81442,10 +81442,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="81985"/>
-   <tile gid="81986"/>
-   <tile gid="81987"/>
-   <tile gid="81988"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -114642,7 +114642,17 @@
   <object id="13" name="esqueleto" gid="114577" x="3480" y="352" width="25" height="46"/>
   <object id="14" name="murcielago" gid="114579" x="3896" y="340" width="16" height="15"/>
   <object id="15" name="murcielago" gid="114579" x="3780" y="344" width="16" height="15"/>
-  <object id="25" gid="89128" x="504" y="356" width="4" height="4"/>
-  <object id="30" gid="64611" x="644" y="244" width="4" height="4"/>
+  <object id="25" name="i" gid="89128" x="504" y="356" width="4" height="4"/>
+  <object id="30" name="f" gid="64611" x="644" y="244" width="4" height="4"/>
+  <object id="36" name="i" gid="89128" x="2264" y="324" width="4" height="4">
+   <properties>
+    <property name="posicion_inicial" type="int" value="2290"/>
+   </properties>
+  </object>
+  <object id="37" name="f" gid="64611" x="2440" y="176" width="4" height="4">
+   <properties>
+    <property name="posicionFin" type="int" value="152"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>
