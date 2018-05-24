@@ -357,7 +357,18 @@ Quintus.Simon = function(Q) {
             if (this.p["y"] > 444) {
 
                 console.log("Tas caio lol");
-                Q.stageScene("endGame", 2, {label: "You Died"});
+                if(Q.state.get("vidas") > 0){ 
+                    Q.state.dec("vidas",1);
+                    Q.clearStages();
+                    Q.stageScene('level');
+                    Q.stageScene("hud",1);
+                    Q.state.inc("health",16);
+                    Q.state.inc("puntuacion",1);
+                    Q.state.dec("puntuacion",1);
+                }else{
+                    Q.clearStages();
+                    Q.stageScene('GameOver');
+                }
                 this.destroy();
             }
         },

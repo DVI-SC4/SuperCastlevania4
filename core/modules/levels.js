@@ -51,6 +51,10 @@ Quintus.CastlevaniaLevels = function (Q) {
                 escena++;
                 Q.stageScene('level');
                 Q.stageScene("hud",1);
+                Q.state.inc("puntuacion",1);
+                Q.state.inc("health",1);
+                Q.state.dec("puntuacion",1);
+                Q.state.dec("health",1);
             }
         }
     });

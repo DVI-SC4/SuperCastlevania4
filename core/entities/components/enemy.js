@@ -33,21 +33,19 @@ Quintus.CastlevaniaEnemy = function(Q) {
                     this.p.vx = 0;
                     collision.obj.p.x -= 100;
                     this.p.vx = -50;
-                    console.log(Q.state.get("health"))
+                    
                     if(Q.state.get("health") > 0){
+                        console.log("estoy decreciendo la salud");
                         Q.state.dec("health",1); 
                     }else{
                         if(Q.state.get("vidas") > 0){ 
+                            Q.state.dec("vidas",1);
                             Q.clearStages();
                             Q.stageScene('level');
                             Q.stageScene("hud",1);
-                            Q.state.inc("health",15);
-                            Q.state.dec("vidas",1);
+                            Q.state.inc("health",16);
                             Q.state.inc("puntuacion",1);
                             Q.state.dec("puntuacion",1);
-                            /*
-                            Q.state.inc("health",1);
-                            Q.state.dec("health",1);*/
                         }else{
                             Q.clearStages();
                             Q.stageScene('GameOver');
@@ -55,7 +53,7 @@ Quintus.CastlevaniaEnemy = function(Q) {
                         
 
                     }
-                    
+                    console.log(Q.state.get("health"));
                 }
             });
             this.entity.on('hit.sprite', function (collision) {

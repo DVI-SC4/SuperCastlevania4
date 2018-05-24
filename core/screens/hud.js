@@ -131,10 +131,10 @@ Q.UI.Container.extend("Salud",{
   update_salud: function(health) {
     /*let puntuacionAct = puntuacion.toString();
     let asset = "numeros/0.png";*/
-    
+    console.log(health);
     let i=0;
     let posXs = 165;
-    while(i<=health){
+    while((i<health)&& (i<16)){
       
       if(!this.saludes[i]){
         //let posX = posicionesScore[i];

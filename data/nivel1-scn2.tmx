@@ -114643,13 +114643,6 @@
   <object id="14" name="murcielago" gid="114579" x="3896" y="340" width="16" height="15"/>
   <object id="15" name="murcielago" gid="114579" x="3780" y="344" width="16" height="15"/>
   <object id="25" gid="89128" x="504" y="356" width="4" height="4"/>
-  <object id="28" gid="64611" x="644" y="252" width="4" height="4"/>
-  <object id="29" gid="64611" x="644" y="248" width="4" height="4"/>
   <object id="30" gid="64611" x="644" y="244" width="4" height="4"/>
-  <object id="31" gid="64611" x="644" y="240" width="4" height="4"/>
-  <object id="32" gid="64611" x="644" y="236" width="4" height="4"/>
-  <object id="33" gid="64611" x="644" y="232" width="4" height="4"/>
-  <object id="34" gid="64611" x="644" y="224" width="4" height="4"/>
-  <object id="35" gid="64611" x="644" y="228" width="4" height="4"/>
  </objectgroup>
 </map>

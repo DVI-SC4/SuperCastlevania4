@@ -108,7 +108,7 @@ Quintus.CastlevaniaEscaleras = function (Q) {
             this.add('2d, aiBounce, animation');
             this.on("bump.left,bump.right, bump.top, bump.bottom",function(collision) {
                  if ( collision.obj.isA("Simon")){
-                    
+                    console.log("tas choca");
                     this.p.collisionMask = Q.SPRITE_NONE;
                     collision.obj.p.subiendoEscaleras = false;
                     collision.obj.p.collisionMask = Q.SPRITE_DEFAULT;
@@ -116,7 +116,7 @@ Quintus.CastlevaniaEscaleras = function (Q) {
                     if(collision.obj.p.subeObaja == "sube"){
                        collision.obj.p.y = this.p.posicionFin; 
                     }
-                    collision.obj.p.subeObaja == " ";
+                    collision.obj.p.subeObaja = " ";
                     
                 }
                 
