@@ -362,6 +362,8 @@ Quintus.Simon = function(Q) {
                 if(Q.state.get("vidas") > 0){ 
                     Q.state.dec("vidas",1);
                     Q.clearStages();
+                    let salud = Q.state.get("health");
+                    Q.state.dec("health",salud);
                     Q.stageScene('level');
                     Q.stageScene("hud",1);
                     Q.state.inc("health",16);
