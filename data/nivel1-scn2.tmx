@@ -114645,7 +114645,7 @@
   <object id="25" name="i" gid="89128" x="504" y="356" width="4" height="4"/>
   <object id="30" name="f" gid="64611" x="644" y="244" width="4" height="4">
    <properties>
-    <property name="posicionFin" type="int" value="156"/>
+    <property name="posicionFin" type="int" value="220"/>
    </properties>
   </object>
   <object id="36" name="i" gid="89128" x="2264" y="324" width="4" height="4">

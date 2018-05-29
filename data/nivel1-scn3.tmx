@@ -71730,7 +71730,7 @@
    <tile/>
   </data>
  </layer>
- <imagelayer name="background">
+ <imagelayer name="background" visible="0">
   <image source="../images/stage-3-lvl-1.png" width="2560" height="448"/>
  </imagelayer>
  <objectgroup name="Cosas">
@@ -71743,7 +71743,7 @@
   </object>
   <object id="6" name="f" gid="27988" x="1864" y="172" width="4" height="4">
    <properties>
-    <property name="posicionFin" type="int" value="156"/>
+    <property name="posicionFin" type="int" value="150"/>
    </properties>
   </object>
   <object id="7" name="i" gid="51623" x="2396" y="132" width="4" height="4">
@@ -71754,8 +71754,7 @@
   </object>
   <object id="8" name="esq" gid="71684" x="820" y="380" width="25" height="46"/>
   <object id="10" gid="71684" x="1016" y="244" width="25" height="46"/>
-  <object id="11" gid="71684" x="1016" y="248" width="25" height="46"/>
-  <object id="12" gid="71684" x="1904" y="184" width="25" height="46"/>
+  <object id="12" gid="71684" x="2100" y="160" width="25" height="46"/>
   <object id="13" gid="71681" x="776" y="96" width="16" height="15"/>
   <object id="14" gid="71681" x="2080" y="84" width="16" height="15"/>
  </objectgroup>

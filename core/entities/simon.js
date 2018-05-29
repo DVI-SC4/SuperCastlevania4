@@ -369,7 +369,7 @@ Quintus.Simon = function(Q) {
                     Q.state.dec("puntuacion",1);
                 }else{
                     Q.clearStages();
-                    Q.stageScene('GameOver');
+                    Q.stageScene('GameOver', {label: "end_title.png"});
                 }
                 this.destroy();
             }

@@ -18,16 +18,10 @@ Quintus.CastlevaniaScenes = function (Q) {
             asset: "intro/mainTitle.jpg",
         }));
         button.on("click",function() {
-            Q.stageScene('level');
-            Q.stageScene("hud",1);
-            Q.state.inc("puntuacion",1);
-            Q.state.inc("health",1);
+            Q.stageScene('introLogos');
         });
         Q.input.on("confirm",stage,function() {
-            Q.stageScene('level');
-            Q.stageScene("hud",1);
-            Q.state.inc("puntuacion",1);
-            Q.state.inc("health",1);
+            Q.stageScene('introLogos');
         });
     });
 
@@ -51,7 +45,7 @@ Quintus.CastlevaniaScenes = function (Q) {
             y: 0,
             h: Q.height,
             w: Q.width,
-            asset: "end_title.png",
+            asset: stage.options.label,
         }));
         button.on("click",function() {
             Q.stageScene('level');

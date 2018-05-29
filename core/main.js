@@ -1,5 +1,5 @@
 var level = 1;
-var escena = 3;
+var escena = 1;
 var MAX_ESCENA = 3;
 
 window.addEventListener('load', function () {

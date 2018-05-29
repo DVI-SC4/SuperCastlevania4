@@ -2,7 +2,7 @@ Quintus.CastlevaniaLevels = function (Q) {
     Q.Sprite.extend("CambioZona", {
         init: function (p) {
             this._super(p, {
-                asset: "simon_normal.png",
+               /* asset: "simon_normal.png",*/
                 w: 10,
                 h: 10,
                 type: Q.SPRITE_ENEMY,
@@ -45,16 +45,19 @@ Quintus.CastlevaniaLevels = function (Q) {
             }
             if ((this.p.temporizazdorZona > 50) && this.p.zonaNueva) {
                 if (escena === MAX_ESCENA) {
-                    escena = 0;
+                    Q.clearStages();
+                    Q.stageScene('GameOver', {label: "youwin.png"});
+                }else{
+                  Q.clearStages();
+                  escena++;
+                  Q.stageScene('level');
+                  Q.stageScene("hud",1);
+                  Q.state.inc("puntuacion",1);
+                  Q.state.inc("health",1);
+                  Q.state.dec("puntuacion",1);
+                  Q.state.dec("health",1); 
                 }
-                Q.clearStages();
-                escena++;
-                Q.stageScene('level');
-                Q.stageScene("hud",1);
-                Q.state.inc("puntuacion",1);
-                Q.state.inc("health",1);
-                Q.state.dec("puntuacion",1);
-                Q.state.dec("health",1);
+                
             }
         }
     });

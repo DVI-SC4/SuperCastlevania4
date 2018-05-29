@@ -2,7 +2,7 @@ Quintus.CastlevaniaEscaleras = function (Q) {
     Q.Sprite.extend("EscaleraArriba", {
         init: function(p) {
             this._super(p, {
-                asset: "simon_normal.png",
+                /*asset: "simon_normal.png",*/
                 w:50,
                 h:1,
                 gravity:0,
@@ -97,11 +97,10 @@ Quintus.CastlevaniaEscaleras = function (Q) {
     Q.Sprite.extend("FinEscalera", {
         init: function(p) {
             this._super(p, {
-                asset: "simon_normal.png",
+                /*asset: "simon_normal.png",*/
                 w:10,
                 h:10,
                 gravity:0,
-                sensor: true,
                 type: Q.SPRITE_FRIENDLY
             });
             console.log(this.p.y);
