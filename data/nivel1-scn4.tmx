@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="512" height="112" tilewidth="4" tileheight="4" infinite="0" nextobjectid="2">
+<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="512" height="112" tilewidth="4" tileheight="4" infinite="0" nextobjectid="3">
  <tileset firstgid="1" name="tiled" tilewidth="4" tileheight="4" tilecount="57344" columns="512">
   <image source="../images/stage-4-lvl-1.png" width="2048" height="448"/>
   <tile id="33847">
    <properties>
     <property name="AnchoMapa" type="int" value="2048"/>
     <property name="Class" value="Simon"/>
+   </properties>
+  </tile>
+  <tile id="35303">
+   <properties>
+    <property name="Class" value="Boss-1"/>
    </properties>
   </tile>
  </tileset>
@@ -57363,5 +57368,7 @@
    <tile gid="57344"/>
   </data>
  </layer>
- <objectgroup name="Cosas" offsetx="-4" offsety="128"/>
+ <objectgroup name="Cosas" offsetx="-4" offsety="128">
+  <object id="2" gid="35304" x="1928" y="348" width="4" height="4"/>
+ </objectgroup>
 </map>
