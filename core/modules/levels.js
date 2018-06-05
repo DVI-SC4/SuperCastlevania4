@@ -61,4 +61,4 @@ Quintus.CastlevaniaLevels = function (Q) {
             }
         }
     });
-}
+};

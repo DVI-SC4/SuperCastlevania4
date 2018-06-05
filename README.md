@@ -186,11 +186,19 @@ Simon es bastante temerario e inclinado a forzar su camino a través de las situ
 
 # 2. Diseño de la implementación
 
-(**Sergio** en esta sección puedes poner la captura que nos mandaste por whastapp de cómo se quedó la jerarquía de archivos y explicar cómo dividiste todo el código)
+<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/arquitectura/estructura.png?raw=true" width="20%" />
+
+Con la finalidad de mejorar la productividad a la hora de desarrollar y hacer mas sencillos los cambios que se puedan producir, hemos separado el codigo en archivos y los hemos tratado como si fueran modulos del propio Quintus, haciendo uso de su espacio de nombres.  
 
 ## 2.1 Arquitectura y jerarquía de archivos
 
+Hemos separado el código por "módulos", asi todos los caracteres del juego se encuentran en la carpeta entidades, donde tambien estaran los componentes necesarios para estos. Todo lo relacionado con pantallas de carga, menues, etc. esta ubicado en otra carpeta y los archivos para la gestion de otro elementos clave del juego en otra carpeta.
+
+Todo el codigo se carga desde un fichero principal (main.js), desde donde se hace la carga de los módulos de Quintus así como de los nuestros.
+
 ## 2.2 Principales componentes
+
+El unico componente que se ha implementado es para los enemigos, que comparten ciertas mecanicas y era logico llevarlo a un punto común.
 
 ## 2.3 Implementaciones realizadas
 
@@ -249,6 +257,7 @@ Simon es bastante temerario e inclinado a forzar su camino a través de las situ
 ### Desarrollo, depuración y testeo
 * [Quintus JavaScript HTML5 Game Engine](http://www.html5quintus.com)
 * [Sublime Text](https://www.sublimetext.com)
+* [JetBrains WebStorm](https://www.jetbrains.com/webstorm/)
 * [Google Chrome](https://www.google.com/chrome/)
 * [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/)
 * [GitHub Desktop](https://desktop.github.com)
