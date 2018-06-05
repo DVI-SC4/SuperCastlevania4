@@ -21,6 +21,8 @@ Quintus.Rowdain = function(Q) {
                 sheet: 'rowdain',
                 scale: 2
             });
+            this.add('2d, aiBounce, animation');
+            this.add('enemy');
         },
         step: function (dt) {
 

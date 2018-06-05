@@ -8,7 +8,7 @@ window.addEventListener('load', function () {
         .include("CastlevaniaScenes, CastlevaniaLevels, CastlevaniaControls")
         .include("CastlevaniaCredits, CastlevaniaMenus, CastlevaniaIntro, CastlevaniaEscaleras")
         .include("CastlevaniaEnemy, CastlevaniaHUD")
-        .include("Simon, Skeleton, Bat")
+        .include("Simon, Skeleton, Bat, Rowdain")
         .setup({width: 584, height: 448})
         .controls().touch().enableSound();
 

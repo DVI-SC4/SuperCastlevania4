@@ -1,5 +1,5 @@
 Quintus.CastlevaniaScenes = function (Q) {
-  Q.load('end_title.png, escena1.ogg, escena2.ogg, escena3.ogg', function () {
+  Q.load('end_title.png, escena1.ogg, escena2.ogg, escena3.ogg, escena4.ogg', function () {
         
   });  
 
@@ -29,7 +29,7 @@ Quintus.CastlevaniaScenes = function (Q) {
         console.log(escena);
         const nivel = "nivel" + level + "-scn" + escena + ".tmx";
         Q.audio.stop();
-        //Q.audio.play('escena' + escena + '.ogg');
+        Q.audio.play('escena' + escena + '.ogg');
         Q.stageTMX(nivel, stage);
     });
 
