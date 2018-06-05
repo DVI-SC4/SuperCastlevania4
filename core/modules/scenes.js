@@ -29,7 +29,7 @@ Quintus.CastlevaniaScenes = function (Q) {
         console.log(escena);
         const nivel = "nivel" + level + "-scn" + escena + ".tmx";
         Q.audio.stop();
-        Q.audio.play('escena' + escena + '.ogg');
+        //Q.audio.play('escena' + escena + '.ogg');
         Q.stageTMX(nivel, stage);
     });
 
