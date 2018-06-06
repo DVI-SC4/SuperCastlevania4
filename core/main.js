@@ -1,5 +1,5 @@
 var level = 1;
-var escena = 4;
+var escena = 3;
 var MAX_ESCENA = 4;
 
 window.addEventListener('load', function () {
@@ -7,7 +7,7 @@ window.addEventListener('load', function () {
         .include("Sprites, Scenes, Input, Touch, UI, Anim, TMX, 2D, Audio")
         .include("CastlevaniaScenes, CastlevaniaLevels, CastlevaniaControls")
         .include("CastlevaniaCredits, CastlevaniaMenus, CastlevaniaIntro, CastlevaniaEscaleras")
-        .include("CastlevaniaEnemy, CastlevaniaHUD")
+        .include("CastlevaniaEnemy, CastlevaniaHUD, CastlevaniaVelas")
         .include("Simon, Skeleton, Bat, Rowdain")
         .setup({width: 584, height: 448})
         .controls().touch().enableSound();

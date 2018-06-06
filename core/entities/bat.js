@@ -14,6 +14,7 @@ Quintus.Bat = function(Q) {
                 sheet: 'bat',
                 scale: 2,
                 gravity: 0,
+                golpes: 2,
                 vx: -50
             });
             this.add('2d, aiBounce, animation');

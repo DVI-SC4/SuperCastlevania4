@@ -22,25 +22,9 @@ Quintus.CastlevaniaHUD = function (Q) {
 
     containerHUD.insert(new Q.Salud());
 
+    containerHUD.insert(new Q.VidasJugador());
 
-
-    let vidasAct = Q.state.get("vidas");
-    vidasAct = vidasAct.toString();
-    let assetVidas = "numeros/0.png";
-    let posX = 424;
-    for(let i=0; i<2;i++){
-      if(vidasAct[vidasAct.length - i - 1]){
-        assetPuntos = "numeros/"+vidasAct[vidasAct.length - i - 1]+".png";
-      }else{
-        assetPuntos = "numeros/0.png";
-      }
-   
-      
-      stage.insert(new Q.Numero({asset: assetPuntos, x:posX, y:48}));
-      
-      posX -= 16;
-      
-    }
+    
 
   
   });
@@ -163,4 +147,49 @@ Q.UI.Container.extend("Salud",{
 });
 
 
+Q.UI.Container.extend("VidasJugador",{ 
+
+  
+
+  init: function(p) {
+    this._super(p, {
+        
+    }); 
+    this.vidasJugador = [];
+    Q.state.on("change.vidas",this,"update_vidas");
+    
+  },//init
+  
+
+  update_vidas: function(vidas) {
+    /*let puntuacionAct = puntuacion.toString();
+    let asset = "numeros/0.png";*/
+    
+    let vidasAct = vidas;
+    vidasAct = vidasAct.toString();
+    let assetVidas = "numeros/0.png";
+    let posX = 424;
+    for(let i=0; i<2;i++){
+      if(vidasAct[vidasAct.length - i - 1]){
+        assetPuntos = "numeros/"+vidasAct[vidasAct.length - i - 1]+".png";
+      }else{
+        assetPuntos = "numeros/0.png";
+      }
+     if(!this.vidasJugador[i]){
+       
+        let vidasJ = new Q.Numero({asset: assetPuntos, x:posX, y:48});
+        this.vidasJugador[i] = vidasJ;
+        this.stage.insert(this.vidasJugador[i]);
+      }
+      this.vidasJugador[i].p.asset = assetPuntos;
+      
+      posX -= 16;
+      
+    }
+
+  }
+});
+
+
 }
+

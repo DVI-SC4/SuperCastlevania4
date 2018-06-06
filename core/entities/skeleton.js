@@ -16,6 +16,7 @@ Quintus.Skeleton = function(Q) {
                 sprite: 'skeleton',
                 sheet: 'skeleton',
                 scale: 2,
+                golpes: 2,
                 vx: -50
             });
             this.p.xInicial = this.p.x;

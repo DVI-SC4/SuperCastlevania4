@@ -36,6 +36,8 @@ Quintus.Simon = function(Q) {
                     direccionEscaleras: " ",
                     subeObaja: " ",
                     derOizq: " "
+                    //collisionMask: !Q.SPRITE_ACTIVE
+                   // type: (Q.SPRITE_DEFAULT | Q.SPRITE_FRIENDLY | Q.SPRITE_ENEMY) && !Q.SPRITE_ACTIVE
                 }
             );
             this.add('2d, platformerControls, animation');
@@ -107,7 +109,8 @@ Quintus.Simon = function(Q) {
                     x: this.p.x + desplazamientoX,
                     y: this.p.y + desplazamientoY,
                     angle: valorAngulo,
-                    flip: valorFlip
+                    flip: valorFlip,
+                    mejorado: this.p.latigoMejorado
                 }));
                 Q.audio.play('normal_whip');
                 this.p.latigo.horaDeDesaparicion = (new Date().getTime()/1000)+0.15; //coge la hora actual, en segundos, y le digo que debe desaparecer 0.15 segundos después de aparecer
@@ -360,12 +363,13 @@ Quintus.Simon = function(Q) {
 
                 console.log("Tas caio lol");
                 if(Q.state.get("vidas") > 0){ 
-                    Q.state.dec("vidas",1);
+                    
                     Q.clearStages();
                     let salud = Q.state.get("health");
                     Q.state.dec("health",salud);
                     Q.stageScene('level');
                     Q.stageScene("hud",1);
+                    Q.state.dec("vidas",1);
                     Q.state.inc("health",16);
                     Q.state.inc("puntuacion",1);
                     Q.state.dec("puntuacion",1);
@@ -621,8 +625,9 @@ Quintus.Simon = function(Q) {
                     gravity: 0,
                     horaDeDesaparicion: null,
                     sensor: true,
-                    collisionMask: Q.SPRITE_NONE,
-                    damage_hits: null //con el latigo basico hará falta dar el doble de golpes que con el mejorado, pues es menos potente.
+                   // type: Q.SPRITE_ACTIVE,
+                    collisionMask: Q.SPRITE_DEFAULT | Q.SPRITE_ACTIVE | Q.SPRITE_ENEMY,
+                    mejorado: false//con el latigo basico hará falta dar el doble de golpes que con el mejorado, pues es menos potente.
                 }
             ); //_super
 

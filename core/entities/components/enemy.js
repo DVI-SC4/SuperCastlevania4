@@ -40,10 +40,11 @@ Quintus.CastlevaniaEnemy = function(Q) {
                         Q.state.dec("health",1); 
                     }else{
                         if(Q.state.get("vidas") > 0){ 
-                            Q.state.dec("vidas",1);
+                            
                             Q.clearStages();
                             Q.stageScene('level');
                             Q.stageScene("hud",1);
+                            Q.state.dec("vidas",1);
                             Q.state.inc("health",16);
                             Q.state.inc("puntuacion",1);
                             Q.state.dec("puntuacion",1);
@@ -59,15 +60,27 @@ Quintus.CastlevaniaEnemy = function(Q) {
              
             });
             this.entity.on('hit.sprite', function (collision) {
-                if (collision.obj.isA('Whip')) {
-                    collision.obj.destroy();
-                    this.destroy();
-                    Q.audio.play('enemy_destroyed');
-                    Q.state.inc("puntuacion",10);
+                if (collision.obj.isA('Whip') && !collision.obj.p.yaColisionado) {
+                  console.log("hey");
+                  collision.obj.p.yaColisionado=true;
+                  collision.obj.p.collisionMask = Q.SPRITE_NONE;
+                  collision.obj.p.type = Q.SPRITE_NONE;
+                    if(collision.obj.p.mejorado == true){
+                        this.p.golpes -=2;
+                    }else{
+                        this.p.golpes -=1;
+                    }
+                    if(this.p.golpes == 0){
+                      
+                      this.destroy();
+                      Q.audio.play('enemy_destroyed');
+                      Q.state.inc("puntuacion",10);
 
-                    const llama = new Q.Llama({x: this.p.x, y: this.p.y});
-                    this.stage.insert(llama);
-                    llama.play('muerte');
+                      const llama = new Q.Llama({x: this.p.x, y: this.p.y});
+                      this.stage.insert(llama);
+                      llama.play('muerte'); 
+                    }
+                    
                 }
             });
         }

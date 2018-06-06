@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="640" height="112" tilewidth="4" tileheight="4" infinite="0" nextobjectid="15">
+<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="640" height="112" tilewidth="4" tileheight="4" infinite="0" nextobjectid="18">
  <tileset firstgid="1" name="tiled3" tilewidth="4" tileheight="4" tilecount="71680" columns="640">
   <image source="../images/stage-3-lvl-1.png" width="2560" height="448"/>
   <tile id="9561">
@@ -40,6 +40,15 @@
   <tile id="0">
    <properties>
     <property name="Class" value="Esqueleto"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="71686" name="vela" tilewidth="18" tileheight="15" tilecount="1" columns="1">
+  <image source="../images/velas.png" width="18" height="15"/>
+  <tile id="0">
+   <properties>
+    <property name="Class" value="Vela"/>
+    <property name="objeto" value="corazon"/>
    </properties>
   </tile>
  </tileset>
@@ -71757,5 +71766,12 @@
   <object id="12" gid="71684" x="2100" y="160" width="25" height="46"/>
   <object id="13" gid="71681" x="776" y="96" width="16" height="15"/>
   <object id="14" gid="71681" x="2080" y="84" width="16" height="15"/>
+  <object id="15" name="velavida" gid="71686" x="370" y="352" width="18" height="15"/>
+  <object id="16" name="velavida" gid="71686" x="1356" y="156" width="18" height="15"/>
+  <object id="17" name="velalatigo" gid="71686" x="1960" y="168" width="18" height="15">
+   <properties>
+    <property name="objeto" value="latigo"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>
