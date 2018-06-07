@@ -91,7 +91,7 @@ Quintus.Rowdain = function(Q) {
               this.play('camina_caballo_derecha');
           } else if ((this.p.vx < 0)  && (vidaenemigo > 7)) {
               this.play('camina_caballo_izquierda');
-          }else if ((this.p.vx < 0)  && (vidaenemigo <= 7)) {
+          }else if ((this.p.vx > 0)  && (vidaenemigo <= 7)) {
               this.play('camina_derecha');
           }else if ((this.p.vx < 0)  && (vidaenemigo <= 7)) {
               this.play('camina_izquierda');
