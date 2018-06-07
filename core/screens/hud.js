@@ -24,6 +24,8 @@ Quintus.CastlevaniaHUD = function (Q) {
 
     containerHUD.insert(new Q.VidasJugador());
 
+    containerHUD.insert(new Q.SaludEnemigo());
+
     
 
   
@@ -145,6 +147,57 @@ Q.UI.Container.extend("Salud",{
 
   }
 });
+
+
+
+Q.UI.Container.extend("SaludEnemigo",{ 
+
+  
+
+  init: function(p) {
+    this._super(p, {
+        
+    }); 
+    this.saludes = [];
+    Q.state.on("change.enemylife",this,"update_salude");
+    
+  },//init
+  
+
+  update_salude: function(enemylife) {
+    /*let puntuacionAct = puntuacion.toString();
+    let asset = "numeros/0.png";*/
+   // console.log(health);
+    let i=0;
+    let posXs = 165;
+    while((i<enemylife)&& (i<16)){
+      
+      if(!this.saludes[i]){
+        //let posX = posicionesScore[i];
+        let salus = new Q.Vida({asset: "vida.png", x:posXs, y:63});
+        this.saludes[i] = salus;
+        this.stage.insert(this.saludes[i]);
+      }
+      this.saludes[i].p.asset = "vida.png";
+      i++;
+      posXs += 8;
+    }
+    while(i<16){
+      
+      if(!this.saludes[i]){
+        //let posX = posicionesScore[i];
+        let salus = new Q.Vida({asset: "vida_no.png", x:posXs, y:63});
+        this.saludes[i] = salus;
+        this.stage.insert(this.saludes[i]);
+      }
+      this.saludes[i].p.asset = "vida_no.png";
+      i++;
+      posXs += 8;
+    }
+
+  }
+});
+
 
 
 Q.UI.Container.extend("VidasJugador",{ 

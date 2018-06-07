@@ -58,6 +58,8 @@ Quintus.CastlevaniaLevels = function (Q) {
                   Q.state.dec("health",1); 
                   Q.state.inc("vidas",1);
                   Q.state.dec("vidas",1);
+                  Q.state.inc("enemylife",1);
+                  Q.state.dec("enemylife",1);
                 }
                 
             }

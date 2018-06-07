@@ -373,6 +373,8 @@ Quintus.Simon = function(Q) {
                     Q.state.inc("health",16);
                     Q.state.inc("puntuacion",1);
                     Q.state.dec("puntuacion",1);
+                    Q.state.dec("enemylife",1);
+                    Q.state.inc("enemylife",1);
                 }else{
                     Q.clearStages();
                     Q.stageScene('GameOver', {label: "end_title.png"});

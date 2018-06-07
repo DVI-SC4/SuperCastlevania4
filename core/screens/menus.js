@@ -51,6 +51,7 @@ Quintus.CastlevaniaMenus = function (Q) {
                       Q.state.inc("puntuacion",1);
                       Q.state.inc("health",1);
                       Q.state.inc("vidas",1);
+                      Q.state.inc("enemylife",1);
                     } 
                     else if(this.p.asset === "menu_principal/controls.png") Q.stageScene("controles"); //console.log("escena de controles");
                     else if(this.p.asset === "menu_principal/credits.png") Q.stageScene("creditos"); //console.log("escena de creditos");
