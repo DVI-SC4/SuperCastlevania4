@@ -20,6 +20,8 @@ Quintus.Rowdain = function(Q) {
                 sprite: 'rowdain',
                 sheet: 'rowdain',
                 scale: 2,
+                contadorTeletransporte: 0,
+                teletransportando: false,
                 vx: -80
             });
             this.add('2d, aiBounce, animation');
@@ -93,8 +95,21 @@ Quintus.Rowdain = function(Q) {
               this.play('camina_caballo_izquierda');
           }else if ((this.p.vx > 0)  && (vidaenemigo <= 7)) {
               this.play('camina_derecha');
+              Q._generateCollisionPoints(this);
           }else if ((this.p.vx < 0)  && (vidaenemigo <= 7)) {
               this.play('camina_izquierda');
+              Q._generateCollisionPoints(this);
+          }
+
+
+          if((vidaenemigo <= 7)&& (!this.p.teletransportando)){
+            this.p.contadorTeletransporte++;
+          }
+          if(this.p.contadorTeletransporte >=10){
+            this.p.teletransportando = true;
+          }
+          if(this.p.teletransportando){
+            this.p.x -= 100;
           }
 
         }

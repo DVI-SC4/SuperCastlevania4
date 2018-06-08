@@ -22,6 +22,7 @@ Quintus.CastlevaniaVelas = function (Q) {
       this.on("hit.sprite", function (collision) {
 
         if (collision.obj.isA('Whip')) {
+            collision.obj.p.yaColisionado=true;
             collision.obj.p.collisionMask = Q.SPRITE_NONE;
             collision.obj.p.type = Q.SPRITE_NONE;
             var xAntigua = this.p.x;
