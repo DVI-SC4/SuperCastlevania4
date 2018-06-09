@@ -57378,7 +57378,11 @@
   </data>
  </layer>
  <objectgroup name="Cosas" offsetx="-4" offsety="128">
-  <object id="2" name="boss" gid="35304" x="1928" y="348" width="4" height="4"/>
+  <object id="2" name="boss" gid="35304" x="1928" y="348" width="4" height="4">
+   <properties>
+    <property name="AnchoMapa" type="int" value="2048"/>
+   </properties>
+  </object>
   <object id="3" name="Simon" gid="33848" x="140" y="316" width="4" height="4"/>
   <object id="4" gid="57345" x="292" y="336" width="18" height="15"/>
  </objectgroup>

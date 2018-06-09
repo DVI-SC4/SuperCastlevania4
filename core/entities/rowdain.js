@@ -4,10 +4,10 @@ Quintus.Rowdain = function(Q) {
     });
 
     Q.animations('rowdain', {
-        camina_caballo_izquierda: { frames: [ 0,1 ], rate: 0.8 },
-        camina_caballo_derecha: { frames: [ 2,3 ], rate: 0.8 },
-        ataca_caballo_izquierda: { frames: [ 4,5 ], rate: 1.5 },
-        ataca_caballo_derecha: { frames: [ 6,7 ], rate: 1.5 },
+        camina_caballo_izquierda: { frames: [ 0,1, 4,5], rate: 0.8 },
+        camina_caballo_derecha: { frames: [ 2,3, 6,7 ], rate: 0.8 },
+        /*ataca_caballo_izquierda: { frames: [  ], rate: 1.5 },
+        ataca_caballo_derecha: { frames: [  ], rate: 1.5 },*/
         camina_izquierda: { frames: [ 8,9 ], rate: 0.8 },
         camina_derecha: { frames: [ 10,11 ], rate: 0.8 },
         ataca_izquierda: { frames: [ 12,13 ], rate: 1.5 },
@@ -21,6 +21,7 @@ Quintus.Rowdain = function(Q) {
                 sheet: 'rowdain',
                 scale: 2,
                 contadorTeletransporte: 0,
+                contadorOpacidad: 0,
                 teletransportando: false,
                 vx: -80
             });
@@ -87,29 +88,48 @@ Quintus.Rowdain = function(Q) {
         
 
         },
+        changeOpacity: function(){
+          if(this.p.opacity == 1){
+            this.p.opacity = 0.7;
+          }else{
+            this.p.opacity = 1;
+          }
+        },
         step: function (dt) {
+          let anchomapa = this.p.AnchoMapa;
+          let posicionteletransporte = Math.floor(Math.random() * (anchomapa-100)) + 800;
           let vidaenemigo = Q.state.get("enemylife");
           if ((this.p.vx > 0) && (vidaenemigo > 7)) {
               this.play('camina_caballo_derecha');
           } else if ((this.p.vx < 0)  && (vidaenemigo > 7)) {
               this.play('camina_caballo_izquierda');
           }else if ((this.p.vx > 0)  && (vidaenemigo <= 7)) {
-              this.play('camina_derecha');
-              Q._generateCollisionPoints(this);
+            this.p.vx = 100;
+            this.play('camina_derecha');
+            Q._generateCollisionPoints(this);
           }else if ((this.p.vx < 0)  && (vidaenemigo <= 7)) {
-              this.play('camina_izquierda');
-              Q._generateCollisionPoints(this);
+            this.p.vx = -100;
+            this.play('camina_izquierda');
+            Q._generateCollisionPoints(this);
           }
 
 
           if((vidaenemigo <= 7)&& (!this.p.teletransportando)){
             this.p.contadorTeletransporte++;
           }
-          if(this.p.contadorTeletransporte >=10){
+          if(this.p.contadorTeletransporte >=100){
             this.p.teletransportando = true;
           }
           if(this.p.teletransportando){
-            this.p.x -= 100;
+            this.changeOpacity();
+            this.p.contadorOpacidad++;
+            
+          }
+          if(this.p.teletransportando && this.p.contadorOpacidad >=50){
+            this.p.contadorTeletransporte = 0;
+            this.p.contadorOpacidad = 0;
+            this.p.teletransportando = false;
+            this.p.x = posicionteletransporte;
           }
 
         }
