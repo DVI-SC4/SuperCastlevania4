@@ -194,7 +194,6 @@ A un lado del HUD podemos ver la putuacion obtenida, la salud de Simon y la salu
 
 Generan objetos que nos facilitan la jugabilidad del juego, estos objetos son vidas, y upgrade del latigo.
 
-
 ## 1.4. Personajes
 
 ### 1. Simon Belmont
@@ -277,8 +276,6 @@ El unico componente que se ha implementado es para los enemigos, que comparten c
 
 ## 3.1. Integrantes
 
-![Team](https://m.popkey.co/bcb243/azGKx_s-200x150.gif)
-
 * [César Godino Rodríguez](https://github.com/cloudgrey)
 * [Carmen López Gonzalo](https://github.com/calope03)
 * [Sergio Pino Holgado](https://github.com/sepino)
@@ -291,6 +288,7 @@ El unico componente que se ha implementado es para los enemigos, que comparten c
 * [JetBrains WebStorm](https://www.jetbrains.com/webstorm/)
 * [Google Chrome](https://www.google.com/chrome/)
 * [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/)
+* [Safari](https://www.apple.com/es/safari/)
 * [GitHub Desktop](https://desktop.github.com)
 
 ### Obtención y preparación de sprites
@@ -317,10 +315,6 @@ El unico componente que se ha implementado es para los enemigos, que comparten c
 
 ## 3.3. Tareas realizadas por cada integrante
 
-(descripción del trabajo realizado por cada uno de los integrantes del grupo, pondremos aquí lo del registro de tareas)
-
-## 3.4. Carga de trabajo
-
 * César:
 	* Preparación de sprites, jsons y animaciones por frames de Simon, con posiciones de avance, ataques, saltos, escaleras...
 	* Limpieza y preparación de sprite de Simon avanzando agachado a partir de capturas de emulación.
@@ -346,20 +340,69 @@ El unico componente que se ha implementado es para los enemigos, que comparten c
 	* Realización de los créditos del juego junto con el sprite animado de Simon al final y composición de los mensajes con las letras oficiales del juego.
 	* Preparación de las imágenes con letras para la pantalla de Game Over.
 * Carmen:
+	* Preparacion de los recursos necesarios para las diferentes escenas.
+	* Realizacion de las diferentes escenas con Tiled.
+	* Programacion de la logica del cambio de escenas.
+	* Gestion del seguimiento de la camara al jugador en el juego.
+	* Añadidos todos los elementos del juego y sus atributos opcionales en el mapa.
+	* Control de Simon en las escaleras:
+		* Escaleras de subida
+		* Escaleras de bajada
+		* Deteccion del fin de la escalera
+		* Atacar en escalera
+		* Moverse hacia arriba y hacia abajo en la escalera
+	* Detalles en los enemigos
+		* Limitacion del movimiento del esqueleto
+		* Gestion de los golpes recibidos segun sea el latigo normal o el mejorado
+	* Gestion de la inmunidad de Simon una vez golpeado.
+	* Preparacion de los elementos del HUD
+	* Programacion y gestion de los elementos del HUD:
+		* Salud de Simon que se reduce cuando le atacan
+		* Puntuacion del jugador que aumenta con cada enemigo eliminado
+		* Vidas del jugador, que aumentan si las recoge
+		* Muestra el nivel y la escena en la que nos encontramos
+		* Salud del juefe del nivel
+	* Creacion de las pantallas de Game Over y de You Win
+	* Programacion de la logica de las velas con los objetos recogibles
+		* Vidas
+		* Upgrade del latigo
+	* Programacion de la logica del movimiento del jefe final.
+	* Revision y redaccion de la memoria: 
+		* Mecanicas principales
+		* Informacion de los personajes
+		* Implementaciones realizadas
+
+		
+		
 * Sergio:
-	* Separación, reestructuración y ordenación de código.
+	* Redaccion del documento de alcance.
+	* Separación del codigo utilizando el espacio de nombres.
+	* Reestructuración y ordenación de código en diferentes direcctorios del repositorio.
+	* Preparacion de los sprites de los enemigos.
 	* Codigo y animación para enemigo Skeleton.
 	* Codigo y animación para enemigo Bat.
+	* Creacion del componente enemy para Skeleton y Bat.
+		* Gestion de las colisiones con el latigo y Simon.
+	* Animacion de la llama que aparece al morir un enemigo.
+	* Conversion .ogg a .mp3 para que sea compatible en todos los navegadores
+	* Inclusion de los sonidos en el juego
+		* Escenas 
+		* Latigo
+		* Muerte enemigo
+	* Preparacion de los sprites del jefe final.
+	* Codigo de las mecanicas basicas del jefe final.
 	* Codigo y animacion para boss Rowdain.
-	* Sprite para Rowdain.
-	* Sprite para skeleton.
-	* Conversion .ogg a .mp3
-	* Animacion muerte enemigos.
-	* Componente para enemigos.
+	* Redaccion de la memoria
+		* Diseño e implementacion
+		* Arquitectura
+
+## 3.4. Carga de trabajo
+
+* César: 33%
+* Carmen: 33%
+* Sergio: 33%
 
 # 4. Fuentes y referencias
-
-(referencias a todos los assets utilizados en la realización del juego.)
 
 ## Recursos
 
@@ -377,11 +420,4 @@ El unico componente que se ha implementado es para los enemigos, que comparten c
 * [Castlevania Wikia](http://es.castlevania.wikia.com/wiki/Simon_Belmont)
 * [Super Castlevannia IV en Wikipedia](https://es.wikipedia.org/wiki/Super_Castlevania_IV)
 
-(otras que pueden servir para acompañar a la memoria)
-http://cdn.atomix.vg/wp-content/uploads/2017/04/aFvXaaY.gif
-https://img.fireden.net/v/image/1462/84/1462843481721.gif
-https://8bitotaku.files.wordpress.com/2012/04/tumblr_m2ogunsoba1qbzzgco1_r2_1280.gif?w=593
-https://i.gifer.com/CT80.gif
-https://media1.tenor.com/images/f477eb8dd0850d2a558e9c9656791561/tenor.gif?itemid=6563382
-https://thumbs.gfycat.com/PlayfulSoftAnkole-max-1mb.gif
-https://thumbs.gfycat.com/DisguisedScalyFritillarybutterfly-max-1mb.gif
+
