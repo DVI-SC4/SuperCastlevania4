@@ -12,7 +12,6 @@ Quintus.CastlevaniaControls = function (Q) {
 
     Q.scene('controles',function(stage) {
 
-        //console.log("estas en el tutorial de controles");
         Q.audio.play("controls.ogg",{loop:true});
 
         stage.insert(new Q.ilustracionControl({asset: "controls/controls.png", x:292, y:224}));

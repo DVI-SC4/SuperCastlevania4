@@ -11,7 +11,7 @@ Quintus.CastlevaniaMenus = function (Q) {
 
         },
         step: function (dt){
-            //console.log(this.p.y);
+         
         }
     });
 
@@ -30,7 +30,6 @@ Quintus.CastlevaniaMenus = function (Q) {
 
         },
         step: function (dt){
-            //console.log(this.p.y);
 
             if(this.p.elegida) {
                 if(this.p.opacity === 1) this.p.opacity = 0;
@@ -40,7 +39,6 @@ Quintus.CastlevaniaMenus = function (Q) {
                 //Q.audio.play("menu_choice.ogg");
 
                 let horaActual = new Date().getTime();
-                //this.p.horaDeEntrar = horaActual+3000;
 
                 if(horaActual-this.p.horaElegida >= 2000){
                     Q.clearStages();
@@ -53,8 +51,8 @@ Quintus.CastlevaniaMenus = function (Q) {
                       Q.state.inc("vidas",1);
                       Q.state.inc("enemylife",1);
                     } 
-                    else if(this.p.asset === "menu_principal/controls.png") Q.stageScene("controles"); //console.log("escena de controles");
-                    else if(this.p.asset === "menu_principal/credits.png") Q.stageScene("creditos"); //console.log("escena de creditos");
+                    else if(this.p.asset === "menu_principal/controls.png") Q.stageScene("controles"); 
+                    else if(this.p.asset === "menu_principal/credits.png") Q.stageScene("creditos"); 
                 }
 
 
@@ -141,7 +139,6 @@ Quintus.CastlevaniaMenus = function (Q) {
 
         Q.audio.play("menu_music.ogg", {loop: true});
 
-        //console.log("estas en el menu principal");
         let fondo = stage.insert(new Q.fondoMenuPrincipal());
         let opcion0 = stage.insert(new Q.opcionMenu({asset: "menu_principal/start.png", x:292, y:290 }));
         let opcion1 = stage.insert(new Q.opcionMenu({asset: "menu_principal/controls.png", x:292, y: 330}));
@@ -152,13 +149,7 @@ Quintus.CastlevaniaMenus = function (Q) {
         let selector2 = stage.insert(new Q.SelectorMenu({x:360, y:285, num_selector:2}));
 
         Q.input.on("confirm",stage,function() { //pulsamos enter para elegir una opcion
-            //Q.clearStages();
-            //Q.stageScene('level');
-
-            //console.log(selector1.p.opcion_apuntada);
-
-
-
+    
             if(!selector1.p.inhabilitado){
 
                 Q.audio.stop("menu_music.ogg");

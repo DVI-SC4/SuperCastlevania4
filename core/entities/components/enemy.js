@@ -36,7 +36,6 @@ Quintus.CastlevaniaEnemy = function(Q) {
                     collision.obj.p.inmune=true;
                     collision.obj.p.temporizadorInmune = 0;
                     if(Q.state.get("health") > 0){
-                        console.log("estoy decreciendo la salud");
                         Q.state.dec("health",1); 
                     }else{
                         if(Q.state.get("vidas") > 0){ 
@@ -57,13 +56,11 @@ Quintus.CastlevaniaEnemy = function(Q) {
                         
 
                     }
-                    console.log(Q.state.get("health"));
                 }
              
             });
             this.entity.on('hit.sprite', function (collision) {
                 if (collision.obj.isA('Whip') && !collision.obj.p.yaColisionado) {
-                  console.log("hey");
                   collision.obj.p.yaColisionado=true;
                   collision.obj.p.collisionMask = Q.SPRITE_NONE;
                   collision.obj.p.type = Q.SPRITE_NONE;
@@ -76,7 +73,7 @@ Quintus.CastlevaniaEnemy = function(Q) {
                       
                       this.destroy();
                       Q.audio.play('enemy_destroyed');
-                      Q.state.inc("puntuacion",10);
+                      Q.state.inc("puntuacion",100);
 
                       const llama = new Q.Llama({x: this.p.x, y: this.p.y});
                       this.stage.insert(llama);

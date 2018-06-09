@@ -1,8 +1,9 @@
 Quintus.CastlevaniaLevels = function (Q) {
+
+    //Clase que cuando Simon pasa por el elemento carga la siguiente escena
     Q.Sprite.extend("CambioZona", {
         init: function (p) {
             this._super(p, {
-               /* asset: "simon_normal.png",*/
                 w: 10,
                 h: 10,
                 type: Q.SPRITE_ENEMY,
@@ -15,7 +16,7 @@ Quintus.CastlevaniaLevels = function (Q) {
             });
             this.add('2d, aiBounce, animation');
             this.on("bump.left,bump.right, bump.top, bump.bottom", function (collision) {
-                this.stage.del("viewport");
+                this.stage.add("viewport").unfollow();
                 this.p.cambiandoZona = true;
                 this.p.type = Q.SPRITE_NONE;
                 this.p.collisionMask = Q.SPRITE_NONE;

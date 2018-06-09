@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="512" height="112" tilewidth="4" tileheight="4" infinite="0" nextobjectid="111">
+<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="512" height="112" tilewidth="4" tileheight="4" infinite="0" nextobjectid="113">
  <tileset firstgid="1" name="tiled" tilewidth="4" tileheight="4" tilecount="57344" columns="512">
   <image source="../images/stage-1-lvl-1-1.png" width="2048" height="448"/>
   <tile id="22168">
@@ -144,7 +144,16 @@
    </properties>
   </tile>
  </tileset>
- <imagelayer name="background">
+ <tileset firstgid="57345" name="vela" tilewidth="18" tileheight="15" tilecount="1" columns="1">
+  <image source="../images/velas.png" width="18" height="15"/>
+  <tile id="0">
+   <properties>
+    <property name="Class" value="Vela"/>
+    <property name="objeto" value="corazon"/>
+   </properties>
+  </tile>
+ </tileset>
+ <imagelayer name="background" visible="0">
   <image source="../images/stage-1-lvl-1-1.png" width="2048" height="448"/>
  </imagelayer>
  <layer name="Collision" width="512" height="112">
@@ -57525,5 +57534,7 @@
   <object id="101" gid="25249" x="1044" y="388" width="4" height="4"/>
   <object id="108" gid="25296" x="792" y="196" width="4" height="4"/>
   <object id="109" gid="25296" x="788" y="196" width="4" height="4"/>
+  <object id="111" gid="57345" x="680" y="156" width="18" height="15"/>
+  <object id="112" gid="57345" x="800" y="152" width="18" height="15"/>
  </objectgroup>
 </map>

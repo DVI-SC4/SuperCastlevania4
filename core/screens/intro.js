@@ -80,8 +80,6 @@ Quintus.CastlevaniaIntro = function (Q) {
 
     Q.scene('introLogos',function(stage) {
 
-        //console.log("estas en la intro");
-
         let parte0 = stage.insert(new Q.parte0intro());
         let parte1 = stage.insert(new Q.parte1intro({parte0: parte0}));
         let parte2 = stage.insert(new Q.parte2intro({parte1: parte1, parte0: parte0}));

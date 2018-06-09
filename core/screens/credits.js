@@ -62,7 +62,6 @@ Quintus.CastlevaniaCredits = function (Q) {
 
     Q.scene('creditos',function(stage) {
 
-        //console.log("estas en los creditos");
         Q.audio.play("credits.ogg");
         let horaActual = (new Date().getTime())/1000;
 

@@ -6,14 +6,14 @@ Quintus.Rowdain = function(Q) {
     Q.animations('rowdain', {
         camina_caballo_izquierda: { frames: [ 0,1, 4,5], rate: 0.8 },
         camina_caballo_derecha: { frames: [ 2,3, 6,7 ], rate: 0.8 },
-        /*ataca_caballo_izquierda: { frames: [  ], rate: 1.5 },
-        ataca_caballo_derecha: { frames: [  ], rate: 1.5 },*/
         camina_izquierda: { frames: [ 8,9 ], rate: 0.8 },
         camina_derecha: { frames: [ 10,11 ], rate: 0.8 },
         ataca_izquierda: { frames: [ 12,13 ], rate: 1.5 },
         ataca_derecha: { frames: [ 14,15 ], rate: 1.5 }
     });
-
+    //Jefe final de la primera escena
+    //Cuando su vida llega a la mitad cambia de estar montado a ir andando y teletransportarse
+    //Para teletransportarse pasa un tiempo parpadea y se teletransporta a una posicion aleatoria
     Q.Sprite.extend('Boss-1', {
         init: function (p) {
             this._super(p, {
@@ -26,21 +26,15 @@ Quintus.Rowdain = function(Q) {
                 vx: -80
             });
             this.add('2d, aiBounce, animation');
-            //this.add('enemy');
-
             this.on('bump.left, bump.right', function(collision) {
                 if (collision.obj.isA('Simon') && !collision.obj.p.inmune) {
-                    //this.p.vx = 0;
                     collision.obj.p.x -= 30;
-                    //this.p.vx = -80;
                     collision.obj.p.inmune=true;
                     collision.obj.p.temporizadorInmune = 0;
                     if(Q.state.get("health") > 0){
-                        console.log("estoy decreciendo la salud");
                         Q.state.dec("health",1); 
                     }else{
                         if(Q.state.get("vidas") > 0){ 
-                            
                             Q.clearStages();
                             Q.stageScene('level');
                             Q.stageScene("hud",1);
@@ -54,16 +48,12 @@ Quintus.Rowdain = function(Q) {
                             Q.clearStages();
                             Q.stageScene('GameOver');
                         }
-                        
-
                     }
-                    console.log(Q.state.get("health"));
                 }
              
             });
             this.on('hit.sprite', function (collision) {
                 if (collision.obj.isA('Whip') && !collision.obj.p.yaColisionado) {
-                  console.log("hey");
                   collision.obj.p.yaColisionado=true;
                   collision.obj.p.collisionMask = Q.SPRITE_NONE;
                   collision.obj.p.type = Q.SPRITE_NONE;
@@ -88,6 +78,7 @@ Quintus.Rowdain = function(Q) {
         
 
         },
+        //Funcion que sirve para que parezca que el enemigo parpadea
         changeOpacity: function(){
           if(this.p.opacity == 1){
             this.p.opacity = 0.7;
@@ -97,7 +88,7 @@ Quintus.Rowdain = function(Q) {
         },
         step: function (dt) {
           let anchomapa = this.p.AnchoMapa;
-          let posicionteletransporte = Math.floor(Math.random() * (anchomapa-100)) + 800;
+          let posicionteletransporte = Math.floor(Math.random() * (anchomapa-100)) + 800; // para calcular la posicion aleatoria a la que mover al jugador
           let vidaenemigo = Q.state.get("enemylife");
           if ((this.p.vx > 0) && (vidaenemigo > 7)) {
               this.play('camina_caballo_derecha');

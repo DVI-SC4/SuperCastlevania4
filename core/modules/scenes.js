@@ -2,7 +2,7 @@ Quintus.CastlevaniaScenes = function (Q) {
   Q.load('end_title.png, escena1.ogg, escena2.ogg, escena3.ogg, escena4.ogg', function () {
         
   });  
-
+    //Escena inicial
     Q.scene('inicio',function(stage) {
         Q.state.reset({puntuacion: -1, health: 15, enemylife: 15, vidas: 3});
         const container = stage.insert(new Q.UI.Container({
@@ -25,14 +25,15 @@ Quintus.CastlevaniaScenes = function (Q) {
         });
     });
 
+    //Escena que carga el TMX en funcion de la variable escena y level
     Q.scene('level', function(stage) {
-        console.log(escena);
         const nivel = "nivel" + level + "-scn" + escena + ".tmx";
         Q.audio.stop();
         Q.audio.play('escena' + escena + '.ogg');
         Q.stageTMX(nivel, stage);
     });
 
+    //Escena del final, carga la pantalla de GameOver o YouWin dependiendo de quien la llama
     Q.scene('GameOver',function(stage) {
         escena=1;
         level=1;

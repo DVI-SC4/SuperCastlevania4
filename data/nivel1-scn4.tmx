@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="512" height="112" tilewidth="4" tileheight="4" infinite="0" nextobjectid="5">
+<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="512" height="112" tilewidth="4" tileheight="4" infinite="0" nextobjectid="6">
  <tileset firstgid="1" name="tiled" tilewidth="4" tileheight="4" tilecount="57344" columns="512">
   <image source="../images/stage-4-lvl-1.png" width="2048" height="448"/>
   <tile id="33847">
@@ -57385,5 +57385,10 @@
   </object>
   <object id="3" name="Simon" gid="33848" x="140" y="316" width="4" height="4"/>
   <object id="4" gid="57345" x="292" y="336" width="18" height="15"/>
+  <object id="5" gid="57345" x="408" y="336" width="18" height="15">
+   <properties>
+    <property name="objeto" value="latigo"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

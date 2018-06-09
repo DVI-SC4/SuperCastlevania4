@@ -5,10 +5,6 @@ Quintus.Simon = function(Q) {
     var vX = 0;
     var vY = 0;
     Q.Sprite.extend("Simon", {
-        //holiSOLUCIONAR QUE SI DEJO PULSADO LATIGO MIENTRAS ATACO DE PIE, NO PUEDA SALTAR NI AGACHARSE HASTA QUE LO SUELTE.
-        //Y MIENTRAS PULSO LATIGO AGACHADO, QUE NO PUEDA PONERSE EN PIE NI SALTAR HASTA QUE LO SUELTE
-        //Y MIENTRAS ATACO HACIA ARRIBA, QUE TAMPOCO PUEDA HACER NADA MAS HASTA SOLTAR EL LATIGO
-        //EN GENERAL, HAY QUE CAPARLE ALGUNOS MOVIMIENTOS MIENTRAS HACE LOS DIFERENTES TIPOS DE ATAQUE
 
 
         init: function (p) {
@@ -36,8 +32,6 @@ Quintus.Simon = function(Q) {
                     direccionEscaleras: " ",
                     subeObaja: " ",
                     derOizq: " "
-                    //collisionMask: !Q.SPRITE_ACTIVE
-                   // type: (Q.SPRITE_DEFAULT | Q.SPRITE_FRIENDLY | Q.SPRITE_ENEMY) && !Q.SPRITE_ACTIVE
                 }
             );
             this.add('2d, platformerControls, animation');
@@ -159,7 +153,6 @@ Quintus.Simon = function(Q) {
                     }
                 }
                 else {
-                    //this.p.andando = true;
 
                     if (this.p.agachado && !this.p.andando_agachado && this.p.direction == "left") {
                         this.p.andando = true;
@@ -197,12 +190,7 @@ Quintus.Simon = function(Q) {
         actuaDer: function () {
             if (Q.inputs['right']) {
 
-                //console.log(this.p);
-
-
                 if (this.p.latigoActivado) {
-                    //if(Q.inputs['up']) console.log("pulsando arriba");
-                    //else console.log("no pulsando arriba");
 
                     if ((!this.p.en_aire && this.p.atacando_diagonalmente) || this.p.atacando_agachado) this.p.x = this.p.posicionAtaque; //para que se quede quieto mientras ataca
                     else if (!this.p.en_aire && !this.p.atacando_diagonalmente) {
@@ -258,17 +246,15 @@ Quintus.Simon = function(Q) {
         },//actuaDer
 
         controlaEnAire: function(){
-            if(!this.p.latigo && !this.p.latigoActivado && this.p.vy >= 70 && !Q.inputs['down'] &&  !this.p.atacando_verticalmente && !this.p.en_aire){ //no está saltando como tal pero se ha dejado caer desde una altura
-                //console.log("hola");
+            if(!this.p.latigo && !this.p.latigoActivado && this.p.vy >= 70 && !Q.inputs['down'] &&  !this.p.atacando_verticalmente && !this.p.en_aire){ 
                 this.cambiaSprite("saltando", "salta_derecha", "salta_izquierda");
-                //console.log(this.p.vy);
                 this.p.en_aire = true;
             }
 
 
             if (this.p.en_aire == true) {
 
-                if (this.p.vy == 0) { //si estaba saltando pero vuelve a estar plantado en el suelo
+                if (this.p.vy == 0) { 
 
                     this.p.en_aire = false;
                     this.cambiaSprite("normalito", "pose_normal_derecha", "pose_normal_izquierda");
@@ -283,24 +269,20 @@ Quintus.Simon = function(Q) {
                     if (!this.p.atacando_verticalmente && !this.p.atacando_diagonalmente) {
 
                         this.gestionaAparicionLatigo(null, null, 45, -5, -37, -7, 37, -7, -45, 0, false);
-                        //this.gestionaAparicionLatigo(valorAngulo, valorAnguloIzq, despXmejorado, despYmejorado, despXizq, despYizq, despX, despY, despXmejoradoIzq, despYmejoradoIzq);
                     }
                     else if (this.p.atacando_verticalmente) {
                         if (!this.p.atacando_verticalmente_abajo) {
 
                             this.gestionaAparicionLatigo(null, null, 2, -this.p.h, -3, -this.p.h + 7, 2, -this.p.h + 7, -7, -this.p.h, false);
-                            //this.gestionaAparicionLatigo(valorAngulo, valorAnguloIzq, despXmejorado, despYmejorado, despXizq, despYizq, despX, despY, despXmejoradoIzq, despYmejoradoIzq);
                         }
                         else {
-                            if (!Q.inputs['left']) { //movidas de Quintus por pulsar varias teclas a la vez...es una ñapa pero así evito el error
+                            if (!Q.inputs['left']) { 
 
                                 this.gestionaAparicionLatigo(null, null, 3, this.p.h - 21, -3, this.p.h - 20, 5, this.p.h - 20, -3, this.p.h - 21, false);
-                                //this.gestionaAparicionLatigo(valorAngulo, valorAnguloIzq, despXmejorado, despYmejorado, despXizq, despYizq, despX, despY, despXmejoradoIzq, despYmejoradoIzq);
                             }
                             else {
 
                                 this.gestionaAparicionLatigo(null, null, this.p.w + 8, 35, -this.p.w - 2, 27, this.p.w + 2, 25, -this.p.w - 2, 27, false);
-                                //this.gestionaAparicionLatigo(valorAngulo, valorAnguloIzq, despXmejorado, despYmejorado, despXizq, despYizq, despX, despY, despXmejoradoIzq, despYmejoradoIzq);
                             }
 
                         }
@@ -311,13 +293,10 @@ Quintus.Simon = function(Q) {
                         if (!this.p.atacando_diagonalmente_abajo) {
 
                             this.gestionaAparicionLatigo(null, null, this.p.w + 8, -this.p.h + 7, -this.p.w - 4, -this.p.h + 11, this.p.w - 1, -this.p.h + 11, -this.p.w - 4, -this.p.h + 11, false);
-                            //this.gestionaAparicionLatigo(valorAngulo, valorAnguloIzq, despXmejorado, despYmejorado, despXizq, despYizq, despX, despY, despXmejoradoIzq, despYmejoradoIzq);
                         }
                         else {
 
                             this.gestionaAparicionLatigo(null, null, this.p.w + 8, 35, -this.p.w - 2, 27, this.p.w + 2, 25, -this.p.w - 2, 27, false);
-                            //this.gestionaAparicionLatigo(valorAngulo, valorAnguloIzq, despXmejorado, despYmejorado, despXizq, despYizq, despX, despY, despXmejoradoIzq, despYmejoradoIzq);
-
                         }
 
                     }
@@ -333,7 +312,6 @@ Quintus.Simon = function(Q) {
                 if (!this.p.agachado && !this.p.atacando_diagonalmente && !this.p.atacando_verticalmente && !this.p.en_aire) {
 
                     this.p.agachado = true;
-                    //console.log("entra");
                     this.cambiaSprite("agachado", "pose_agachado_derecha", "pose_agachado_izquierda");
                 }
 
@@ -360,8 +338,6 @@ Quintus.Simon = function(Q) {
 
         compruebaCaida: function(){
             if (this.p["y"] > 444) {
-
-                console.log("Tas caio lol");
                 if(Q.state.get("vidas") > 0){ 
                     
                     Q.clearStages();
@@ -491,8 +467,6 @@ Quintus.Simon = function(Q) {
 
                     this.p.atacando_verticalmente = true;
                     this.p.atacando_verticalmente_abajo = true;
-
-                    //console.log("HOLA HOLA HOLA"); aqui se confundia a veces: al querer atacar diagonalmente hacia abajo a la izquierda se pensaba que quería atacar verticalmente hacia abajo (direccion izquierda)
                     this.cambiaSprite("saltando_atacando_haciabajo", "saltataca_haciabajo_derecha", "saltataca_haciabajo_izquierda");
                 }
                 else if (Q.inputs['up'] && Q.inputs['W'] && (Q.inputs['right'] || Q.inputs['left']) && !this.p.atacando_diagonalmente) {
@@ -541,12 +515,7 @@ Quintus.Simon = function(Q) {
                     this.cambiaSprite("agachado_atacando", "ataca_agachado_derecha", "ataca_agachado_izquierda");
                 }
 
-            }//activando el latigo
-
-            //if (!Q.inputs['W']){// && this.p.latigo) { //no se pulsa  W y si sigue el latigo presente
-
-            //VIGILAR, PORQUE EL LATIGO SE CREA AL TERMINAR LA ANIMACION DE ATAQUE,
-            //SI PULSAMOS Y SOLTAMOS W MUY RAPIDO, LA ANIMACION NO TERMINA Y P.LATIGO NO APUNTA A NADA
+            }
 
             if(this.p.latigo){
                 var horaActual = new Date().getTime()/1000;
@@ -562,7 +531,6 @@ Quintus.Simon = function(Q) {
                     this.p.atacando_verticalmente_abajo = false;
                     this.p.atacando_diagonalmente = false;
                     this.p.atacando_diagonalmente_abajo = false;
-                    //console.log("has soltado W " + this.p.latigoActivado);
 
                     this.p.listoAtacarDenuevo = false;
                     if (this.p.en_aire == true) {
@@ -582,10 +550,8 @@ Quintus.Simon = function(Q) {
 
             if(!Q.inputs['W'] && !this.p.en_aire) {
                 this.p.listoAtacarDenuevo = true;
-                //console.log("ya puedes");
             }
 
-            //}
 
             this.subeEscalera();
             if(!this.p.subiendoEscaleras){
@@ -616,10 +582,8 @@ Quintus.Simon = function(Q) {
 
         init: function (p) {
 
-            console.log("Estamos creando una instancia de Whip");
-
             this._super(p, {
-                    asset: "basic_whip.png", //por defecto el personaje siempre empieza con el latigo basico, y éste se actualiza al recoger la mejora. Si el personaje pierde una vida, el latigo vuelve a ser basico
+                    asset: "basic_whip.png", //por defecto el personaje siempre empieza con el latigo basico, y éste se actualiza al recoger la mejora.
                     x: 100,
                     y: 528,
                     yaColisionada: false,
@@ -627,30 +591,15 @@ Quintus.Simon = function(Q) {
                     gravity: 0,
                     horaDeDesaparicion: null,
                     sensor: true,
-                   // type: Q.SPRITE_ACTIVE,
                     collisionMask: Q.SPRITE_DEFAULT | Q.SPRITE_ACTIVE | Q.SPRITE_ENEMY,
-                    mejorado: false//con el latigo basico hará falta dar el doble de golpes que con el mejorado, pues es menos potente.
+                    mejorado: false
                 }
             ); //_super
 
             this.add('2d');
-            this.on("bump.top,bump.left,bump.right,bump.bottom", function (collision) {
-
-                //AQUI VAN LOS ENEMIGOS A LOS QUE PODRÁ DAÑAR EL LATIGO
-                /*if(collision.obj.isA("Bloopa") || collision.obj.isA("Koopa")) {
-                    //this.destroy();
-                    console.log("latigo colisiona con bloopa O koopa");
-                    collision.obj.destroy();
-                }*/
-
-            });//on
 
         }/*,//init
 
-        step: function(dt){
-            //console.log(this.p); en principio no hará falta step para el latigo, borrar al terminar el juego
-
-        }*/
 
     });//extend Whip
 };

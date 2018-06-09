@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="1023" height="112" tilewidth="4" tileheight="4" infinite="0" nextobjectid="38">
+<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="1023" height="112" tilewidth="4" tileheight="4" infinite="0" nextobjectid="40">
  <tileset firstgid="1" name="tiled2" tilewidth="4" tileheight="4" tilecount="114576" columns="1023">
   <image source="../../pruebasCastlevania/images/stage-2-lvl-1.png" width="4092" height="448"/>
   <tile id="56235">
@@ -39,6 +39,15 @@
   <tile id="0">
    <properties>
     <property name="Class" value="Murcielago"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="114582" name="vela" tilewidth="18" tileheight="15" tilecount="1" columns="1">
+  <image source="../images/velas.png" width="18" height="15"/>
+  <tile id="0">
+   <properties>
+    <property name="Class" value="Vela"/>
+    <property name="objeto" value="corazon"/>
    </properties>
   </tile>
  </tileset>
@@ -114658,5 +114667,11 @@
     <property name="posicionFin" type="int" value="152"/>
    </properties>
   </object>
+  <object id="38" gid="114582" x="476" y="316" width="18" height="15">
+   <properties>
+    <property name="objeto" value="latigo"/>
+   </properties>
+  </object>
+  <object id="39" gid="114582" x="2596" y="140" width="18" height="15"/>
  </objectgroup>
 </map>

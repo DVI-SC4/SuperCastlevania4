@@ -2,7 +2,7 @@ Quintus.CastlevaniaHUD = function (Q) {
   Q.load('hud.png, numeros/0.png, numeros/1.png, numeros/2.png, numeros/3.png, numeros/4.png, numeros/5.png, numeros/6.png, numeros/7.png, numeros/8.png, numeros/9.png, vida.png, vida_no.png', function () {
         
   });
-  let posicionesScore = [151,167,183,199,215,231,247,263,279];//31
+  let posicionesScore = [151,167,183,199,215,231,247,263,279];
   Q.scene("hud", function(stage){
     let containerHUD = stage.insert(new Q.UI.Container({x: Q.width/2, y: 40})); 
     let fondoHUD  = containerHUD.insert(new Q.UI.Button({
@@ -14,6 +14,7 @@ Quintus.CastlevaniaHUD = function (Q) {
    
     containerHUD.insert(new Q.Score());
 
+    //Las variables de escena y de nivel no cambian a no ser que cambie la escena y entonces la informacion del HUD se recarga.
     let assetNivel = "numeros/"+level+".png";
     stage.insert(new Q.Numero({asset: assetNivel, x:486, y:31}));
 
@@ -26,12 +27,10 @@ Quintus.CastlevaniaHUD = function (Q) {
 
     containerHUD.insert(new Q.SaludEnemigo());
 
-    
-
-  
   });
 
- Q.Sprite.extend('Numero',{
+  //Esta clase nos permite insertar los numeros en el HUd dependiendo del asset con el que se genere
+  Q.Sprite.extend('Numero',{
         init: function(p) {
             this._super(p, {
                 asset: "numeros/0.png",
@@ -45,7 +44,9 @@ Quintus.CastlevaniaHUD = function (Q) {
             
         }
   });
- Q.Sprite.extend('Vida',{
+
+  //Clase que sirve para el nivel de salud del jugador y del jefe final
+  Q.Sprite.extend('Vida',{
         init: function(p) {
             this._super(p, {
                 asset: "vida.png",
@@ -61,10 +62,10 @@ Quintus.CastlevaniaHUD = function (Q) {
   });
 
 
-
+//Clase que se encarga de actualizar la puntuacion en el HUD cada vez que se actualiza
+//Dependiendo de si la puntuacion se ha generado con anterioridad se crea de nuevo o se actualiza su asset
+//Esta variable se actualiza cada vez que matamos a un enemigo
 Q.UI.Container.extend("Score",{ 
-
-  
 
   init: function(p) {
     this._super(p, {
@@ -74,8 +75,6 @@ Q.UI.Container.extend("Score",{
     Q.state.on("change.puntuacion",this,"update_puntos");
     
   },//init
-  
-
   update_puntos: function(puntuacion) {
     let puntuacionAct = puntuacion.toString();
     let assetPuntos = "numeros/0.png";
@@ -95,14 +94,13 @@ Q.UI.Container.extend("Score",{
       this.puntuaciones[i].p.asset = assetPuntos;
       
     }
-
   }
 });
 
-
+//Clase que se encarga de actualizar la salud del jugador en el HUD cada vez que se actualiza
+//Dependiendo de si la salud se ha generado con anterioridad se crea de nuevo o se actualiza su asset
+//Esta variable se actualiza cada vez que algun enemigo golpea a Simon
 Q.UI.Container.extend("Salud",{ 
-
-  
 
   init: function(p) {
     this._super(p, {
@@ -110,20 +108,14 @@ Q.UI.Container.extend("Salud",{
     }); 
     this.saludes = [];
     Q.state.on("change.health",this,"update_salud");
-    
   },//init
   
-
   update_salud: function(health) {
-    /*let puntuacionAct = puntuacion.toString();
-    let asset = "numeros/0.png";*/
-    console.log(health);
     let i=0;
     let posXs = 165;
     while((i<health)&& (i<16)){
       
       if(!this.saludes[i]){
-        //let posX = posicionesScore[i];
         let salus = new Q.Vida({asset: "vida.png", x:posXs, y:47});
         this.saludes[i] = salus;
         this.stage.insert(this.saludes[i]);
@@ -135,7 +127,6 @@ Q.UI.Container.extend("Salud",{
     while(i<16){
       
       if(!this.saludes[i]){
-        //let posX = posicionesScore[i];
         let salus = new Q.Vida({asset: "vida_no.png", x:posXs, y:47});
         this.saludes[i] = salus;
         this.stage.insert(this.saludes[i]);
@@ -148,32 +139,25 @@ Q.UI.Container.extend("Salud",{
   }
 });
 
-
-
+//Clase que se encarga de actualizar la salud del enemigo en el HUD cada vez que se actualiza
+//Dependiendo de si la salud se ha generado con anterioridad se crea de nuevo o se actualiza su asset
+//Esta variable se actualiza cada vez que Simon golpea al enemigo
 Q.UI.Container.extend("SaludEnemigo",{ 
-
-  
 
   init: function(p) {
     this._super(p, {
-        
     }); 
     this.saludes = [];
     Q.state.on("change.enemylife",this,"update_salude");
     
   },//init
   
-
   update_salude: function(enemylife) {
-    /*let puntuacionAct = puntuacion.toString();
-    let asset = "numeros/0.png";*/
-   // console.log(health);
     let i=0;
     let posXs = 165;
     while((i<enemylife)&& (i<16)){
       
       if(!this.saludes[i]){
-        //let posX = posicionesScore[i];
         let salus = new Q.Vida({asset: "vida.png", x:posXs, y:63});
         this.saludes[i] = salus;
         this.stage.insert(this.saludes[i]);
@@ -185,7 +169,6 @@ Q.UI.Container.extend("SaludEnemigo",{
     while(i<16){
       
       if(!this.saludes[i]){
-        //let posX = posicionesScore[i];
         let salus = new Q.Vida({asset: "vida_no.png", x:posXs, y:63});
         this.saludes[i] = salus;
         this.stage.insert(this.saludes[i]);
@@ -199,10 +182,10 @@ Q.UI.Container.extend("SaludEnemigo",{
 });
 
 
-
+//Clase que se encarga de actualizar las vidas en el HUD cada vez que se actualiza
+//Dependiendo de si las vidas se ha generado con anterioridad se crea de nuevo o se actualiza su asset
+//Esta variable se actualiza o cuando muere o cuando recoge una vida
 Q.UI.Container.extend("VidasJugador",{ 
-
-  
 
   init: function(p) {
     this._super(p, {
@@ -212,11 +195,8 @@ Q.UI.Container.extend("VidasJugador",{
     Q.state.on("change.vidas",this,"update_vidas");
     
   },//init
-  
 
   update_vidas: function(vidas) {
-    /*let puntuacionAct = puntuacion.toString();
-    let asset = "numeros/0.png";*/
     
     let vidasAct = vidas;
     vidasAct = vidasAct.toString();
@@ -242,7 +222,6 @@ Q.UI.Container.extend("VidasJugador",{
 
   }
 });
-
 
 }
 
