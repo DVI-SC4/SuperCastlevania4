@@ -30,13 +30,13 @@ Proyecto final de la asignatura Desarrollo de Videojuegos mediante Tecnologías 
 
 # 1. Diseño del juego
 
-(se puede confeccionar a partir del documento de concepto entregado anteriormente, ampliando con las nuevas mecánicas añadidas y explicando mínimamente en qué consisten. Acompañar de algunas imágenes o capturas de nuestros recursos o cosas ya implementadas) (podemos empezar diciendo que usamos Quintus y qué base hemos usado para las pruebas y demás)
-
 ## 1.1 Sobre el juego original
 
 ### Información general
 
-Dentro de la nipona saga de juegos Castlevania, conocida a nivel mundial, tenemos el título "Super Castlevania IV" (en Japón: Akumajō Dracula 悪魔城ドラキュラ Akumajō Dorakyura, traducido literalmente como "Devil's Castle Dracula"). Éste un videojuego de acción-aventura desarrollado y publicado por Konami a finales de 1991 en Japón y en Norteamérica, y en 1992 en Europa. Fue el primer videojuego de la serie Castlevania en aparecer para la videoconsola Super Nintendo aprovechándose de las mejores características técnicas en comparación con su predecesora, la videoconsola Nintendo Entertainment System (NES), apoyado en un hardware de 16 bits y ayudado de múltiples efectos como el Modo 7.
+Dentro de la nipona saga de juegos Castlevania, conocida a nivel mundial, tenemos el título "Super Castlevania IV" (en Japón: Akumajō Dracula 悪魔城ドラキュラ Akumajō Dorakyura, traducido literalmente como "Devil's Castle Dracula"). Éste un videojuego de acción-aventura desarrollado y publicado por Konami a finales de 1991 en Japón y en Norteamérica, y en 1992 en Europa. 
+
+Fue el primer videojuego de la serie Castlevania en aparecer para la videoconsola Super Nintendo aprovechándose de las mejores características técnicas en comparación con su predecesora, la videoconsola Nintendo Entertainment System (NES), apoyado en un hardware de 16 bits y ayudado de múltiples efectos como el Modo 7.
 
 Aunque se trata de un remake del juego Castlevania de NES, en realidad es una secuela de Castlevania II: Simon's Quest.
 
@@ -57,45 +57,47 @@ La familia Belmont, a través de generaciones ha destruido a Drácula cada vez q
 
 En nuestra versión reducida de Super Castlevania IV podemos a jugar al primer nivel del juego, en el cual entramos al castillo y atravesamos parte de unos jardines y unas ruinas anexas, ambos lugares plagados de los enemigos básicos. 
 
-Como en el original, el objetivo principal del nivel es avanzar hasta su final y, una vez allí, enfrentarse y derrotar al jefe final. Opcionalmente, podemos recoger armas secundarias en el camino que nos ayuden un poco más a la hora de luchar. Una vez derrotado el jefe, una esfera brillante aparece y, al recogerla, queda completado el nivel.
+Como en el original, el objetivo principal del nivel es avanzar hasta su final y, una vez allí, enfrentarse y derrotar al jefe final. En el camino, podremos encontrar velas con objetos que nos ayudaran a  llegar al final, como son mas vidas y un latigo mejorado, que inflige mas daño a los enemigos. Una vez que derrotemos al jefe final habramos ganado el juego.
 
-Nada más entrar al castillo, estaremos expuestos a las hordas de enemigos y en peligro constante. Los monstruos pueden atacar al protagonista hasta agotar su barra de energía progresivamente. Si Simon se queda sin energía, quedará inconsciente y perderá una vida. Reaparecerá en un punto del nivel acorde al avance que llevase dentro del mismo. Si Simon se queda sin vidas, la partida se acabará y se le dará la oportunidad de volver a empezar el nivel desde cero o de volver al menú. Cabe destacar que nuestro personaje también puede perder una vida súbitamente si cae al agua o a algún foso.
+Nada más entrar al castillo, estaremos expuestos a las hordas de enemigos y en peligro constante. Los monstruos pueden atacar al protagonista hasta agotar su barra de energía progresivamente. Si Simon se queda sin energía, quedará inconsciente y perderá una vida. Reaparecerá al principio de la misma escena en la que murio. Si Simon se queda sin vidas, la partida se acabará y se le dará la oportunidad de volver a empezar el nivel desde cero. Cabe destacar que nuestro personaje también puede perder una vida súbitamente si cae al agua o a algún foso.
 
 ## 1.3. Principales mecánicas
 
-### 1. Avance y retroceso
+### 1. Simon
 
-<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/movimiento/teclas_andando.png?raw=true" width="11%" />
+#### 1.1. Avance y retroceso
+
+<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/movimiento/teclas_andando.png?raw=true" width="11%" align="left" />
 
 ![andando](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/movimiento/andando.gif?raw=true)
 
 Simon puede caminar en ambos sentidos pulsando las teclas de dirección "izquierda" y "derecha".
 
-### 2. Agacharse
+#### 1.2. Agacharse
 
-<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/movimiento/teclas_agacharse.png?raw=true" width="20%" />
+<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/movimiento/teclas_agacharse.png?raw=true" width="20%" align="left"/>
 
 ![agacharse](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/movimiento/agacharse.gif?raw=true)
 
 Para esquivar ciertos ataques, nuestro protagonista puede agacharse usando la tecla de dirección "abajo". Asimismo, mientras se encuentra agachado, puede seguir avanzando o retrocediendo en cuclillas si la situación lo requiere.
 
-### 3. Salto
+#### 1.3. Salto
 
-<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/movimiento/teclas_saltando.png?raw=true" width="20%" />
+<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/movimiento/teclas_saltando.png?raw=true" width="20%" align="left"/>
 
 ![saltando](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/movimiento/saltando.gif?raw=true)
 
 Simon también puede saltar pulsando la tecla "Q". Para mayor agilidad, durante el breve salto puede cambiar el sentido de su avance si pulsa "izquierda" o "derecha".
 
-### 4. Subir y bajar escaleras
-
-(se pondrán las teclas y gif cuando esté implementado)
+#### 1.4. Subir y bajar escaleras
 
 Como parte indispensable de su avance por el nivel, Simon también es capaz de subir o bajar escaleras. 
 * Para subir, al situarse encima del pie de las escaleras pulsará "derecha" o "izquierda" (según el sentido de la escalera) seguido de "arriba" y comenzará el ascenso.
-* Para bajar, bastará con avanzar (sea hacia la izquierda o hacia la derecha) hacia la escalera en cuestión y comenzará el descenso. Si la escalera no está al final de una plataforma sino en medio de una, se combinará el uso de "izquierda" o "derecha" seguida de la tecla "abajo".
+* Para bajar, cuando el jugador se encuentra una escalera pulsará "derecha" o "izquierda" seguido de la tecla "abajo" para comenzar el descenso.
 
-### 5. Ataque
+Una vez en la escalera, el jugador puede atacar en ambas direcciones, y subir y bajar la escalera.
+
+#### 1.5. Ataque
 
 El arma principal de Simon es el legendario látigo "Vampire Killer", el cual ha pasado de generación en generación en la familia Belmont durante siglos. Este arma de cazavampiros posee habilidades mágicas para luchar contra las criaturas infernales. 
 
@@ -103,67 +105,95 @@ Mediante la tecla "W", Simon enarbolará el látigo para asestar golpes a sus en
 
 Disponemos de distintas combinaciones de ataque, en ambas direcciones, para usar las que mejor se ajusten a la situación en la que Simon se vea envuelto.
 
-#### 5.1 Ataques desde el suelo
+##### 1.5.1 Ataques desde el suelo
 
-##### 5.1.1 Ataque normal
+###### 1.5.1.1 Ataque normal
 
-<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/teclas/W.png?raw=true" width="5%" />
+<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/teclas/W.png?raw=true" width="5%" align="left"/>
 
 ![atacando](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20en%20el%20suelo/atacando.gif?raw=true)
 
-##### 5.1.2 Ataque agachado
+###### 1.5.1.2 Ataque agachado
 
 <img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20en%20el%20suelo/teclas_atacando_agachado.png?raw=true" width="14%" />
 
 ![atacando_agachado](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20en%20el%20suelo/atacando_agachado.gif?raw=true)
 
-##### 5.1.3 Ataque en vertical
+###### 1.5.1.3 Ataque en vertical
 
-<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20en%20el%20suelo/teclas_atacando_vertical.png?raw=true" width="14%" />
+<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20en%20el%20suelo/teclas_atacando_vertical.png?raw=true" width="14%"/>
 
 ![atacando_haciarriba](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20en%20el%20suelo/atacando_vertical.gif?raw=true)
 
-##### 5.1.4 Ataque en diagonal
+###### 1.5.1.4 Ataque en diagonal
 
-<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20en%20el%20suelo/teclas_ataque_diagonal.png?raw=true" width="24%" />
+<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20en%20el%20suelo/teclas_ataque_diagonal.png?raw=true" width="24%"/>
 
 ![atacando_diagonal](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20en%20el%20suelo/ataque_diagonal.gif?raw=true)
 
-#### 5.2 Ataques en el aire
+##### 1.5.2 Ataques en el aire
 
-##### 5.2.1 Ataque normal saltando
+###### 1.5.2.1 Ataque normal saltando
 
-<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/teclas_atacando_saltando.png?raw=true" width="24%" />
+<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/teclas_atacando_saltando.png?raw=true" width="24%" align="left"/>
 
 ![atacando_saltando](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/atacando_saltando.gif?raw=true)
 
-##### 5.2.2 Ataque en vertical saltando
+###### 1.5.2.2 Ataque en vertical saltando
 
 <img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/teclas_atacando_vertical_saltando.png?raw=true" width="24%" />
 
 ![atacando_verticalarriba_saltando](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/atacando_vertical_saltando.gif?raw=true)
 
-##### 5.2.3 Ataque hacia abajo saltando
+###### 1.5.2.3 Ataque hacia abajo saltando
 
-<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/teclas_atacando_verticalabajo.png?raw=true" width="24%" />
+<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/teclas_atacando_verticalabajo.png?raw=true" width="24%"/>
 
 ![atacando_verticalabajo_saltando](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/atacando_verticalabajo.gif?raw=true)
 
-##### 5.2.4 Ataque en diagonal saltando
+###### 1.5.2.4 Ataque en diagonal saltando
 
 <img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/teclas_atacando_diagonalarriba_saltando.png?raw=true" width="24%" />
 
 ![atacando_diagonal_saltando](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/atacando_diagonalarriba_saltando.gif?raw=true)
 
-##### 5.2.5 Ataque en diagonal hacia abajo saltando
+###### 1.5.2.5 Ataque en diagonal hacia abajo saltando
 
-<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/teclas_atacando_diagonalabajo_saltando.png?raw=true" width="24%" />
+<img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/teclas_atacando_diagonalabajo_saltando.png?raw=true" width="24%"/>
 
 ![atacando_diagonal_abajo_saltando](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/atacando_diagonalabajo_saltando.gif?raw=true)
 
-### 6. Uso de armas secundarias
 
-(decidir con qué tecla se activarán y hacer su gif e imagen de tecla. Yo lo pondría con la tecla E por facilidad de activarlas rápidamente)
+### 2. Enemigos 
+
+Tenemos dos enemigos basicos el esqueleto y el murcielago. En ambos casos necesitan dos golpes del latigo basico para morir y un golpe del latigo mejorado.
+
+En el caso de que se choquen con Simon le quitaran un punto de salud, se hará inmune por un tiempo limitado y retrocederá un poco respecto a su posicion.
+
+#### 2.1. Esqueleto
+
+El esqueleto tiene la movilidad limitada, es decir, se mueve hacia la derecha y hacia la izquierda en un espacio limitado.
+
+#### 2.2. Murcielago
+
+El murcielago va por el aire volando hasta que se choque con una pared, que en ese caso cambiará la direccion.
+
+### 3. Jefe Final
+
+Como jefe final hemos elegido el propio del nivel, que es Rowdain. Este tiene 16 puntos de salud igual que Simon y le afecta el latigo igual que a los enemigos normales. Latigo normal quita y¡un punto de salud y latigo mejorado quitará dos puntos.
+
+Cuando la salud del jefe llega a la mitad desmonta su montura y tenemos que enfrentarnos con un esqueleto, que cada cierto tiempo se teletransporta a un punto aleatorio del nivel. Para avisarnos de que se va a teletransportar este parpadea unas cuantas veces y despues se teletransporta.
+
+Una vez que matamos al jefe, hemos ganado el juego.
+
+### 4. HUD
+
+A un lado del HUD podemos ver la putuacion obtenida, la salud de Simon y la salud del jefe final. y al otro lado tenemos el nivel y la escena en la que nos encontramos y las vidas.
+
+### 5. Velas
+
+Generan objetos que nos facilitan la jugabilidad del juego, estos objetos son vidas, y upgrade del latigo.
+
 
 ## 1.4. Personajes
 
@@ -181,8 +211,11 @@ Simon es bastante temerario e inclinado a forzar su camino a través de las situ
 
 ### 2. Enemigos
 
+Tenemos dos enemigos basicos el esqueleto y el murcielago, de los cuales ya hemos explicado sus mecanicas anteriormente.
+
 ### 3. Jefe final
 
+Y de jefe final hemos introducido a Rowdain que es un esqueleto montado sobre un esqueleto de animal. Cuando le hemos golpeado varias veces, nos pasamos a enfrentar a un esqueleto armado.
 
 # 2. Diseño de la implementación
 
@@ -213,32 +246,32 @@ El unico componente que se ha implementado es para los enemigos, que comparten c
 	* Sprites y animaciones	 
 	* Movimientos básicos
 	* Ataque y uso del látigo (arma principal)
-	* Ataque con armas secundarias
+	* Subir y bajar escaleras	
 
-* Primer nivel del juego original (de momento, provisional)
+* Varias escenas del primer nivel del juego original
+	* Logica entre el cambio de escenas
+	* Seguimiento al jugador a traves del nivel
 
 * Enemigos
 	* Sprites y animaciones 
 	* Movimiento
 	* Lógica de ataque y salud
 
-* Objetos
-	* Recogibles
-	* Armas secundarias
+* Objetos recogibles
+	* Vidas
+	* Upgrade del latigo
 
 * Jefe final del nivel
+	* Sprites y animaciones
+	* Movimientos basicos
+	* Teletransporte
+	* Logica de ataque y gestion de la salud
 
 * HUD
 	* Medidor de energía del protagonista
 	* Medidor de energía del jefe de nivel
-	* Visor de tiempo restante
-	* Contador de vidas restantes
-	* Corazones acumulados
+	* Vidas restantes
 	* Puntos acumulados
-	* Arma secundaria recogida
-
-## 2.4 Sobre el código
-
 
 # 3. Equipo de trabajo y reparto de tareas
 
@@ -252,8 +285,6 @@ El unico componente que se ha implementado es para los enemigos, que comparten c
 
 ## 3.2 Software y herramientas empleadas
 
-(poned las que se me hayan pasado y también habrá que incluir los programas con los que grabemos el vídeo y audio del gameplay + la presentación de clase)
-
 ### Desarrollo, depuración y testeo
 * [Quintus JavaScript HTML5 Game Engine](http://www.html5quintus.com)
 * [Sublime Text](https://www.sublimetext.com)
@@ -266,6 +297,7 @@ El unico componente que se ha implementado es para los enemigos, que comparten c
 * [OpenEmu (OS X)](http://openemu.org)
 * [Pixelmator (OS X)](http://www.pixelmator.com/mac/)
 * [Vista Previa (OS X)](https://support.apple.com/es-es/guide/preview/prvwd4a90e45/mac)
+* [Adobe Photoshop](https://www.adobe.com/es/products/photoshop.html)
 
 ### Obtención y edición de sonido
 * [Audacity](https://www.audacityteam.org)
@@ -275,8 +307,13 @@ El unico componente que se ha implementado es para los enemigos, que comparten c
 * [Adobe Photoshop](https://www.adobe.com/es/products/photoshop.html)
 * [Tiled](https://thorbjorn.itch.io/tiled)
 
-### Presentación
+### Memoria y documento de alcance
 * [MacDown (OS X)](https://macdown.uranusjr.com)
+* [Sublime Text](https://www.sublimetext.com)
+
+### Presentacion
+* [Google Presentaciones](https://docs.google.com/presentation/u/0/)
+* [Camtasia Studio](https://www.techsmith.com/video-editor.html)
 
 ## 3.3. Tareas realizadas por cada integrante
 
@@ -284,11 +321,41 @@ El unico componente que se ha implementado es para los enemigos, que comparten c
 
 ## 3.4. Carga de trabajo
 
-(a cada miembro se le asigna un porcentaje)
-
 * César:
+	* Preparación de sprites, jsons y animaciones por frames de Simon, con posiciones de avance, ataques, saltos, escaleras...
+	* Limpieza y preparación de sprite de Simon avanzando agachado a partir de capturas de emulación.
+	* Programación de lógica de Simon: avance, saltos, agacharse, ataques con los diferentes combos... excepto su mecánica de comportamiento en escaleras.
+	* Obtención y conversión de efectos de sonido, extrayéndolos de la grabación de una emulación.
+	* Obtención de música de fondo (para introduccción, menú, nivel y créditos).
+	* Obtención de imágenes con el recorrido visual (mapa en "horizontal") de los distintos niveles.
+	* Limpieza y preparación de sprites de los elementos del HUD y de las armas secundarias, a partir de capturas de pantalla de una emulación.
+	* Preparación de sprites y jsons de elementos de interacción del primer nivel (velas, esfera final, etc.).
+	* Preparación de sprites de objetos recogibles (mejora de látigo, carne, corazones, etc.).
+	* Preparación de sprites y jsons de enemigos básicos (murciélago, esqueleto, bicéfalo, etc.) con posiciones de avance, ataques y muerte.
+	* Redacción de la memoria
+		* Sección 1.1 Sobre el juego original
+		* Sección 1.2 Objetivo del juego	 
+		* Sección 1.3 Principales mecánicas (con preparación y edición de los gifs y las imágenes de combinaciones de teclas).
+		* Sección de Simon en 1.4 Personajes.
+		* Sección 2.3 Implementaciones realizadas
+		* Sección 3.2 Software y herramientas empleadas
+		* Sección 4 Fuentes y referencias
+	* Realización de la intro del juego con los logos de la UCM y FdI.
+	* Realización del menú principal del juego, junto con el sprite animado del selector en forma de llama.
+	* Realización de la sección de controles del personaje, junto a las capturas de las poses de Simon.
+	* Realización de los créditos del juego junto con el sprite animado de Simon al final y composición de los mensajes con las letras oficiales del juego.
+	* Preparación de las imágenes con letras para la pantalla de Game Over.
 * Carmen:
 * Sergio:
+	* Separación, reestructuración y ordenación de código.
+	* Codigo y animación para enemigo Skeleton.
+	* Codigo y animación para enemigo Bat.
+	* Codigo y animacion para boss Rowdain.
+	* Sprite para Rowdain.
+	* Sprite para skeleton.
+	* Conversion .ogg a .mp3
+	* Animacion muerte enemigos.
+	* Componente para enemigos.
 
 # 4. Fuentes y referencias
 
