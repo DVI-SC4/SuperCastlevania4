@@ -598,7 +598,7 @@ Quintus.Simon = function(Q) {
 
             this.add('2d');
 
-        }/*,//init
+        },//init
 
 
     });//extend Whip
