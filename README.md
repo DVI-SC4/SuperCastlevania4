@@ -7,20 +7,25 @@ Proyecto final de la asignatura Desarrollo de Videojuegos mediante Tecnologías 
 	* [1.1. Sobre el juego original](https://github.com/DVI-SC4/SuperCastlevania4#11-sobre-el-juego-original)
 	* [1.2. Objetivo del juego](https://github.com/DVI-SC4/SuperCastlevania4#12-objetivo-del-juego) 
 	* [1.3. Principales mecánicas](https://github.com/DVI-SC4/SuperCastlevania4#13-principales-mec%C3%A1nicas)
-		* [Avance y retroceso](https://github.com/DVI-SC4/SuperCastlevania4#1-avance-y-retroceso)
-		* [Agacharse](https://github.com/DVI-SC4/SuperCastlevania4#2-agacharse)
-		* [Salto](https://github.com/DVI-SC4/SuperCastlevania4#3-salto)
-		* [Subir y bajar escaleras](https://github.com/DVI-SC4/SuperCastlevania4#4-subir-y-bajar-escaleras)
-		* [Ataque](https://github.com/DVI-SC4/SuperCastlevania4#5-ataque)
-			*  [Ataques desde el suelo](https://github.com/DVI-SC4/SuperCastlevania4#51-ataques-desde-el-suelo)
-			*  [Ataques en el aire](https://github.com/DVI-SC4/SuperCastlevania4#52-ataques-en-el-aire)
-		* [Uso de armas secundarias](https://github.com/DVI-SC4/SuperCastlevania4#6-uso-de-armas-secundarias)  
+		* [Simon](https://github.com/DVI-SC4/SuperCastlevania4#1-simon)
+			* [Avance y retroceso](https://github.com/DVI-SC4/SuperCastlevania4#11-avance-y-retroceso)
+			* [Agacharse](https://github.com/DVI-SC4/SuperCastlevania4#12-agacharse)
+			* [Salto](https://github.com/DVI-SC4/SuperCastlevania4#13-salto)
+			* [Subir y bajar escaleras](https://github.com/DVI-SC4/SuperCastlevania4#14-subir-y-bajar-escaleras)
+			* [Ataque](https://github.com/DVI-SC4/SuperCastlevania4#15-ataque)
+				*  [Ataques desde el suelo](https://github.com/DVI-SC4/SuperCastlevania4#151-ataques-desde-el-suelo)
+				*  [Ataques en el aire](https://github.com/DVI-SC4/SuperCastlevania4#152-ataques-en-el-aire)
+		* [Enemigos](https://github.com/DVI-SC4/SuperCastlevania4#2-enemigos)
+			* [Esqueleto](https://github.com/DVI-SC4/SuperCastlevania4#21-esqueleto)
+			* [Murcielago](https://github.com/DVI-SC4/SuperCastlevania4#22-murcielago)
+		* [Jefe final](https://github.com/DVI-SC4/SuperCastlevania4#3-jefe-final)
+		* [HUD](https://github.com/DVI-SC4/SuperCastlevania4#4-hud)
+		* [Velas](https://github.com/DVI-SC4/SuperCastlevania4#5-velas)
 	* [1.4. Personajes](https://github.com/DVI-SC4/SuperCastlevania4#14-personajes)
 * [2. Diseño de la implementación](https://github.com/DVI-SC4/SuperCastlevania4#2-dise%C3%B1o-de-la-implementaci%C3%B3n)
 	* [2.1. Arquitectura y jerarquía de archivos](https://github.com/DVI-SC4/SuperCastlevania4#21-arquitectura-y-jerarqu%C3%ADa-de-archivos)
 	* [2.2. Principales componentes](https://github.com/DVI-SC4/SuperCastlevania4#22-principales-componentes)
 	* [2.3. Implementaciones realizadas](https://github.com/DVI-SC4/SuperCastlevania4#23-implementaciones-realizadas)
-	* [2.4. Sobre el código](https://github.com/DVI-SC4/SuperCastlevania4#24-sobre-el-c%C3%B3digo)
 * [3. Equipo de trabajo y reparto de tareas](https://github.com/DVI-SC4/SuperCastlevania4#3-equipo-de-trabajo-y-reparto-de-tareas)
 	* [3.1. Integrantes](https://github.com/DVI-SC4/SuperCastlevania4#31-integrantes)
 	* [3.2. Software y herramientas empleadas](https://github.com/DVI-SC4/SuperCastlevania4#32-software-y-herramientas-empleadas)
@@ -57,9 +62,9 @@ La familia Belmont, a través de generaciones ha destruido a Drácula cada vez q
 
 En nuestra versión reducida de Super Castlevania IV podemos a jugar al primer nivel del juego, en el cual entramos al castillo y atravesamos parte de unos jardines y unas ruinas anexas, ambos lugares plagados de los enemigos básicos. 
 
-Como en el original, el objetivo principal del nivel es avanzar hasta su final y, una vez allí, enfrentarse y derrotar al jefe final. En el camino, podremos encontrar velas con objetos que nos ayudaran a  llegar al final, como son mas vidas y un latigo mejorado, que inflige mas daño a los enemigos. Una vez que derrotemos al jefe final habramos ganado el juego.
+Como en el original, el objetivo principal del nivel es avanzar hasta su final y, una vez allí, enfrentarse y derrotar al jefe final. En el camino, podremos encontrar velas con objetos que nos ayudaran a llegar al final, como son mas vidas y un látigo mejorado, que inflige mas daño a los enemigos. Una vez que derrotemos al jefe final habríamos ganado el juego.
 
-Nada más entrar al castillo, estaremos expuestos a las hordas de enemigos y en peligro constante. Los monstruos pueden atacar al protagonista hasta agotar su barra de energía progresivamente. Si Simon se queda sin energía, quedará inconsciente y perderá una vida. Reaparecerá al principio de la misma escena en la que murio. Si Simon se queda sin vidas, la partida se acabará y se le dará la oportunidad de volver a empezar el nivel desde cero. Cabe destacar que nuestro personaje también puede perder una vida súbitamente si cae al agua o a algún foso.
+Nada más entrar al castillo, estaremos expuestos a las hordas de enemigos y en peligro constante. Los monstruos pueden atacar al protagonista hasta agotar su barra de energía progresivamente. Si Simon se queda sin energía, quedará inconsciente y perderá una vida. Reaparecerá al principio de la misma escena en la que murió. Si Simon se queda sin vidas, la partida se acabará y se le dará la oportunidad de volver a empezar el nivel desde cero. Cabe destacar que nuestro personaje también puede perder una vida súbitamente si cae al agua o a algún foso.
 
 ## 1.3. Principales mecánicas
 
@@ -166,9 +171,9 @@ Disponemos de distintas combinaciones de ataque, en ambas direcciones, para usar
 
 ### 2. Enemigos 
 
-Tenemos dos enemigos basicos el esqueleto y el murcielago. En ambos casos necesitan dos golpes del latigo basico para morir y un golpe del latigo mejorado.
+Tenemos dos enemigos básicos el esqueleto y el murcielago. En ambos casos necesitan dos golpes del látigo básico para morir y un golpe del látigo mejorado.
 
-En el caso de que se choquen con Simon le quitaran un punto de salud, se hará inmune por un tiempo limitado y retrocederá un poco respecto a su posicion.
+En el caso de que se choquen con Simon le quitaran un punto de salud, se hará inmune por un tiempo limitado y retrocederá un poco respecto a su posición.
 
 #### 2.1. Esqueleto
 
@@ -180,7 +185,7 @@ El murcielago va por el aire volando hasta que se choque con una pared, que en e
 
 ### 3. Jefe Final
 
-Como jefe final hemos elegido el propio del nivel, que es Rowdain. Este tiene 16 puntos de salud igual que Simon y le afecta el latigo igual que a los enemigos normales. Latigo normal quita y¡un punto de salud y latigo mejorado quitará dos puntos.
+Como jefe final hemos elegido el propio del nivel, que es Rowdain. Este tiene 16 puntos de salud igual que Simon y le afecta el látigo igual que a los enemigos normales. Látigo normal quita un punto de salud y látigo mejorado quitará dos puntos.
 
 Cuando la salud del jefe llega a la mitad desmonta su montura y tenemos que enfrentarnos con un esqueleto, que cada cierto tiempo se teletransporta a un punto aleatorio del nivel. Para avisarnos de que se va a teletransportar este parpadea unas cuantas veces y despues se teletransporta.
 
@@ -192,7 +197,7 @@ A un lado del HUD podemos ver la putuacion obtenida, la salud de Simon y la salu
 
 ### 5. Velas
 
-Generan objetos que nos facilitan la jugabilidad del juego, estos objetos son vidas, y upgrade del latigo.
+Generan objetos que nos facilitan la jugabilidad del juego, estos objetos son vidas, y upgrade del látigo.
 
 ## 1.4. Personajes
 
@@ -210,7 +215,7 @@ Simon es bastante temerario e inclinado a forzar su camino a través de las situ
 
 ### 2. Enemigos
 
-Tenemos dos enemigos basicos el esqueleto y el murcielago, de los cuales ya hemos explicado sus mecanicas anteriormente.
+Tenemos dos enemigos básicos el esqueleto y el murcielago, de los cuales ya hemos explicado sus mecánicas anteriormente.
 
 ### 3. Jefe final
 
@@ -224,13 +229,13 @@ Con la finalidad de mejorar la productividad a la hora de desarrollar y hacer ma
 
 ## 2.1 Arquitectura y jerarquía de archivos
 
-Hemos separado el código por "módulos", asi todos los caracteres del juego se encuentran en la carpeta entidades, donde tambien estaran los componentes necesarios para estos. Todo lo relacionado con pantallas de carga, menues, etc. esta ubicado en otra carpeta y los archivos para la gestion de otro elementos clave del juego en otra carpeta.
+Hemos separado el código por "módulos", asi todos los caracteres del juego se encuentran en la carpeta entidades, donde tambien estaran los componentes necesarios para estos. Todo lo relacionado con pantallas de carga, menues, etc. esta ubicado en otra carpeta y los archivos para la gestión de otro elementos clave del juego en otra carpeta.
 
 Todo el codigo se carga desde un fichero principal (main.js), desde donde se hace la carga de los módulos de Quintus así como de los nuestros.
 
 ## 2.2 Principales componentes
 
-El unico componente que se ha implementado es para los enemigos, que comparten ciertas mecanicas y era logico llevarlo a un punto común.
+El único componente que se ha implementado es para los enemigos, que comparten ciertas mecánicas y era lógico llevarlo a un punto común.
 
 ## 2.3 Implementaciones realizadas
 
@@ -248,8 +253,8 @@ El unico componente que se ha implementado es para los enemigos, que comparten c
 	* Subir y bajar escaleras	
 
 * Varias escenas del primer nivel del juego original
-	* Logica entre el cambio de escenas
-	* Seguimiento al jugador a traves del nivel
+	* Lógica entre el cambio de escenas
+	* Seguimiento al jugador a través del nivel
 
 * Enemigos
 	* Sprites y animaciones 
@@ -258,13 +263,13 @@ El unico componente que se ha implementado es para los enemigos, que comparten c
 
 * Objetos recogibles
 	* Vidas
-	* Upgrade del latigo
+	* Upgrade del látigo
 
 * Jefe final del nivel
 	* Sprites y animaciones
-	* Movimientos basicos
+	* Movimientos básicos
 	* Teletransporte
-	* Logica de ataque y gestion de la salud
+	* Lógica de ataque y gestión de la salud
 
 * HUD
 	* Medidor de energía del protagonista
@@ -340,60 +345,57 @@ El unico componente que se ha implementado es para los enemigos, que comparten c
 	* Realización de los créditos del juego junto con el sprite animado de Simon al final y composición de los mensajes con las letras oficiales del juego.
 	* Preparación de las imágenes con letras para la pantalla de Game Over.
 * Carmen:
-	* Preparacion de los recursos necesarios para las diferentes escenas.
-	* Realizacion de las diferentes escenas con Tiled.
-	* Programacion de la logica del cambio de escenas.
-	* Gestion del seguimiento de la camara al jugador en el juego.
+	* Preparación de los recursos necesarios para las diferentes escenas.
+	* Realización de las diferentes escenas con Tiled.
+	* Programación de la lógica del cambio de escenas.
+	* Gestión del seguimiento de la cámara al jugador en el juego.
 	* Añadidos todos los elementos del juego y sus atributos opcionales en el mapa.
 	* Control de Simon en las escaleras:
 		* Escaleras de subida
 		* Escaleras de bajada
-		* Deteccion del fin de la escalera
+		* Detección del fin de la escalera
 		* Atacar en escalera
 		* Moverse hacia arriba y hacia abajo en la escalera
 	* Detalles en los enemigos
-		* Limitacion del movimiento del esqueleto
-		* Gestion de los golpes recibidos segun sea el latigo normal o el mejorado
-	* Gestion de la inmunidad de Simon una vez golpeado.
-	* Preparacion de los elementos del HUD
-	* Programacion y gestion de los elementos del HUD:
+		* Limitación del movimiento del esqueleto
+		* Gestión de los golpes recibidos según sea el látigo normal o el mejorado
+	* Gestión de la inmunidad de Simon una vez golpeado.
+	* Preparación de los elementos del HUD
+	* Programación y gestión de los elementos del HUD:
 		* Salud de Simon que se reduce cuando le atacan
-		* Puntuacion del jugador que aumenta con cada enemigo eliminado
+		* Puntuación del jugador que aumenta con cada enemigo eliminado
 		* Vidas del jugador, que aumentan si las recoge
 		* Muestra el nivel y la escena en la que nos encontramos
-		* Salud del juefe del nivel
-	* Creacion de las pantallas de Game Over y de You Win
-	* Programacion de la logica de las velas con los objetos recogibles
+		* Salud del jefe del nivel
+	* Creación de las pantallas de Game Over y de You Win
+	* Programación de la lógica de las velas con los objetos recogibles
 		* Vidas
-		* Upgrade del latigo
-	* Programacion de la logica del movimiento del jefe final.
-	* Revision y redaccion de la memoria: 
+		* Upgrade del látigo
+	* Programación de la lógica del movimiento del jefe final.
+	* Revisión y redacción de la memoria: 
 		* Mecanicas principales
 		* Informacion de los personajes
 		* Implementaciones realizadas
-
-		
-		
 * Sergio:
-	* Redaccion del documento de alcance.
+	* Redacción del documento de alcance.
 	* Separación del codigo utilizando el espacio de nombres.
 	* Reestructuración y ordenación de código en diferentes direcctorios del repositorio.
-	* Preparacion de los sprites de los enemigos.
+	* Preparación de los sprites de los enemigos.
 	* Codigo y animación para enemigo Skeleton.
 	* Codigo y animación para enemigo Bat.
-	* Creacion del componente enemy para Skeleton y Bat.
-		* Gestion de las colisiones con el latigo y Simon.
-	* Animacion de la llama que aparece al morir un enemigo.
-	* Conversion .ogg a .mp3 para que sea compatible en todos los navegadores
-	* Inclusion de los sonidos en el juego
+	* Creación del componente enemy para Skeleton y Bat.
+		* Gestión de las colisiones con el látigo y Simon.
+	* Animación de la llama que aparece al morir un enemigo.
+	* Conversión .ogg a .mp3 para que sea compatible en todos los navegadores
+	* Inclusión de los sonidos en el juego
 		* Escenas 
-		* Latigo
+		* Látigo
 		* Muerte enemigo
-	* Preparacion de los sprites del jefe final.
-	* Codigo de las mecanicas basicas del jefe final.
-	* Codigo y animacion para boss Rowdain.
-	* Redaccion de la memoria
-		* Diseño e implementacion
+	* Preparación de los sprites del jefe final.
+	* Código de las mecánicas básicas del jefe final.
+	* Código y animación para boss Rowdain.
+	* Redacción de la memoria
+		* Diseño e implementación
 		* Arquitectura
 
 ## 3.4. Carga de trabajo
