@@ -3,10 +3,10 @@ Proyecto final de la asignatura Desarrollo de Videojuegos mediante Tecnologías 
 
 # Índice
 
-* [1. Diseño del juego](https://github.com/DVI-SC4/SuperCastlevania4#1-dise%C3%B1o-del-juego)
+* [1. Diseño del juego](https://github.com/DVI-SC4/SuperCastlevania4#1-dise%C3%B1o-del-juego)
 	* [1.1. Sobre el juego original](https://github.com/DVI-SC4/SuperCastlevania4#11-sobre-el-juego-original)
 	* [1.2. Objetivo del juego](https://github.com/DVI-SC4/SuperCastlevania4#12-objetivo-del-juego) 
-	* [1.3. Principales mecánicas](https://github.com/DVI-SC4/SuperCastlevania4#13-principales-mec%C3%A1nicas)
+	* [1.3. Principales mecánicas](https://github.com/DVI-SC4/SuperCastlevania4#13-principales-mec%C3%A1nicas)
 		* [Simon](https://github.com/DVI-SC4/SuperCastlevania4#1-simon)
 			* [Avance y retroceso](https://github.com/DVI-SC4/SuperCastlevania4#11-avance-y-retroceso)
 			* [Agacharse](https://github.com/DVI-SC4/SuperCastlevania4#12-agacharse)
@@ -22,7 +22,7 @@ Proyecto final de la asignatura Desarrollo de Videojuegos mediante Tecnologías 
 		* [HUD](https://github.com/DVI-SC4/SuperCastlevania4#4-hud)
 		* [Velas](https://github.com/DVI-SC4/SuperCastlevania4#5-velas)
 	* [1.4. Personajes](https://github.com/DVI-SC4/SuperCastlevania4#14-personajes)
-* [2. Diseño de la implementación](https://github.com/DVI-SC4/SuperCastlevania4#2-dise%C3%B1o-de-la-implementaci%C3%B3n)
+* [2. Diseño de la implementación](https://github.com/DVI-SC4/SuperCastlevania4#2-dise%C3%B1o-de-la-implementaci%C3%B3n)
 	* [2.1. Arquitectura y jerarquía de archivos](https://github.com/DVI-SC4/SuperCastlevania4#21-arquitectura-y-jerarqu%C3%ADa-de-archivos)
 	* [2.2. Principales componentes](https://github.com/DVI-SC4/SuperCastlevania4#22-principales-componentes)
 	* [2.3. Implementaciones realizadas](https://github.com/DVI-SC4/SuperCastlevania4#23-implementaciones-realizadas)
@@ -141,6 +141,7 @@ Disponemos de distintas combinaciones de ataque, en ambas direcciones, para usar
 ###### 1.5.2.1 Ataque normal saltando
 
 <img src="https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/teclas_atacando_saltando.png?raw=true" width="24%" align="left"/>
+
 
 ![atacando_saltando](https://github.com/DVI-SC4/SuperCastlevania4/blob/master/Recursos%20memoria/Gu%C3%ADa%20de%20movimientos/ataques%20saltando/atacando_saltando.gif?raw=true)
 
